@@ -2,6 +2,8 @@ use_frameworks!
 
 target 'UIAdapterKit_Example' do
   pod 'UIAdapterKit', :path => '../'
+  pod 'Fakery'
+  pod 'R.swift', '~> 5.0.3'
 
   target 'UIAdapterKit_Tests' do
     inherit! :search_paths
