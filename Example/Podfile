@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'UIAdapterKit_Example' do
+  pod 'UIAdapterKit', :path => '../'
+
+  target 'UIAdapterKit_Tests' do
+    inherit! :search_paths
+
+    pod 'FBSnapshotTestCase' , '~> 2.1.4'
+  end
+end
