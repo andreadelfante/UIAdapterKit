@@ -1,0 +1,114 @@
+default_platform(:ios)
+
+setup_travis
+
+platform :ios do
+
+  ########## MISC ##########
+
+  desc "Prepare and open the workspace"
+  lane :prep do
+    pods(silent: false)
+    sh("open ../Example/UIAdapterKit.xcworkspace")
+  end
+
+  desc "Commit to remote!"
+  lane :commit do
+    auto_fixing
+    code_lint
+    
+    message = UI.input("Commit message: ")
+    git_add(
+      path: "."
+    )
+    git_commit(
+      path: ".",
+      message: message
+    )
+    push_to_git_remote
+  end
+
+  desc "Perform a code quality..."
+  lane :code_lint do
+    pods(silent: true)
+
+    swiftlint(
+      mode: :lint,
+      executable: "Example/Pods/SwiftLint/swiftlint",
+      config_file: ".swiftlint.yml",
+      quiet: true
+    )
+  end
+
+  desc "Linting podspec"
+  lane :podspec_lint do
+    pod_lib_lint(
+      verbose: true,
+      quick: true
+    )
+  end
+
+  desc "Linting and fixing..."
+  lane :auto_fixing do
+    swiftlint(
+      mode: :autocorrect,
+      executable: "Example/Pods/SwiftLint/swiftlint",
+      config_file: ".swiftlint.yml"
+    )
+  end
+
+  desc "Install dependencies"
+  lane :pods do |options|
+    silent = options[:silent]
+
+    cocoapods(
+      podfile: "./Example/Podfile",
+      try_repo_update_on_error: true,
+      silent: silent
+    )
+  end
+
+  ########## TESTS ##########
+
+  desc "Run tests for UIAdapterKit (Debug config)"
+  lane :test_debug do
+    pods(silent: true)
+    run_tests
+  end
+
+  desc "Run tests for UIAdapterKit (Release config)"
+  lane :test_release do
+    pods(silent: true)
+    run_tests
+  end
+
+  ########## DEPLOY ##########
+
+  desc "Deploy a new version"
+  lane :deploy do
+    version = read_podspec['version']
+
+    pull_master
+
+    #doc
+    #publish_doc(version: version)
+    publish_podspec(version: version)
+  end
+
+  private_lane :pull_master do
+    ensure_git_branch
+    git_pull
+  end
+
+  private_lane :publish_podspec do |options|
+    version = options[:version]
+
+    ensure_git_branch
+    add_git_tag(tag: version)
+    push_git_tags
+    
+    puts "Ready to publish a podspec with version #{version}"
+
+    pod_push
+  end
+end
