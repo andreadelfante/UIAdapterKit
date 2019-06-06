@@ -16,7 +16,9 @@ class SectionTests: XCTestCase {
     override func setUp() {
         super.setUp()
         
-        section = BasicSection(items: BasicModel.fake(30).map { _ in BasicItem() })
+        section = BasicSection(items: BasicModel.fake(30).map { _ in BasicItem() },
+                               nibForHeader: UINib(nibName: "Header", bundle: nil),
+                               nibForFooter: UINib(nibName: "Footer", bundle: nil))
     }
     
     func testCount() {
@@ -39,5 +41,13 @@ class SectionTests: XCTestCase {
     
     func testReuseIdentifierForFooter() {
         XCTAssertEqual(section.reuseIdentifierForFooter, "BasicSection.Footer")
+    }
+    
+    func testNibForHeader() {
+        XCTAssertNotNil(section.nibForHeader)
+    }
+    
+    func testNibForFooter() {
+        XCTAssertNotNil(section.nibForFooter)
     }
 }

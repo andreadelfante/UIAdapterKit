@@ -6,7 +6,7 @@
 //
 
 public protocol Identifiable {
-    
+
 }
 
 extension Identifiable {

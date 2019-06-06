@@ -11,6 +11,8 @@ import UIAdapterKit
 struct BasicSection: Section {
     
     let items: [BasicItem]
+    var nibForHeader: UINib? = nil
+    var nibForFooter: UINib? = nil
     
     var count: Int {
         return items.count

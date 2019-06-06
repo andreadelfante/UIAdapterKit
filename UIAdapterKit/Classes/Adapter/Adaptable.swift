@@ -8,7 +8,7 @@
 public protocol Adaptable {
     var sectionCount: Int { get }
     var hasSections: Bool { get }
-    
+
     func section(for index: Int) -> Section?
 }
 

@@ -1,27 +1,27 @@
 PODS:
   - Fakery (4.0.0)
-  - FBSnapshotTestCase (2.1.4):
-    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
-  - FBSnapshotTestCase/Core (2.1.4)
-  - FBSnapshotTestCase/SwiftSupport (2.1.4):
-    - FBSnapshotTestCase/Core
   - R.swift (5.0.3):
     - R.swift.Library (~> 5.0.0)
   - R.swift.Library (5.0.1)
-  - UIAdapterKit (0.1.0)
+  - SwiftLint (0.32.0)
+  - UIAdapterKit (0.1.0):
+    - UIAdapterKit/Basic (= 0.1.0)
+  - UIAdapterKit/Basic (0.1.0)
+  - UIAdapterKit/Common (0.1.0)
 
 DEPENDENCIES:
   - Fakery
-  - FBSnapshotTestCase (~> 2.1.4)
   - R.swift (~> 5.0.3)
+  - SwiftLint
   - UIAdapterKit (from `../`)
+  - UIAdapterKit/Common (from `../`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Fakery
-    - FBSnapshotTestCase
     - R.swift
     - R.swift.Library
+    - SwiftLint
 
 EXTERNAL SOURCES:
   UIAdapterKit:
@@ -29,11 +29,11 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Fakery: 476f6d947de432f84703acc830a1e7166330299b
-  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
   R.swift: f5a87643b91ea569d23d6afb3eee9c743edde239
   R.swift.Library: cfe85d569d9bae6cb262922db130e7c3a7a5fad1
-  UIAdapterKit: c9fc58a66577c59d88ed1fb7393948890586b7d8
+  SwiftLint: 009a898ef2a1c851f45e1b59349bf6ff2ddc990d
+  UIAdapterKit: eec5fbfaeb382352c4ab35e6536ed1777fcd817a
 
-PODFILE CHECKSUM: 9bfc673d03184fd11335f3a251f4fca4c8f8c9c7
+PODFILE CHECKSUM: b82a178d9f5444f6aaad172eeef442c1dc020ac8
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.7.1

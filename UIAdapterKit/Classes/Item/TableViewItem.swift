@@ -7,7 +7,7 @@
 
 public protocol TableViewItem: Item {
     func configure(cell: UITableViewCell)
-    
+
     func height(_ container: Container) -> CGFloat?
 }
 
@@ -24,12 +24,12 @@ public extension TableViewItem {
             tableView.register(clazz, forCellReuseIdentifier: reuseIdentifier)
         }
     }
-    
+
     func dequeueCell(from tableView: UITableView, at indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier) {
             return cell
         }
-        
+
         registerCell(for: tableView)
         return tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
     }
