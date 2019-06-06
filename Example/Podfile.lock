@@ -32,7 +32,7 @@ SPEC CHECKSUMS:
   R.swift: f5a87643b91ea569d23d6afb3eee9c743edde239
   R.swift.Library: cfe85d569d9bae6cb262922db130e7c3a7a5fad1
   SwiftLint: 009a898ef2a1c851f45e1b59349bf6ff2ddc990d
-  UIAdapterKit: eec5fbfaeb382352c4ab35e6536ed1777fcd817a
+  UIAdapterKit: 85ec259997b788743c9e61ad2621b85c070ce342
 
 PODFILE CHECKSUM: b82a178d9f5444f6aaad172eeef442c1dc020ac8
 

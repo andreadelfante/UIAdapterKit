@@ -30,6 +30,6 @@ A set of adapters useful to define UITableView and UICollectionView in a declara
   end
   
   s.subspec 'Common' do |common|
-    common.source_files     = 'UIAdapterKit-Common/Classes/**/*'
+    common.source_files     = ['UIAdapterKit/Classes/**/*', 'UIAdapterKit-Common/Classes/**/*']
   end
 end
