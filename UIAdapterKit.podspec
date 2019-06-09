@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name                    = 'UIAdapterKit'
-  s.version                 = '0.1.0'
+  s.version                 = '0.2.0'
   s.summary                 = 'A set of declarative adapters.'
 
   s.description             = <<-DESC
@@ -27,6 +27,12 @@ A set of adapters useful to define UITableView and UICollectionView in a declara
   
   s.subspec 'Basic' do |basic|
     basic.source_files      = 'UIAdapterKit/Classes/**/*'
+  end
+
+  s.subspec 'Realm' do |realm|
+    realm.source_files      = ['UIAdapterKit/Classes/**/*', 'UIAdapterKit-Realm/Classes/**/*']
+    
+    realm.dependency 'RealmSwift'
   end
   
   s.subspec 'Common' do |common|

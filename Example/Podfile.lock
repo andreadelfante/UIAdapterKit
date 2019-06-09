@@ -3,11 +3,18 @@ PODS:
   - R.swift (5.0.3):
     - R.swift.Library (~> 5.0.0)
   - R.swift.Library (5.0.1)
+  - Realm (3.16.1):
+    - Realm/Headers (= 3.16.1)
+  - Realm/Headers (3.16.1)
+  - RealmSwift (3.16.1):
+    - Realm (= 3.16.1)
   - SwiftLint (0.32.0)
-  - UIAdapterKit (0.1.0):
-    - UIAdapterKit/Basic (= 0.1.0)
-  - UIAdapterKit/Basic (0.1.0)
-  - UIAdapterKit/Common (0.1.0)
+  - UIAdapterKit (0.2.0):
+    - UIAdapterKit/Basic (= 0.2.0)
+  - UIAdapterKit/Basic (0.2.0)
+  - UIAdapterKit/Common (0.2.0)
+  - UIAdapterKit/Realm (0.2.0):
+    - RealmSwift
 
 DEPENDENCIES:
   - Fakery
@@ -15,12 +22,15 @@ DEPENDENCIES:
   - SwiftLint
   - UIAdapterKit (from `../`)
   - UIAdapterKit/Common (from `../`)
+  - UIAdapterKit/Realm (from `../`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Fakery
     - R.swift
     - R.swift.Library
+    - Realm
+    - RealmSwift
     - SwiftLint
 
 EXTERNAL SOURCES:
@@ -31,9 +41,11 @@ SPEC CHECKSUMS:
   Fakery: 476f6d947de432f84703acc830a1e7166330299b
   R.swift: f5a87643b91ea569d23d6afb3eee9c743edde239
   R.swift.Library: cfe85d569d9bae6cb262922db130e7c3a7a5fad1
+  Realm: 601cacc51d8be3b17a377ef787be0f6ee0e76cf1
+  RealmSwift: 486f2e09d5a8ccff63ed66e48d0846b111deb5e5
   SwiftLint: 009a898ef2a1c851f45e1b59349bf6ff2ddc990d
-  UIAdapterKit: 85ec259997b788743c9e61ad2621b85c070ce342
+  UIAdapterKit: 011b6cb877ecdfd0607e948cbe9b059c3355315b
 
-PODFILE CHECKSUM: b82a178d9f5444f6aaad172eeef442c1dc020ac8
+PODFILE CHECKSUM: db9033c80184fe0751c80e6fb4dc72657451783d
 
 COCOAPODS: 1.7.1

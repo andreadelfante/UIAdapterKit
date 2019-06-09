@@ -12,7 +12,7 @@ class UserTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
 }
 
-class UserTableViewItem: TableViewItem {
+class UserTableViewItem: TableViewItem, RealmTableViewItem {
     private var user: User
     
     init(user: User) {

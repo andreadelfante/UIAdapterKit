@@ -18,11 +18,9 @@ public protocol CollectionViewSection: Section {
 
 public extension CollectionViewSection {
     func configure(header: UICollectionReusableView) {}
-
     func configure(footer: UICollectionReusableView) {}
 
     func sizeForHeader(_ container: Container) -> CGSize? { return nil }
-
     func sizeForFooter(_ container: Container) -> CGSize? { return nil }
 
     func minimumInteritemSpacing(_ container: Container) -> CGFloat? { return nil }

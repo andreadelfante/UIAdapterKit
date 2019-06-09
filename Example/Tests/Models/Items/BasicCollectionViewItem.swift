@@ -8,7 +8,7 @@
 
 import UIAdapterKit
 
-class BasicCollectionViewItem: CollectionViewItem {
+class BasicCollectionViewItem: CollectionViewItem, RealmCollectionViewItem {
     private var model: BasicModel
     
     init(_ model: BasicModel) {

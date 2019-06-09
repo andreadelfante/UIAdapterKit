@@ -5,6 +5,7 @@ $adapterPath = '../'
 target 'UIAdapterKit_Example' do
   pod 'UIAdapterKit', :path => $adapterPath
   pod 'UIAdapterKit/Common', :path => $adapterPath
+  pod 'UIAdapterKit/Realm', :path => $adapterPath
   pod 'Fakery'
   pod 'R.swift', '~> 5.0.3'
 

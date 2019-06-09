@@ -8,7 +8,7 @@
 
 import UIAdapterKit
 
-class BasicTableViewItem: TableViewItem {
+class BasicTableViewItem: TableViewItem, RealmTableViewItem {
     private var model: BasicModel
     
     init(_ model: BasicModel) {

@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name='UIAdapterKit_Tests.xctest' tests='41' failures='0'>
+  <testsuite name='UIAdapterKit_Tests.StaticTableViewAdapterTests' tests='4' failures='0'>
+    <testcase classname='UIAdapterKit_Tests.StaticTableViewAdapterTests' name='testSectionForIndex' time='0.322'/>
+    <testcase classname='UIAdapterKit_Tests.StaticTableViewAdapterTests' name='testSectionForItem' time='0.207'/>
+    <testcase classname='UIAdapterKit_Tests.StaticTableViewAdapterTests' name='testHasSections' time='0.200'/>
+    <testcase classname='UIAdapterKit_Tests.StaticTableViewAdapterTests' name='testSectionCount' time='0.206'/>
+  </testsuite>
+  <testsuite name='UIAdapterKit_Tests.DefaultTableViewItemTests' tests='1' failures='0'>
+    <testcase classname='UIAdapterKit_Tests.DefaultTableViewItemTests' name='testConfigure' time='0.008'/>
+  </testsuite>
+  <testsuite name='UIAdapterKit_Tests.RealmCollectionViewSectionTests' tests='8' failures='0'>
+    <testcase classname='UIAdapterKit_Tests.RealmCollectionViewSectionTests' name='testSizeForHeader' time='0.297'/>
+    <testcase classname='UIAdapterKit_Tests.RealmCollectionViewSectionTests' name='testNibForFooter' time='0.181'/>
+    <testcase classname='UIAdapterKit_Tests.RealmCollectionViewSectionTests' name='testMinimumInteritemSpacing' time='0.187'/>
+    <testcase classname='UIAdapterKit_Tests.RealmCollectionViewSectionTests' name='testItemForIndex' time='0.194'/>
+    <testcase classname='UIAdapterKit_Tests.RealmCollectionViewSectionTests' name='testCount' time='0.189'/>
+    <testcase classname='UIAdapterKit_Tests.RealmCollectionViewSectionTests' name='testNibForHeader' time='0.194'/>
+    <testcase classname='UIAdapterKit_Tests.RealmCollectionViewSectionTests' name='testMinimumLineSpacing' time='0.204'/>
+    <testcase classname='UIAdapterKit_Tests.RealmCollectionViewSectionTests' name='testSizeForFooter' time='0.189'/>
+  </testsuite>
+  <testsuite name='UIAdapterKit_Tests.RealmCollectionViewAdapterTests' tests='4' failures='0'>
+    <testcase classname='UIAdapterKit_Tests.RealmCollectionViewAdapterTests' name='testDeleteIndex' time='0.201'/>
+    <testcase classname='UIAdapterKit_Tests.RealmCollectionViewAdapterTests' name='testSectionForIndex' time='0.188'/>
+    <testcase classname='UIAdapterKit_Tests.RealmCollectionViewAdapterTests' name='testSectionCount' time='0.260'/>
+    <testcase classname='UIAdapterKit_Tests.RealmCollectionViewAdapterTests' name='testHasItems' time='0.194'/>
+  </testsuite>
+  <testsuite name='UIAdapterKit_Tests.SectionTests' tests='7' failures='0'>
+    <testcase classname='UIAdapterKit_Tests.SectionTests' name='testReuseIdentifierForHeader' time='0.188'/>
+    <testcase classname='UIAdapterKit_Tests.SectionTests' name='testIsEmpty' time='0.201'/>
+    <testcase classname='UIAdapterKit_Tests.SectionTests' name='testItemForIndex' time='0.201'/>
+    <testcase classname='UIAdapterKit_Tests.SectionTests' name='testNibForFooter' time='0.174'/>
+    <testcase classname='UIAdapterKit_Tests.SectionTests' name='testReuseIdentifierForFooter' time='0.197'/>
+    <testcase classname='UIAdapterKit_Tests.SectionTests' name='testCount' time='0.183'/>
+    <testcase classname='UIAdapterKit_Tests.SectionTests' name='testNibForHeader' time='0.183'/>
+  </testsuite>
+  <testsuite name='UIAdapterKit_Tests.RealmTableViewAdapterTests' tests='4' failures='0'>
+    <testcase classname='UIAdapterKit_Tests.RealmTableViewAdapterTests' name='testSectionCount' time='0.191'/>
+    <testcase classname='UIAdapterKit_Tests.RealmTableViewAdapterTests' name='testHasItems' time='0.210'/>
+    <testcase classname='UIAdapterKit_Tests.RealmTableViewAdapterTests' name='testSectionForIndex' time='0.202'/>
+    <testcase classname='UIAdapterKit_Tests.RealmTableViewAdapterTests' name='testDeleteIndex' time='0.188'/>
+  </testsuite>
+  <testsuite name='UIAdapterKit_Tests.StaticCollectionViewAdapterTests' tests='4' failures='0'>
+    <testcase classname='UIAdapterKit_Tests.StaticCollectionViewAdapterTests' name='testHasSection' time='0.185'/>
+    <testcase classname='UIAdapterKit_Tests.StaticCollectionViewAdapterTests' name='testSectionForItem' time='0.196'/>
+    <testcase classname='UIAdapterKit_Tests.StaticCollectionViewAdapterTests' name='testSectionForIndex' time='0.195'/>
+    <testcase classname='UIAdapterKit_Tests.StaticCollectionViewAdapterTests' name='testSectionCount' time='0.199'/>
+  </testsuite>
+  <testsuite name='UIAdapterKit_Tests.ItemTests' tests='2' failures='0'>
+    <testcase classname='UIAdapterKit_Tests.ItemTests' name='testRegistrationType' time='0.001'/>
+    <testcase classname='UIAdapterKit_Tests.ItemTests' name='testReuseIdentifier' time='0.001'/>
+  </testsuite>
+  <testsuite name='UIAdapterKit_Tests.RealmTableViewSectionTests' tests='6' failures='0'>
+    <testcase classname='UIAdapterKit_Tests.RealmTableViewSectionTests' name='testCount' time='0.197'/>
+    <testcase classname='UIAdapterKit_Tests.RealmTableViewSectionTests' name='testHeaderTitle' time='0.198'/>
+    <testcase classname='UIAdapterKit_Tests.RealmTableViewSectionTests' name='testNibForFooter' time='0.188'/>
+    <testcase classname='UIAdapterKit_Tests.RealmTableViewSectionTests' name='testFooterTitle' time='0.190'/>
+    <testcase classname='UIAdapterKit_Tests.RealmTableViewSectionTests' name='testNibForHeader' time='0.200'/>
+    <testcase classname='UIAdapterKit_Tests.RealmTableViewSectionTests' name='testItemForIndex' time='0.210'/>
+  </testsuite>
+  <testsuite name='UIAdapterKit_Tests.ContainerTests' tests='1' failures='0'>
+    <testcase classname='UIAdapterKit_Tests.ContainerTests' name='testContainerSize' time='0.001'/>
+  </testsuite>
+</testsuites>

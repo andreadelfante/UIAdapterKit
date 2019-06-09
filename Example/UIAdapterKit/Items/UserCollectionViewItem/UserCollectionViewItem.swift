@@ -12,7 +12,7 @@ class UserCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
 }
 
-class UserCollectionViewItem: CollectionViewItem {
+class UserCollectionViewItem: CollectionViewItem, RealmCollectionViewItem {
     private var user: User
     
     init(user: User) {

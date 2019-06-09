@@ -15,6 +15,13 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		65346BB822A994360009A654 /* Fakeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6584BF0422A703C2006D6275 /* Fakeable.swift */; };
 		65346BBA22A998370009A654 /* DefaultTableViewItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65346BB922A998370009A654 /* DefaultTableViewItemTests.swift */; };
+		65346BCA22AD62570009A654 /* RealmTableViewAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65346BC822AD623A0009A654 /* RealmTableViewAdapterTests.swift */; };
+		65346BCE22AD6A250009A654 /* RealmTableViewSectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65346BCD22AD6A250009A654 /* RealmTableViewSectionTests.swift */; };
+		65346BD122AD6ACF0009A654 /* BaseRealmTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65346BD022AD6ACF0009A654 /* BaseRealmTestCase.swift */; };
+		65346BD722AD707F0009A654 /* RealmCollectionViewSectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65346BD622AD707F0009A654 /* RealmCollectionViewSectionTests.swift */; };
+		65346BD922AD71D40009A654 /* RealmCollectionViewAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65346BD822AD71D40009A654 /* RealmCollectionViewAdapterTests.swift */; };
+		65346BDB22AD777E0009A654 /* RealmTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65346BDA22AD777E0009A654 /* RealmTableViewController.swift */; };
+		65346BE022ADB3F50009A654 /* RealmCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65346BDF22ADB3F50009A654 /* RealmCollectionViewController.swift */; };
 		6584BEE522A70143006D6275 /* StaticTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6584BEE422A70143006D6275 /* StaticTableViewController.swift */; };
 		6584BEE722A7017B006D6275 /* StaticCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6584BEE622A7017B006D6275 /* StaticCollectionViewController.swift */; };
 		6584BEED22A701D7006D6275 /* UserCollectionViewHeaderFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6584BEEB22A701D7006D6275 /* UserCollectionViewHeaderFooter.xib */; };
@@ -28,7 +35,7 @@
 		6584BF0122A7039B006D6275 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6584BF0022A7039B006D6275 /* User.swift */; };
 		6584BF0E22A70639006D6275 /* StaticTableViewAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6584BF0C22A70628006D6275 /* StaticTableViewAdapterTests.swift */; };
 		6584BF0F22A7064D006D6275 /* Fakeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6584BF0422A703C2006D6275 /* Fakeable.swift */; };
-		6584BF1122A70680006D6275 /* StaticCollectionViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6584BF1022A70680006D6275 /* StaticCollectionViewAdapter.swift */; };
+		6584BF1122A70680006D6275 /* StaticCollectionViewAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6584BF1022A70680006D6275 /* StaticCollectionViewAdapterTests.swift */; };
 		6584BF1422A706BC006D6275 /* BasicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6584BF1322A706BC006D6275 /* BasicModel.swift */; };
 		6584BF1622A706C9006D6275 /* BasicTableViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6584BF1522A706C9006D6275 /* BasicTableViewItem.swift */; };
 		6584BF1822A70710006D6275 /* BasicCollectionViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6584BF1722A70710006D6275 /* BasicCollectionViewItem.swift */; };
@@ -67,6 +74,13 @@
 		607FACE51AFB9204008FA782 /* UIAdapterKit_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIAdapterKit_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65346BB922A998370009A654 /* DefaultTableViewItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTableViewItemTests.swift; sourceTree = "<group>"; };
+		65346BC822AD623A0009A654 /* RealmTableViewAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmTableViewAdapterTests.swift; sourceTree = "<group>"; };
+		65346BCD22AD6A250009A654 /* RealmTableViewSectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmTableViewSectionTests.swift; sourceTree = "<group>"; };
+		65346BD022AD6ACF0009A654 /* BaseRealmTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRealmTestCase.swift; sourceTree = "<group>"; };
+		65346BD622AD707F0009A654 /* RealmCollectionViewSectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmCollectionViewSectionTests.swift; sourceTree = "<group>"; };
+		65346BD822AD71D40009A654 /* RealmCollectionViewAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmCollectionViewAdapterTests.swift; sourceTree = "<group>"; };
+		65346BDA22AD777E0009A654 /* RealmTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmTableViewController.swift; sourceTree = "<group>"; };
+		65346BDF22ADB3F50009A654 /* RealmCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmCollectionViewController.swift; sourceTree = "<group>"; };
 		6584BEE422A70143006D6275 /* StaticTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticTableViewController.swift; sourceTree = "<group>"; };
 		6584BEE622A7017B006D6275 /* StaticCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticCollectionViewController.swift; sourceTree = "<group>"; };
 		6584BEEB22A701D7006D6275 /* UserCollectionViewHeaderFooter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserCollectionViewHeaderFooter.xib; sourceTree = "<group>"; };
@@ -80,7 +94,7 @@
 		6584BF0022A7039B006D6275 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		6584BF0422A703C2006D6275 /* Fakeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fakeable.swift; sourceTree = "<group>"; };
 		6584BF0C22A70628006D6275 /* StaticTableViewAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticTableViewAdapterTests.swift; sourceTree = "<group>"; };
-		6584BF1022A70680006D6275 /* StaticCollectionViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticCollectionViewAdapter.swift; sourceTree = "<group>"; };
+		6584BF1022A70680006D6275 /* StaticCollectionViewAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticCollectionViewAdapterTests.swift; sourceTree = "<group>"; };
 		6584BF1322A706BC006D6275 /* BasicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicModel.swift; sourceTree = "<group>"; };
 		6584BF1522A706C9006D6275 /* BasicTableViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicTableViewItem.swift; sourceTree = "<group>"; };
 		6584BF1722A70710006D6275 /* BasicCollectionViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCollectionViewItem.swift; sourceTree = "<group>"; };
@@ -174,6 +188,7 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				65346BCF22AD6AC40009A654 /* Base */,
 				6584BF2822A714AA006D6275 /* Sections */,
 				6584BF2522A7137C006D6275 /* Items */,
 				6584BF0622A7041E006D6275 /* Adapters */,
@@ -202,9 +217,27 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
+		65346BCF22AD6AC40009A654 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				65346BD022AD6ACF0009A654 /* BaseRealmTestCase.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		65346BDC22AD778B0009A654 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				65346BDA22AD777E0009A654 /* RealmTableViewController.swift */,
+				65346BDF22ADB3F50009A654 /* RealmCollectionViewController.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
 		6584BEE322A70130006D6275 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				65346BDC22AD778B0009A654 /* Realm */,
 				6584BEE422A70143006D6275 /* StaticTableViewController.swift */,
 				6584BEE622A7017B006D6275 /* StaticCollectionViewController.swift */,
 			);
@@ -296,7 +329,9 @@
 			isa = PBXGroup;
 			children = (
 				6584BF0C22A70628006D6275 /* StaticTableViewAdapterTests.swift */,
-				6584BF1022A70680006D6275 /* StaticCollectionViewAdapter.swift */,
+				6584BF1022A70680006D6275 /* StaticCollectionViewAdapterTests.swift */,
+				65346BC822AD623A0009A654 /* RealmTableViewAdapterTests.swift */,
+				65346BD822AD71D40009A654 /* RealmCollectionViewAdapterTests.swift */,
 			);
 			path = Adapters;
 			sourceTree = "<group>";
@@ -345,6 +380,8 @@
 			isa = PBXGroup;
 			children = (
 				6584BF2922A714B7006D6275 /* SectionTests.swift */,
+				65346BCD22AD6A250009A654 /* RealmTableViewSectionTests.swift */,
+				65346BD622AD707F0009A654 /* RealmCollectionViewSectionTests.swift */,
 			);
 			path = Sections;
 			sourceTree = "<group>";
@@ -477,12 +514,16 @@
 				"${PODS_ROOT}/Target Support Files/Pods-UIAdapterKit_Example/Pods-UIAdapterKit_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Fakery/Fakery.framework",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/UIAdapterKit/UIAdapterKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Fakery.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIAdapterKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -526,7 +567,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$SRCROOT/R.generated.swift",
+				$SRCROOT/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -567,9 +608,11 @@
 				6584BEFE22A7035B006D6275 /* UserTableViewItem.swift in Sources */,
 				6584BF0122A7039B006D6275 /* User.swift in Sources */,
 				6584BEEE22A701D7006D6275 /* UserCollectionViewSection.swift in Sources */,
+				65346BDB22AD777E0009A654 /* RealmTableViewController.swift in Sources */,
 				65346BB822A994360009A654 /* Fakeable.swift in Sources */,
 				6584BF1C22A707AF006D6275 /* R.generated.swift in Sources */,
 				6584BEE722A7017B006D6275 /* StaticCollectionViewController.swift in Sources */,
+				65346BE022ADB3F50009A654 /* RealmCollectionViewController.swift in Sources */,
 				6584BEE522A70143006D6275 /* StaticTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -580,17 +623,22 @@
 			files = (
 				6584BF2422A70E8B006D6275 /* BasicCollectionViewSection.swift in Sources */,
 				6584BF0E22A70639006D6275 /* StaticTableViewAdapterTests.swift in Sources */,
+				65346BD722AD707F0009A654 /* RealmCollectionViewSectionTests.swift in Sources */,
 				65346BBA22A998370009A654 /* DefaultTableViewItemTests.swift in Sources */,
 				6584BF2222A70E6E006D6275 /* BasicTableViewSection.swift in Sources */,
+				65346BD922AD71D40009A654 /* RealmCollectionViewAdapterTests.swift in Sources */,
 				6584BF1622A706C9006D6275 /* BasicTableViewItem.swift in Sources */,
 				6584BF0F22A7064D006D6275 /* Fakeable.swift in Sources */,
 				6584BF2E22A99217006D6275 /* ContainerTests.swift in Sources */,
 				6584BF2A22A714B7006D6275 /* SectionTests.swift in Sources */,
 				6584BF1422A706BC006D6275 /* BasicModel.swift in Sources */,
 				6584BF2022A70E58006D6275 /* BasicSection.swift in Sources */,
+				65346BD122AD6ACF0009A654 /* BaseRealmTestCase.swift in Sources */,
 				6584BF1822A70710006D6275 /* BasicCollectionViewItem.swift in Sources */,
 				6584BF1A22A70761006D6275 /* BasicItem.swift in Sources */,
-				6584BF1122A70680006D6275 /* StaticCollectionViewAdapter.swift in Sources */,
+				65346BCA22AD62570009A654 /* RealmTableViewAdapterTests.swift in Sources */,
+				6584BF1122A70680006D6275 /* StaticCollectionViewAdapterTests.swift in Sources */,
+				65346BCE22AD6A250009A654 /* RealmTableViewSectionTests.swift in Sources */,
 				6584BF2722A71386006D6275 /* ItemTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

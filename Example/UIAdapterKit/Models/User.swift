@@ -7,13 +7,16 @@
 //
 
 import Fakery
+import RealmSwift
 
-struct User: Fakeable {
-    let firstName: String
-    let lastName: String
-    let text: String
+class User: Object, Fakeable {
+    @objc dynamic private(set) var firstName: String!
+    @objc dynamic private(set) var lastName: String!
+    @objc dynamic private(set) var text: String!
     
-    init(faker: Faker) {
+    required convenience init(faker: Faker) {
+        self.init()
+        
         firstName = faker.name.firstName()
         lastName = faker.name.lastName()
         text = faker.lorem.paragraph()

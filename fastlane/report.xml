@@ -5,27 +5,27 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.008823">
+      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.013945">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="1: setup_travis" time="0.001901">
+      <testcase classname="fastlane.lanes" name="1: setup_travis" time="0.001993">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="2: Switch to ios pods lane" time="0.001337">
+      <testcase classname="fastlane.lanes" name="2: Switch to ios pods lane" time="0.001571">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="3: cocoapods" time="3.341936">
+      <testcase classname="fastlane.lanes" name="3: cocoapods" time="7.100166">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="4: open ../Example/UIAdapterKit.xcworkspace" time="0.102634">
+      <testcase classname="fastlane.lanes" name="4: run_tests" time="263.940383">
         
       </testcase>
     

@@ -63,11 +63,14 @@ open class BaseTableViewAdapter: NSObject, Adaptable, UITableViewDelegate, UITab
     }
 
     public func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return tableViewSection(for: section)?.headerTitle
+        guard let section = tableViewSection(for: section) else { return nil }
+        guard !section.isEmpty else { return nil }
+        return section.headerTitle
     }
 
     public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         guard let section = tableViewSection(for: section) else { return nil }
+        guard !section.isEmpty else { return nil }
         guard let header = section.dequeueHeader(for: tableView) else { return nil }
 
         section.configure(header: header)
@@ -75,19 +78,30 @@ open class BaseTableViewAdapter: NSObject, Adaptable, UITableViewDelegate, UITab
     }
 
     public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return tableViewSection(for: section)?.heightForHeader(tableView) ?? UITableView.automaticDimension
+        guard let section = tableViewSection(for: section) else { return 0 }
+        guard !section.isEmpty else { return 0 }
+        return section.heightForHeader(tableView) ?? UITableView.automaticDimension
     }
 
     public func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
-        return tableViewSection(for: section)?.footerTitle
+        guard let section = tableViewSection(for: section) else { return nil }
+        guard !section.isEmpty else { return nil }
+        return section.footerTitle
     }
 
     public func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         guard let section = tableViewSection(for: section) else { return nil }
+        guard !section.isEmpty else { return nil }
         guard let footer = section.dequeueFooter(for: tableView) else { return nil }
 
         section.configure(footer: footer)
         return footer
+    }
+
+    public func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        guard let section = tableViewSection(for: section) else { return 0 }
+        guard !section.isEmpty else { return 0 }
+        return section.heightForFooter(tableView) ?? UITableView.automaticDimension
     }
 }
 

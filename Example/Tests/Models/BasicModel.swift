@@ -7,13 +7,20 @@
 //
 
 import Fakery
+import RealmSwift
 
-struct BasicModel: Fakeable {
-    let text: String
-    let detail: String
+class BasicModel: Object, Fakeable {
+    @objc private(set) var text: String!
+    @objc private(set) var detail: String!
     
-    init(faker: Faker) {
+    required convenience init(faker: Faker) {
+        self.init()
+        
         text = faker.lorem.sentence()
         detail = faker.lorem.paragraphs()
+    }
+    
+    override class func primaryKey() -> String? {
+        return "text"
     }
 }
