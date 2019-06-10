@@ -22,6 +22,7 @@
 		65346BD922AD71D40009A654 /* RealmCollectionViewAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65346BD822AD71D40009A654 /* RealmCollectionViewAdapterTests.swift */; };
 		65346BDB22AD777E0009A654 /* RealmTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65346BDA22AD777E0009A654 /* RealmTableViewController.swift */; };
 		65346BE022ADB3F50009A654 /* RealmCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65346BDF22ADB3F50009A654 /* RealmCollectionViewController.swift */; };
+		65346BE522AEF7B00009A654 /* EditableTableViewItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65346BE422AEF7B00009A654 /* EditableTableViewItemTests.swift */; };
 		6584BEE522A70143006D6275 /* StaticTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6584BEE422A70143006D6275 /* StaticTableViewController.swift */; };
 		6584BEE722A7017B006D6275 /* StaticCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6584BEE622A7017B006D6275 /* StaticCollectionViewController.swift */; };
 		6584BEED22A701D7006D6275 /* UserCollectionViewHeaderFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6584BEEB22A701D7006D6275 /* UserCollectionViewHeaderFooter.xib */; };
@@ -81,6 +82,7 @@
 		65346BD822AD71D40009A654 /* RealmCollectionViewAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmCollectionViewAdapterTests.swift; sourceTree = "<group>"; };
 		65346BDA22AD777E0009A654 /* RealmTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmTableViewController.swift; sourceTree = "<group>"; };
 		65346BDF22ADB3F50009A654 /* RealmCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmCollectionViewController.swift; sourceTree = "<group>"; };
+		65346BE422AEF7B00009A654 /* EditableTableViewItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditableTableViewItemTests.swift; sourceTree = "<group>"; };
 		6584BEE422A70143006D6275 /* StaticTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticTableViewController.swift; sourceTree = "<group>"; };
 		6584BEE622A7017B006D6275 /* StaticCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticCollectionViewController.swift; sourceTree = "<group>"; };
 		6584BEEB22A701D7006D6275 /* UserCollectionViewHeaderFooter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserCollectionViewHeaderFooter.xib; sourceTree = "<group>"; };
@@ -372,6 +374,7 @@
 			children = (
 				6584BF2622A71386006D6275 /* ItemTests.swift */,
 				65346BB922A998370009A654 /* DefaultTableViewItemTests.swift */,
+				65346BE422AEF7B00009A654 /* EditableTableViewItemTests.swift */,
 			);
 			path = Items;
 			sourceTree = "<group>";
@@ -621,6 +624,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65346BE522AEF7B00009A654 /* EditableTableViewItemTests.swift in Sources */,
 				6584BF2422A70E8B006D6275 /* BasicCollectionViewSection.swift in Sources */,
 				6584BF0E22A70639006D6275 /* StaticTableViewAdapterTests.swift in Sources */,
 				65346BD722AD707F0009A654 /* RealmCollectionViewSectionTests.swift in Sources */,

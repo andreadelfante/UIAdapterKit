@@ -11,9 +11,9 @@ open class RealmCollectionViewAdapter: BaseCollectionViewAdapter {
     public private(set) var itemsCount: Int
     
     private var sections: [Int: CollectionViewSection]
-    private let itemAnimation: Bool
+    private let itemAnimation: CollectionViewAnimation
     
-    public init(animation: Bool = false) {
+    public init(animation: CollectionViewAnimation = .none) {
         sections = [:]
         itemsCount = 0
         itemAnimation = animation
@@ -58,15 +58,22 @@ open class RealmCollectionViewAdapter: BaseCollectionViewAdapter {
                 self.collectionView?.reloadData()
                 break
                 
-            case .update(_, let deletions, let insertions, _):
+            case .update(_, let deletions, let insertions, let modifications):
                 self.itemsCount -= deletions.count
                 self.itemsCount += insertions.count
                 section.onUpdate()
                 
-                if self.itemAnimation {
-                    self.collectionView?.reloadSections([index])
-                } else {
+                switch self.itemAnimation {
+                case .none:
                     self.collectionView?.reloadData()
+                case .section:
+                    self.collectionView?.reloadSections([index])
+                case .row:
+                    self.collectionView?.performBatchUpdates({
+                        self.collectionView?.deleteItems(at: deletions.map { IndexPath(row: $0, section: index) })
+                        self.collectionView?.insertItems(at: insertions.map { IndexPath(row: $0, section: index) })
+                        self.collectionView?.reloadItems(at: modifications.map { IndexPath(row: $0, section: index) })
+                    })
                 }
                 break
                 
@@ -82,10 +89,11 @@ open class RealmCollectionViewAdapter: BaseCollectionViewAdapter {
         if let section = sections.removeValue(forKey: index) as? RealmCollectionViewSection {
             itemsCount -= section.count
             
-            if itemAnimation {
-                collectionView?.deleteSections([index])
-            } else {
+            switch itemAnimation {
+            case .none:
                 collectionView?.reloadData()
+            case .section, .row:
+                collectionView?.deleteSections([index])
             }
             
             section.notificationToken?.invalidate()

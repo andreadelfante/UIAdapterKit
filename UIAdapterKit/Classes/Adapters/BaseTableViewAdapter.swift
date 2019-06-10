@@ -103,6 +103,10 @@ open class BaseTableViewAdapter: NSObject, Adaptable, UITableViewDelegate, UITab
         guard !section.isEmpty else { return 0 }
         return section.heightForFooter(tableView) ?? UITableView.automaticDimension
     }
+
+    public func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        return (item(for: indexPath) as? EditableTableViewItem)?.actions
+    }
 }
 
 fileprivate extension Adaptable where Self: BaseTableViewAdapter {

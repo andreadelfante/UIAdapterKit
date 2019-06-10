@@ -10,3 +10,5 @@ public protocol RealmItem: Item {}
 public protocol RealmTableViewItem: TableViewItem, RealmItem {}
 
 public protocol RealmCollectionViewItem: CollectionViewItem, RealmItem {}
+
+extension DefaultTableViewItem: RealmTableViewItem {}

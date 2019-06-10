@@ -19,9 +19,12 @@ class RealmTableViewController: UITableViewController {
         
         realm = try! Realm(configuration: Realm.Configuration(inMemoryIdentifier: NSStringFromClass(RealmTableViewController.self)))
         
-        adapter = RealmTableViewAdapter(animation: .automatic)
+        adapter = RealmTableViewAdapter(animation: .row(.automatic))
             .map(section: RealmTableViewSection(results: realm.objects(User.self).sorted(byKeyPath: "lastName"),
-                                                itemBuilder: { UserTableViewItem(user: $0) }))
+                                                itemBuilder: { user in
+                                                    return UserTableViewItem(user: user,
+                                                                             actionForDelete: { self.delete(user: user) })
+                                                }))
         adapter.tableView = tableView
     }
     
@@ -45,5 +48,11 @@ class RealmTableViewController: UITableViewController {
         }
         
         super.viewDidDisappear(animated)
+    }
+    
+    private func delete(user: User) {
+        try! realm.write {
+            realm.delete(user)
+        }
     }
 }

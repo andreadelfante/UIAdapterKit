@@ -19,7 +19,7 @@ class RealmCollectionViewController: UICollectionViewController {
         
         realm = try! Realm(configuration: Realm.Configuration(inMemoryIdentifier: NSStringFromClass(RealmCollectionViewController.self)))
         
-        adapter = RealmCollectionViewAdapter(animation: true)
+        adapter = RealmCollectionViewAdapter(animation: .row)
             .map(section: RealmCollectionViewSection(results: realm.objects(User.self).sorted(byKeyPath: "lastName"),
                                                      itemBuilder: { UserCollectionViewItem(user: $0) }))
         adapter.collectionView = collectionView

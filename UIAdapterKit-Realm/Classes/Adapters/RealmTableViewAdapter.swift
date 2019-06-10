@@ -11,9 +11,9 @@ open class RealmTableViewAdapter: BaseTableViewAdapter {
     public private(set) var itemsCount: Int
     
     private var sections: [Int: TableViewSection]
-    private let rowAnimation: UITableView.RowAnimation?
+    private let rowAnimation: TableViewAnimation
     
-    public init(animation: UITableView.RowAnimation? = nil) {
+    public init(animation: TableViewAnimation = .none) {
         sections = [:]
         itemsCount = 0
         rowAnimation = animation
@@ -58,15 +58,22 @@ open class RealmTableViewAdapter: BaseTableViewAdapter {
                 self.tableView?.reloadData()
                 break
                 
-            case .update(_, let deletions, let insertions, _):
+            case .update(_, let deletions, let insertions, let modifications):
                 self.itemsCount -= deletions.count
                 self.itemsCount += insertions.count
                 section.onUpdate()
                 
-                if let animation = self.rowAnimation {
-                    self.tableView?.reloadSections([index], with: animation)
-                } else {
+                switch self.rowAnimation {
+                case .none:
                     self.tableView?.reloadData()
+                case .section(let animation):
+                    self.tableView?.reloadSections([index], with: animation)
+                case .row(let animation):
+                    self.tableView?.beginUpdates()
+                    self.tableView?.deleteRows(at: deletions.map { IndexPath(row: $0, section: index) }, with: animation)
+                    self.tableView?.insertRows(at: insertions.map { IndexPath(row: $0, section: index) }, with: animation)
+                    self.tableView?.reloadRows(at: modifications.map { IndexPath(row: $0, section: index) }, with: animation)
+                    self.tableView?.endUpdates()
                 }
                 break
                 
@@ -83,10 +90,11 @@ open class RealmTableViewAdapter: BaseTableViewAdapter {
         if let section = sections.removeValue(forKey: index) as? RealmTableViewSection {
             itemsCount -= section.count
             
-            if let animation = self.rowAnimation {
-                tableView?.deleteSections([index], with: animation)
-            } else {
+            switch self.rowAnimation {
+            case .none:
                 tableView?.reloadData()
+            case .row(let animation), .section(let animation):
+                tableView?.deleteSections([index], with: animation)
             }
             
             section.notificationToken?.invalidate()
