@@ -1,4 +1,4 @@
-1.0.0.alpha.1 Release notes (2019-06-11)
+0.3.0 Release notes (2019-06-11)
 =============================================================
 ### Enhancements
 * Add support to UITableView editing actions
