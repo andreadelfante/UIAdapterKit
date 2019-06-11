@@ -23,6 +23,8 @@
 		65346BDB22AD777E0009A654 /* RealmTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65346BDA22AD777E0009A654 /* RealmTableViewController.swift */; };
 		65346BE022ADB3F50009A654 /* RealmCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65346BDF22ADB3F50009A654 /* RealmCollectionViewController.swift */; };
 		65346BE522AEF7B00009A654 /* EditableTableViewItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65346BE422AEF7B00009A654 /* EditableTableViewItemTests.swift */; };
+		65346BEF22B0247F0009A654 /* BaseTableViewAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65346BEE22B0247F0009A654 /* BaseTableViewAdapterTests.swift */; };
+		65346BF522B062400009A654 /* BaseCollectionViewAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65346BF422B062400009A654 /* BaseCollectionViewAdapterTests.swift */; };
 		6584BEE522A70143006D6275 /* StaticTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6584BEE422A70143006D6275 /* StaticTableViewController.swift */; };
 		6584BEE722A7017B006D6275 /* StaticCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6584BEE622A7017B006D6275 /* StaticCollectionViewController.swift */; };
 		6584BEED22A701D7006D6275 /* UserCollectionViewHeaderFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6584BEEB22A701D7006D6275 /* UserCollectionViewHeaderFooter.xib */; };
@@ -83,6 +85,8 @@
 		65346BDA22AD777E0009A654 /* RealmTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmTableViewController.swift; sourceTree = "<group>"; };
 		65346BDF22ADB3F50009A654 /* RealmCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmCollectionViewController.swift; sourceTree = "<group>"; };
 		65346BE422AEF7B00009A654 /* EditableTableViewItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditableTableViewItemTests.swift; sourceTree = "<group>"; };
+		65346BEE22B0247F0009A654 /* BaseTableViewAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewAdapterTests.swift; sourceTree = "<group>"; };
+		65346BF422B062400009A654 /* BaseCollectionViewAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewAdapterTests.swift; sourceTree = "<group>"; };
 		6584BEE422A70143006D6275 /* StaticTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticTableViewController.swift; sourceTree = "<group>"; };
 		6584BEE622A7017B006D6275 /* StaticCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticCollectionViewController.swift; sourceTree = "<group>"; };
 		6584BEEB22A701D7006D6275 /* UserCollectionViewHeaderFooter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserCollectionViewHeaderFooter.xib; sourceTree = "<group>"; };
@@ -330,6 +334,8 @@
 		6584BF0622A7041E006D6275 /* Adapters */ = {
 			isa = PBXGroup;
 			children = (
+				65346BEE22B0247F0009A654 /* BaseTableViewAdapterTests.swift */,
+				65346BF422B062400009A654 /* BaseCollectionViewAdapterTests.swift */,
 				6584BF0C22A70628006D6275 /* StaticTableViewAdapterTests.swift */,
 				6584BF1022A70680006D6275 /* StaticCollectionViewAdapterTests.swift */,
 				65346BC822AD623A0009A654 /* RealmTableViewAdapterTests.swift */,
@@ -637,6 +643,7 @@
 				6584BF2A22A714B7006D6275 /* SectionTests.swift in Sources */,
 				6584BF1422A706BC006D6275 /* BasicModel.swift in Sources */,
 				6584BF2022A70E58006D6275 /* BasicSection.swift in Sources */,
+				65346BEF22B0247F0009A654 /* BaseTableViewAdapterTests.swift in Sources */,
 				65346BD122AD6ACF0009A654 /* BaseRealmTestCase.swift in Sources */,
 				6584BF1822A70710006D6275 /* BasicCollectionViewItem.swift in Sources */,
 				6584BF1A22A70761006D6275 /* BasicItem.swift in Sources */,
@@ -644,6 +651,7 @@
 				6584BF1122A70680006D6275 /* StaticCollectionViewAdapterTests.swift in Sources */,
 				65346BCE22AD6A250009A654 /* RealmTableViewSectionTests.swift in Sources */,
 				6584BF2722A71386006D6275 /* ItemTests.swift in Sources */,
+				65346BF522B062400009A654 /* BaseCollectionViewAdapterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

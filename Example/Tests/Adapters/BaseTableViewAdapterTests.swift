@@ -1,0 +1,324 @@
+//
+//  BaseTableViewAdapterTests.swift
+//  UIAdapterKit_Tests
+//
+//  Created by Andrea Del Fante on 11/06/2019.
+//  Copyright © 2019 CocoaPods. All rights reserved.
+//
+
+import XCTest
+import Fakery
+@testable import UIAdapterKit
+
+class BaseTableViewAdapterTests: XCTestCase {
+    private var adapter: MockTableViewAdapter!
+    private var tableView: UITableView!
+    private var indexPath: IndexPath!
+    private var faker: Faker!
+    
+    override func setUp() {
+        super.setUp()
+        
+        adapter = MockTableViewAdapter()
+        tableView = UITableView(frame: CGRect(x: 0, y: 0, width: 150, height: 150), style: .grouped)
+        indexPath = IndexPath(row: 0, section: 0)
+        faker = Faker()
+    }
+    
+    override func tearDown() {
+        adapter = nil
+        tableView = nil
+        indexPath = nil
+        faker = nil
+        
+        super.tearDown()
+    }
+    
+    func testNumberOfSectionsInTableView() {
+        XCTAssertEqual(adapter.numberOfSections(in: tableView), adapter.sectionCount)
+    }
+    
+    func testTableViewNumberOfRowsInSection() {
+        adapter.sectionBuilder = { _ in MockSection() }
+        
+        XCTAssertEqual(adapter.tableView(tableView, numberOfRowsInSection: -1), 0)
+        XCTAssertEqual(adapter.tableView(tableView, numberOfRowsInSection: 0), 1)
+    }
+    
+    func testTableViewCellForRowAt() {
+        adapter.sectionBuilder = { _ in
+            let section = MockSection()
+            section.itemBuilder = { _ in MockItem() }
+            return section
+        }
+        
+        XCTAssertEqual(adapter.tableView(tableView, cellForRowAt: indexPath).reuseIdentifier, MockItem().dequeueCell(from: tableView, at: indexPath).reuseIdentifier)
+    }
+    
+    func testTableViewShouldHighlightRowAt() {
+        adapter.sectionBuilder = { _ in
+            let section = MockSection()
+            section.itemBuilder = { _ in
+                let item = MockItem()
+                item.didSelectItem = {}
+                return item
+            }
+            return section
+        }
+        
+        XCTAssertTrue(adapter.tableView(tableView, shouldHighlightRowAt: indexPath))
+    }
+    
+    func testTableViewDidSelectRowAt() {
+        let expected = expectation(description: "testDidSelectRowAt")
+        adapter.sectionBuilder = { _ in
+            let section = MockSection()
+            section.itemBuilder = { _ in
+                let item = MockItem()
+                item.didSelectItem = {
+                    expected.fulfill()
+                }
+                return item
+            }
+            return section
+        }
+        
+        adapter.tableView(tableView, didSelectRowAt: indexPath)
+        wait(for: [expected], timeout: 5)
+    }
+    
+    func testTableViewDidDeselectRowAt() {
+        let expected = expectation(description: "testDidDeselectRowAt")
+        adapter.sectionBuilder = { _ in
+            let section = MockSection()
+            section.itemBuilder = { _ in
+                let item = MockItem()
+                item.didDeselectItem = {
+                    expected.fulfill()
+                }
+                return item
+            }
+            return section
+        }
+        
+        adapter.tableView(tableView, didDeselectRowAt: indexPath)
+        wait(for: [expected], timeout: 5)
+    }
+    
+    func testTableViewHeightForRowAt() {
+        let expected = CGFloat(faker.number.randomInt())
+        
+        adapter.sectionBuilder = { _ in
+            let section = MockSection()
+            section.itemBuilder = { _ in
+                let item = MockItem()
+                item.heightForRow = expected
+                return item
+            }
+            return section
+        }
+        
+        XCTAssertEqual(expected, adapter.tableView(tableView, heightForRowAt: indexPath))
+    }
+    
+    func testTableViewTitleForHeaderInSection() {
+        let expected = faker.lorem.paragraph()
+        
+        adapter.sectionBuilder = { _ in
+            let section = MockSection()
+            section.headerString = expected
+            return section
+        }
+        
+        XCTAssertEqual(expected, adapter.tableView(tableView, titleForHeaderInSection: 0))
+    }
+    
+    func testTableViewViewForHeaderInSection() {
+        adapter.sections = 0
+        XCTAssertNil(adapter.tableView(tableView, viewForHeaderInSection: 0))
+        
+        adapter.sections = 1
+        adapter.sectionBuilder = { _ in
+            let section = MockSection()
+            section.items = 0
+            return section
+        }
+        XCTAssertNil(adapter.tableView(tableView, viewForHeaderInSection: 0))
+        
+        let view = UITableViewHeaderFooterView()
+        adapter.sectionBuilder = { _ in
+            let section = MockSection()
+            section.headerView = view
+            return section
+        }
+        XCTAssertEqual(view, adapter.tableView(tableView, viewForHeaderInSection: 0))
+    }
+    
+    func testTableViewHeightForHeaderInSection() {
+        let expected = CGFloat(faker.number.randomInt())
+        adapter.sectionBuilder = { _ in
+            let section = MockSection()
+            section.heightForHeader = expected
+            return section
+        }
+        
+        adapter.sections = 0
+        XCTAssertEqual(adapter.tableView(tableView, heightForHeaderInSection: 0), 0)
+        
+        adapter.sections = 1
+        XCTAssertEqual(adapter.tableView(tableView, heightForHeaderInSection: 0), expected)
+    }
+    
+    func testTableViewTitleForFooterInSection() {
+        let expected = faker.lorem.paragraph()
+        
+        adapter.sectionBuilder = { _ in
+            let section = MockSection()
+            section.footerString = expected
+            return section
+        }
+        
+        XCTAssertEqual(expected, adapter.tableView(tableView, titleForFooterInSection: 0))
+    }
+    
+    func testTableViewViewForFooterInSection() {
+        adapter.sections = 0
+        XCTAssertNil(adapter.tableView(tableView, viewForFooterInSection: 0))
+        
+        adapter.sections = 1
+        adapter.sectionBuilder = { _ in
+            let section = MockSection()
+            section.items = 0
+            return section
+        }
+        XCTAssertNil(adapter.tableView(tableView, viewForFooterInSection: 0))
+        
+        let view = UITableViewHeaderFooterView()
+        adapter.sectionBuilder = { _ in
+            let section = MockSection()
+            section.footerView = view
+            return section
+        }
+        XCTAssertEqual(view, adapter.tableView(tableView, viewForFooterInSection: 0))
+    }
+    
+    func testTableViewHeightForFooterInSection() {
+        let expected = CGFloat(faker.number.randomInt())
+        adapter.sectionBuilder = { _ in
+            let section = MockSection()
+            section.heightForFooter = expected
+            return section
+        }
+        
+        adapter.sections = 0
+        XCTAssertEqual(adapter.tableView(tableView, heightForFooterInSection: 0), 0)
+        
+        adapter.sections = 1
+        XCTAssertEqual(adapter.tableView(tableView, heightForFooterInSection: 0), expected)
+    }
+    
+    func testTableViewEditActionsForRowAt() {
+        adapter.sections = 0
+        XCTAssertNil(adapter.tableView(tableView, editActionsForRowAt: indexPath))
+        
+        adapter.sections = 1
+        adapter.sectionBuilder = { _ in
+            let section = MockSection()
+            section.itemBuilder = { _ in
+                let item = MockItem()
+                item.actions = [
+                    UITableViewRowAction(style: .default, title: nil, handler: { (_, _) in })
+                ]
+                return item
+            }
+            return section
+        }
+        
+        let result = adapter.tableView(tableView, editActionsForRowAt: indexPath)
+        XCTAssertNotNil(result)
+        XCTAssertFalse(result!.isEmpty)
+    }
+}
+
+// MARK: Fileprivate
+
+fileprivate class MockItem: TableViewItem, EditableTableViewItem {
+    var didSelectItem: SelectionCompletion?
+    var didDeselectItem: SelectionCompletion?
+    var heightForRow: CGFloat?
+    var actions: [UITableViewRowAction] = []
+    
+    var registrationType: RegistrationType {
+        return .clazz(UITableViewCell.self)
+    }
+    
+    func configure(cell: UITableViewCell) {
+        
+    }
+    
+    func height(_ container: Container) -> CGFloat? {
+        return heightForRow
+    }
+}
+
+fileprivate class MockSection: TableViewSection {
+    var items: Int = 1
+    var itemBuilder: ((Int) -> Item?)?
+    var heightForHeader: CGFloat?
+    var heightForFooter: CGFloat?
+    var headerString: String?
+    var footerString: String?
+    var headerView: UITableViewHeaderFooterView?
+    var footerView: UITableViewHeaderFooterView?
+    
+    var count: Int {
+        return items
+    }
+    
+    func item(for index: Int) -> Item? {
+        guard 0 <= index && index < count else { return nil }
+        return itemBuilder?(index)
+    }
+    
+    func heightForHeader(_ container: Container) -> CGFloat? {
+        return heightForHeader
+    }
+    
+    func heightForFooter(_ container: Container) -> CGFloat? {
+        return heightForFooter
+    }
+    
+    var headerTitle: String? {
+        return headerString
+    }
+    
+    var footerTitle: String? {
+        return footerString
+    }
+    
+    func dequeueHeader(for tableView: UITableView) -> UITableViewHeaderFooterView? {
+        return headerView
+    }
+    
+    func dequeueFooter(for tableView: UITableView) -> UITableViewHeaderFooterView? {
+        return footerView
+    }
+    
+    func registerHeaderFooter(for tableView: UITableView) {
+        
+    }
+}
+
+fileprivate class MockTableViewAdapter: BaseTableViewAdapter {
+    var sections: Int = 1
+    var sectionBuilder: ((Int) -> Section?)?
+    
+    override var sectionCount: Int {
+        return sections
+    }
+    
+    override func section(for index: Int) -> Section? {
+        guard 0 <= index && index < sectionCount else { return nil }
+        return sectionBuilder?(index)
+    }
+}

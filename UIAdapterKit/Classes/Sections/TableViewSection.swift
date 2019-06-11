@@ -14,6 +14,10 @@ public protocol TableViewSection: Section {
 
     func heightForHeader(_ container: Container) -> CGFloat?
     func heightForFooter(_ container: Container) -> CGFloat?
+
+    func dequeueHeader(for tableView: UITableView) -> UITableViewHeaderFooterView?
+    func dequeueFooter(for tableView: UITableView) -> UITableViewHeaderFooterView?
+    func registerHeaderFooter(for tableView: UITableView)
 }
 
 public extension TableViewSection {
