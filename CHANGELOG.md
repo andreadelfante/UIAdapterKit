@@ -1,3 +1,8 @@
+0.3.1 Release notes (2019-06-11)
+=============================================================
+### Enhancements
+* Fix crash when using DefaultTableViewItem with StaticTableViewAdapter
+
 0.3.0 Release notes (2019-06-11)
 =============================================================
 ### Enhancements
