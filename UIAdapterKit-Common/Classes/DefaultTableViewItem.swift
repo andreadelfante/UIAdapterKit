@@ -38,6 +38,10 @@ public class DefaultTableViewItem: TableViewItem {
         cell.accessoryType = accessoryType
     }
 
+    public var registrationType: RegistrationType {
+        return .clazz(UITableViewCell.self)
+    }
+
     public func registerCell(for tableView: UITableView) {
 
     }

@@ -42,4 +42,10 @@ class DefaultTableViewItemTests: XCTestCase {
         XCTAssertEqual(cell.detailTextLabel?.text, detailText)
         XCTAssertEqual(cell.accessoryType, .disclosureIndicator)
     }
+    
+    func testRegistrationType() {
+        let item = DefaultTableViewItem(text: nil)
+        
+        XCTAssertEqual(item.registrationType, .clazz(UITableViewCell.self))
+    }
 }
