@@ -1,3 +1,8 @@
+0.4.0 Release notes (2019-06-14)
+=============================================================
+### Enhancements
+* Add support for UITableView and UICollectionView menu actions
+
 0.3.1 Release notes (2019-06-11)
 =============================================================
 ### Enhancements
