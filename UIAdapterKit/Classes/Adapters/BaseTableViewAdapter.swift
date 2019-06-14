@@ -107,6 +107,18 @@ open class BaseTableViewAdapter: NSObject, Adaptable, UITableViewDelegate, UITab
     public func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         return (item(for: indexPath) as? EditableTableViewItem)?.actions
     }
+
+    public func tableView(_ tableView: UITableView, shouldShowMenuForRowAt indexPath: IndexPath) -> Bool {
+        return item(for: indexPath) is ActionPerformableTableViewItem
+    }
+
+    public func tableView(_ tableView: UITableView, canPerformAction action: Selector, forRowAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
+        return (item(for: indexPath) as? ActionPerformableTableViewItem)?.canPerform(action: action, withSender: sender) ?? false
+    }
+
+    public func tableView(_ tableView: UITableView, performAction action: Selector, forRowAt indexPath: IndexPath, withSender sender: Any?) {
+        (item(for: indexPath) as? ActionPerformableTableViewItem)?.perform(action: action, withSender: sender)
+    }
 }
 
 fileprivate extension Adaptable where Self: BaseTableViewAdapter {

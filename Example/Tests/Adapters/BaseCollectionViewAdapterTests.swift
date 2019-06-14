@@ -16,6 +16,7 @@ class BaseCollectionViewAdapterTests: XCTestCase {
     private var layout: UICollectionViewFlowLayout!
     private var indexPath: IndexPath!
     private var faker: Faker!
+    private var selector: Selector!
 
     override func setUp() {
         super.setUp()
@@ -25,6 +26,7 @@ class BaseCollectionViewAdapterTests: XCTestCase {
         collectionView = UICollectionView(frame: CGRect(x: 0, y: 0, width: 150, height: 150), collectionViewLayout: layout)
         indexPath = IndexPath(row: 0, section: 0)
         faker = Faker()
+        selector = Selector("")
     }
 
     override func tearDown() {
@@ -33,6 +35,7 @@ class BaseCollectionViewAdapterTests: XCTestCase {
         layout = nil
         indexPath = nil
         faker = nil
+        selector = nil
         
         super.tearDown()
     }
@@ -171,12 +174,64 @@ class BaseCollectionViewAdapterTests: XCTestCase {
         adapter.sections = 1
         XCTAssertEqual(expected, adapter.collectionView(collectionView, layout: layout, referenceSizeForFooterInSection: 0))
     }
+    
+    func testCollectionViewShouldShowMenuForItemAt() {
+        adapter.sectionBuilder = { _ in
+            let section = MockSection()
+            section.itemBuilder = { _ in
+                return MockItem()
+            }
+            return section
+        }
+        
+        XCTAssertEqual(adapter.collectionView(collectionView, shouldShowMenuForItemAt: indexPath), true)
+    }
+    
+    func testCollectionViewCanPerformActionForItemAtWithSender() {
+        XCTAssertFalse(adapter.collectionView(collectionView, canPerformAction: selector, forItemAt: indexPath, withSender: nil))
+        
+        adapter.sectionBuilder = { _ in
+            let section = MockSection()
+            section.itemBuilder = { _ in
+                let item = MockItem()
+                item.canPerform = { _, _ in return true }
+                return item
+            }
+            return section
+        }
+        
+        XCTAssertTrue(adapter.collectionView(collectionView, canPerformAction: selector, forItemAt: indexPath, withSender: nil))
+    }
+    
+    func testCollectionViewPerformActionForItemAtWithSender() {
+        let expected = expectation(description: "testCollectionViewPerformActionForItemAtWithSender")
+        
+        var result = false
+        adapter.sectionBuilder = { _ in
+            let section = MockSection()
+            section.itemBuilder = { _ in
+                let item = MockItem()
+                item.perform = { _, _ in
+                    result = true
+                    expected.fulfill()
+                }
+                return item
+            }
+            return section
+        }
+        
+        adapter.collectionView(collectionView, performAction: selector, forItemAt: indexPath, withSender: nil)
+        wait(for: [expected], timeout: 5)
+        XCTAssertTrue(result)
+    }
 }
 
-fileprivate class MockItem: CollectionViewItem {
+fileprivate class MockItem: CollectionViewItem, ActionPerformableCollectionViewItem {
     var didSelectItem: SelectionCompletion?
     var didDeselectItem: SelectionCompletion?
     var size: CGSize?
+    var canPerform: ((Selector, Any?) -> Bool)?
+    var perform: ((Selector, Any?) -> Void)?
     
     func configure(cell: UICollectionViewCell) {
         
@@ -188,6 +243,14 @@ fileprivate class MockItem: CollectionViewItem {
     
     func size(_ container: Container) -> CGSize? {
         return size
+    }
+    
+    func canPerform(action: Selector, withSender sender: Any?) -> Bool {
+        return canPerform!(action, sender)
+    }
+    
+    func perform(action: Selector, withSender sender: Any?) {
+        perform!(action, sender)
     }
 }
 

@@ -12,7 +12,7 @@ class UserTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
 }
 
-class UserTableViewItem: TableViewItem, RealmTableViewItem, EditableTableViewItem {
+class UserTableViewItem: TableViewItem, RealmTableViewItem, EditableTableViewItem, ActionPerformableTableViewItem {
     private var user: User
     private var actionForDelete: (() -> Void)?
     
@@ -35,5 +35,15 @@ class UserTableViewItem: TableViewItem, RealmTableViewItem, EditableTableViewIte
                 self.actionForDelete?()
             })
         ]
+    }
+    
+    func canPerform(action: Selector, withSender sender: Any?) -> Bool {
+        return action == #selector(UIResponderStandardEditActions.copy(_:))
+    }
+    
+    func perform(action: Selector, withSender sender: Any?) {
+        if action == #selector(UIResponderStandardEditActions.copy(_:)) {
+            UIPasteboard.general.string = user.text
+        }
     }
 }

@@ -90,6 +90,18 @@ open class BaseCollectionViewAdapter: NSObject, Adaptable, UICollectionViewDeleg
             ?? (collectionViewLayout as? UICollectionViewFlowLayout)?.footerReferenceSize
             ?? CGSize.zero
     }
+
+    public func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
+        return self.item(for: indexPath) is ActionPerformableCollectionViewItem
+    }
+
+    public func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
+        return (self.item(for: indexPath) as? ActionPerformableCollectionViewItem)?.canPerform(action: action, withSender: sender) ?? false
+    }
+
+    public func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
+        (self.item(for: indexPath) as? ActionPerformableCollectionViewItem)?.perform(action: action, withSender: sender)
+    }
 }
 
 fileprivate extension Adaptable where Self: BaseCollectionViewAdapter {

@@ -12,7 +12,7 @@ class UserCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
 }
 
-class UserCollectionViewItem: CollectionViewItem, RealmCollectionViewItem {
+class UserCollectionViewItem: CollectionViewItem, RealmCollectionViewItem, ActionPerformableCollectionViewItem {
     private var user: User
     
     init(user: User) {
@@ -29,5 +29,15 @@ class UserCollectionViewItem: CollectionViewItem, RealmCollectionViewItem {
     
     func size(_ container: Container) -> CGSize? {
         return CGSize(width: container.containerSize.width / 4, height: container.containerSize.height / 4)
+    }
+    
+    func canPerform(action: Selector, withSender sender: Any?) -> Bool {
+        return action == #selector(UIResponderStandardEditActions.copy(_:))
+    }
+    
+    func perform(action: Selector, withSender sender: Any?) {
+        if action == #selector(UIResponderStandardEditActions.copy(_:)) {
+            UIPasteboard.general.string = user.firstName
+        }
     }
 }

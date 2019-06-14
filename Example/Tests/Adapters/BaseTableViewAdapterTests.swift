@@ -15,6 +15,7 @@ class BaseTableViewAdapterTests: XCTestCase {
     private var tableView: UITableView!
     private var indexPath: IndexPath!
     private var faker: Faker!
+    private var selector: Selector!
     
     override func setUp() {
         super.setUp()
@@ -23,6 +24,7 @@ class BaseTableViewAdapterTests: XCTestCase {
         tableView = UITableView(frame: CGRect(x: 0, y: 0, width: 150, height: 150), style: .grouped)
         indexPath = IndexPath(row: 0, section: 0)
         faker = Faker()
+        selector = Selector("")
     }
     
     override func tearDown() {
@@ -30,6 +32,7 @@ class BaseTableViewAdapterTests: XCTestCase {
         tableView = nil
         indexPath = nil
         faker = nil
+        selector = nil
         
         super.tearDown()
     }
@@ -238,15 +241,67 @@ class BaseTableViewAdapterTests: XCTestCase {
         XCTAssertNotNil(result)
         XCTAssertFalse(result!.isEmpty)
     }
+    
+    func testTableViewShouldShowMenuForRowAt() {
+        adapter.sectionBuilder = { _ in
+            let section = MockSection()
+            section.itemBuilder = { _ in
+                return MockItem()
+            }
+            return section
+        }
+        
+        XCTAssertEqual(adapter.tableView(tableView, shouldShowMenuForRowAt: indexPath), true)
+    }
+    
+    func testTableViewCanPerformActionForRowAtWithSender() {
+        XCTAssertFalse(adapter.tableView(tableView, canPerformAction: selector, forRowAt: indexPath, withSender: nil))
+        
+        adapter.sectionBuilder = { _ in
+            let section = MockSection()
+            section.itemBuilder = { _ in
+                let item = MockItem()
+                item.canPerform = { _, _ in return true }
+                return item
+            }
+            return section
+        }
+        
+        XCTAssertTrue(adapter.tableView(tableView, canPerformAction: selector, forRowAt: indexPath, withSender: nil))
+    }
+    
+    func testTableViewPerformActionForRowAtWithSender() {
+        let expected = expectation(description: "testTableViewPerformActionForRowAtWithSender")
+        
+        var result = false
+        adapter.sectionBuilder = { _ in
+            let section = MockSection()
+            section.itemBuilder = { _ in
+                let item = MockItem()
+                item.perform = { _, _ in
+                    result = true
+                    expected.fulfill()
+                }
+                return item
+            }
+            return section
+        }
+        
+        adapter.tableView(tableView, performAction: selector, forRowAt: indexPath, withSender: nil)
+        wait(for: [expected], timeout: 5)
+        XCTAssertTrue(result)
+    }
 }
 
 // MARK: Fileprivate
 
-fileprivate class MockItem: TableViewItem, EditableTableViewItem {
+fileprivate class MockItem: TableViewItem, EditableTableViewItem, ActionPerformableTableViewItem {
     var didSelectItem: SelectionCompletion?
     var didDeselectItem: SelectionCompletion?
     var heightForRow: CGFloat?
     var actions: [UITableViewRowAction] = []
+    var canPerform: ((Selector, Any?) -> Bool)?
+    var perform: ((Selector, Any?) -> Void)?
     
     var registrationType: RegistrationType {
         return .clazz(UITableViewCell.self)
@@ -258,6 +313,14 @@ fileprivate class MockItem: TableViewItem, EditableTableViewItem {
     
     func height(_ container: Container) -> CGFloat? {
         return heightForRow
+    }
+    
+    func canPerform(action: Selector, withSender sender: Any?) -> Bool {
+        return canPerform!(action, sender)
+    }
+    
+    func perform(action: Selector, withSender sender: Any?) {
+        perform!(action, sender)
     }
 }
 
