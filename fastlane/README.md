@@ -61,6 +61,11 @@ Run tests for UIAdapterKit (Release config)
 fastlane ios deploy
 ```
 Deploy a new version
+### ios prepare_doc
+```
+fastlane ios prepare_doc
+```
+
 
 ----
 
