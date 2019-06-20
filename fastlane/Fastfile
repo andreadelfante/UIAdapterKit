@@ -104,7 +104,7 @@ platform :ios do
     end
 
     is_write_changelog = UI.confirm "Did you write the changelog for version #{version}?"
-    if is_write_changelog?
+    if !is_write_changelog
       UI.user_error!("Please write changelog for version #{version} first!")
     end
 
