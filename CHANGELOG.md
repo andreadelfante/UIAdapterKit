@@ -1,7 +1,7 @@
 0.5.0 Release notes (2019-06-21)
 =============================================================
 ### Enhancements
-* Add support for filtering a Realm results in UITableView and UICollectionView with RealmSearchableTableViewAdapter and RealmSearchableCollectionViewAdapter
+* Add support for filtering Realm results in UITableView and UICollectionView with RealmSearchableTableViewAdapter and RealmSearchableCollectionViewAdapter
 
 0.4.0 Release notes (2019-06-14)
 =============================================================
