@@ -13,6 +13,8 @@
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
+		65256FAE22BBB0BE00253E0E /* RealmSearchableCollectionViewAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65256FAD22BBB0BE00253E0E /* RealmSearchableCollectionViewAdapterTests.swift */; };
+		65256FB322BBF1F800253E0E /* PredicateFlow.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65256FB222BBF1F700253E0E /* PredicateFlow.generated.swift */; };
 		65346BB822A994360009A654 /* Fakeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6584BF0422A703C2006D6275 /* Fakeable.swift */; };
 		65346BBA22A998370009A654 /* DefaultTableViewItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65346BB922A998370009A654 /* DefaultTableViewItemTests.swift */; };
 		65346BCA22AD62570009A654 /* RealmTableViewAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65346BC822AD623A0009A654 /* RealmTableViewAdapterTests.swift */; };
@@ -25,6 +27,7 @@
 		65346BE522AEF7B00009A654 /* EditableTableViewItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65346BE422AEF7B00009A654 /* EditableTableViewItemTests.swift */; };
 		65346BEF22B0247F0009A654 /* BaseTableViewAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65346BEE22B0247F0009A654 /* BaseTableViewAdapterTests.swift */; };
 		65346BF522B062400009A654 /* BaseCollectionViewAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65346BF422B062400009A654 /* BaseCollectionViewAdapterTests.swift */; };
+		654E42E122BB5A93000373A6 /* RealmSearchableTableViewAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654E42E022BB5A93000373A6 /* RealmSearchableTableViewAdapterTests.swift */; };
 		6584BEE522A70143006D6275 /* StaticTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6584BEE422A70143006D6275 /* StaticTableViewController.swift */; };
 		6584BEE722A7017B006D6275 /* StaticCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6584BEE622A7017B006D6275 /* StaticCollectionViewController.swift */; };
 		6584BEED22A701D7006D6275 /* UserCollectionViewHeaderFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6584BEEB22A701D7006D6275 /* UserCollectionViewHeaderFooter.xib */; };
@@ -76,6 +79,8 @@
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* UIAdapterKit_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIAdapterKit_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65256FAD22BBB0BE00253E0E /* RealmSearchableCollectionViewAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmSearchableCollectionViewAdapterTests.swift; sourceTree = "<group>"; };
+		65256FB222BBF1F700253E0E /* PredicateFlow.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PredicateFlow.generated.swift; sourceTree = SOURCE_ROOT; };
 		65346BB922A998370009A654 /* DefaultTableViewItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTableViewItemTests.swift; sourceTree = "<group>"; };
 		65346BC822AD623A0009A654 /* RealmTableViewAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmTableViewAdapterTests.swift; sourceTree = "<group>"; };
 		65346BCD22AD6A250009A654 /* RealmTableViewSectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmTableViewSectionTests.swift; sourceTree = "<group>"; };
@@ -87,6 +92,7 @@
 		65346BE422AEF7B00009A654 /* EditableTableViewItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditableTableViewItemTests.swift; sourceTree = "<group>"; };
 		65346BEE22B0247F0009A654 /* BaseTableViewAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewAdapterTests.swift; sourceTree = "<group>"; };
 		65346BF422B062400009A654 /* BaseCollectionViewAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewAdapterTests.swift; sourceTree = "<group>"; };
+		654E42E022BB5A93000373A6 /* RealmSearchableTableViewAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmSearchableTableViewAdapterTests.swift; sourceTree = "<group>"; };
 		6584BEE422A70143006D6275 /* StaticTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticTableViewController.swift; sourceTree = "<group>"; };
 		6584BEE622A7017B006D6275 /* StaticCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticCollectionViewController.swift; sourceTree = "<group>"; };
 		6584BEEB22A701D7006D6275 /* UserCollectionViewHeaderFooter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserCollectionViewHeaderFooter.xib; sourceTree = "<group>"; };
@@ -254,6 +260,7 @@
 			isa = PBXGroup;
 			children = (
 				6584BF1B22A707AF006D6275 /* R.generated.swift */,
+				65256FB222BBF1F700253E0E /* PredicateFlow.generated.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -340,6 +347,8 @@
 				6584BF1022A70680006D6275 /* StaticCollectionViewAdapterTests.swift */,
 				65346BC822AD623A0009A654 /* RealmTableViewAdapterTests.swift */,
 				65346BD822AD71D40009A654 /* RealmCollectionViewAdapterTests.swift */,
+				654E42E022BB5A93000373A6 /* RealmSearchableTableViewAdapterTests.swift */,
+				65256FAD22BBB0BE00253E0E /* RealmSearchableCollectionViewAdapterTests.swift */,
 			);
 			path = Adapters;
 			sourceTree = "<group>";
@@ -415,6 +424,7 @@
 			buildPhases = (
 				E1288021F0A5ADBC13838F24 /* [CP] Check Pods Manifest.lock */,
 				6584BEE222A700F3006D6275 /* R.swift */,
+				65256FB122BBF1AD00253E0E /* PredicateFlow */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
@@ -522,6 +532,7 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-UIAdapterKit_Example/Pods-UIAdapterKit_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Fakery/Fakery.framework",
+				"${BUILT_PRODUCTS_DIR}/PredicateFlow/PredicateFlow.framework",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
@@ -530,6 +541,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Fakery.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PredicateFlow.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
@@ -561,6 +573,25 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		65256FB122BBF1AD00253E0E /* PredicateFlow */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = PredicateFlow;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$SRCROOT/PredicateFlow.generated.swift\n",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/Sourcery/bin/sourcery\" --sources \"$PODS_ROOT/PredicateFlow/PredicateFlow/Classes/Utils/\" --sources \"$SRCROOT\"  --sources \"$PODS_ROOT/RealmSwift\" --templates \"$PODS_ROOT/PredicateFlow/PredicateFlow/Templates/PredicateFlow-Realm.stencil\" --output \"$SRCROOT/PredicateFlow.generated.swift\"\n";
 		};
 		6584BEE222A700F3006D6275 /* R.swift */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -619,6 +650,7 @@
 				6584BEEE22A701D7006D6275 /* UserCollectionViewSection.swift in Sources */,
 				65346BDB22AD777E0009A654 /* RealmTableViewController.swift in Sources */,
 				65346BB822A994360009A654 /* Fakeable.swift in Sources */,
+				65256FB322BBF1F800253E0E /* PredicateFlow.generated.swift in Sources */,
 				6584BF1C22A707AF006D6275 /* R.generated.swift in Sources */,
 				6584BEE722A7017B006D6275 /* StaticCollectionViewController.swift in Sources */,
 				65346BE022ADB3F50009A654 /* RealmCollectionViewController.swift in Sources */,
@@ -630,6 +662,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65256FAE22BBB0BE00253E0E /* RealmSearchableCollectionViewAdapterTests.swift in Sources */,
 				65346BE522AEF7B00009A654 /* EditableTableViewItemTests.swift in Sources */,
 				6584BF2422A70E8B006D6275 /* BasicCollectionViewSection.swift in Sources */,
 				6584BF0E22A70639006D6275 /* StaticTableViewAdapterTests.swift in Sources */,
@@ -639,6 +672,7 @@
 				65346BD922AD71D40009A654 /* RealmCollectionViewAdapterTests.swift in Sources */,
 				6584BF1622A706C9006D6275 /* BasicTableViewItem.swift in Sources */,
 				6584BF0F22A7064D006D6275 /* Fakeable.swift in Sources */,
+				654E42E122BB5A93000373A6 /* RealmSearchableTableViewAdapterTests.swift in Sources */,
 				6584BF2E22A99217006D6275 /* ContainerTests.swift in Sources */,
 				6584BF2A22A714B7006D6275 /* SectionTests.swift in Sources */,
 				6584BF1422A706BC006D6275 /* BasicModel.swift in Sources */,

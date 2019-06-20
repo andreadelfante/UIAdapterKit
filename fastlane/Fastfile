@@ -86,26 +86,58 @@ platform :ios do
 
   desc "Deploy a new version"
   lane :deploy do
+    ensure_git_branch
+    git_pull
+
     version = read_podspec['version']
-
-    pull_master
-
-    #doc
-    #publish_doc(version: version)
+    
+    prepare_changelog(version: version)
+    prepare_doc(version: version)
     publish_podspec(version: version)
   end
 
-  private_lane :pull_master do
-    ensure_git_branch
-    git_pull
+  private_lane :prepare_changelog do |options|
+    version = options[:version]
+
+    if git_tag_exists(tag: version)
+      UI.user_error!("This version #{version} is already deployed!!")
+    end
+
+    is_write_changelog = UI.confirm "Did you write the changelog for version #{version}?"
+    if is_write_changelog?
+      UI.user_error!("Please write changelog for version #{version} first!")
+    end
+
+    git_add(path: "CHANGELOG.md")
+    git_commit(
+      path: "CHANGELOG.md",
+      message: "Update CHANGELOG.md for version #{version}"
+    )
+
+    puts "Changelog for version #{version} ready!"
+  end
+
+  private_lane :prepare_doc do |options|
+    version = options[:version]
+
+    jazzy(
+      config: ".jazzy.yaml"
+    )
+
+    git_add(path: "docs")
+    git_commit(
+      path: "docs",
+      message: "Update docs folder for version #{version}"
+    )
+
+    puts "Doc for version #{version} ready!"
   end
 
   private_lane :publish_podspec do |options|
     version = options[:version]
 
-    ensure_git_branch
     add_git_tag(tag: version)
-    push_git_tags
+    push_to_git_remote(tags: true)
     
     puts "Ready to publish a podspec with version #{version}"
 

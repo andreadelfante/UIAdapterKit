@@ -36,5 +36,12 @@ class RealmTableViewAdapterTests: BaseRealmTestCase {
     func testDeleteIndex() {
         adapter.delete(index: 0)
         XCTAssertEqual(adapter.sectionCount, 0)
+        XCTAssertEqual(adapter.itemsCount, 0)
+    }
+    
+    func testDeleteAll() {
+        adapter.deleteAll()
+        XCTAssertEqual(adapter.sectionCount, 0)
+        XCTAssertEqual(adapter.itemsCount, 0)
     }
 }

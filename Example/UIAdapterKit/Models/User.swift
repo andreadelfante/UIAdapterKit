@@ -8,8 +8,9 @@
 
 import Fakery
 import RealmSwift
+import PredicateFlow
 
-class User: Object, Fakeable {
+class User: Object, Fakeable, PredicateSchema {
     @objc dynamic private(set) var firstName: String!
     @objc dynamic private(set) var lastName: String!
     @objc dynamic private(set) var text: String!

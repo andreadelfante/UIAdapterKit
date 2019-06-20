@@ -10,21 +10,17 @@ import RealmSwift
 open class RealmTableViewAdapter: BaseTableViewAdapter {
     public private(set) var itemsCount: Int
     
-    private var sections: [Int: TableViewSection]
-    private let rowAnimation: TableViewAnimation
+    internal var sections: [Int: TableViewSection]
+    private var animation: TableViewAnimation
     
     public init(animation: TableViewAnimation = .none) {
-        sections = [:]
-        itemsCount = 0
-        rowAnimation = animation
+        self.sections = [:]
+        self.itemsCount = 0
+        self.animation = animation
     }
     
-    deinit {
-        sections.forEach {
-            ($0.value as? RealmTableViewSection)?
-                .notificationToken?
-                .invalidate()
-        }
+    open var rowAnimation: TableViewAnimation {
+        return animation
     }
     
     open override var sectionCount: Int {
@@ -51,29 +47,31 @@ open class RealmTableViewAdapter: BaseTableViewAdapter {
         sections[index] = section
         itemsCount += section.count
         
-        section.notificationToken = section.results.observe({ (change) in
+        section.notificationToken = section.results.observe({ [weak self] (change) in
+            guard let strongSelf = self else { return }
+            
             switch change {
             case .initial(_):
                 section.onInitial()
-                self.tableView?.reloadData()
+                strongSelf.tableView?.reloadData()
                 break
                 
             case .update(_, let deletions, let insertions, let modifications):
-                self.itemsCount -= deletions.count
-                self.itemsCount += insertions.count
+                strongSelf.itemsCount -= deletions.count
+                strongSelf.itemsCount += insertions.count
                 section.onUpdate()
                 
-                switch self.rowAnimation {
+                switch strongSelf.rowAnimation {
                 case .none:
-                    self.tableView?.reloadData()
+                    strongSelf.tableView?.reloadData()
                 case .section(let animation):
-                    self.tableView?.reloadSections([index], with: animation)
+                    strongSelf.tableView?.reloadSections([index], with: animation)
                 case .row(let animation):
-                    self.tableView?.beginUpdates()
-                    self.tableView?.deleteRows(at: deletions.map { IndexPath(row: $0, section: index) }, with: animation)
-                    self.tableView?.insertRows(at: insertions.map { IndexPath(row: $0, section: index) }, with: animation)
-                    self.tableView?.reloadRows(at: modifications.map { IndexPath(row: $0, section: index) }, with: animation)
-                    self.tableView?.endUpdates()
+                    strongSelf.tableView?.beginUpdates()
+                    strongSelf.tableView?.deleteRows(at: deletions.map { IndexPath(row: $0, section: index) }, with: animation)
+                    strongSelf.tableView?.insertRows(at: insertions.map { IndexPath(row: $0, section: index) }, with: animation)
+                    strongSelf.tableView?.reloadRows(at: modifications.map { IndexPath(row: $0, section: index) }, with: animation)
+                    strongSelf.tableView?.endUpdates()
                 }
                 break
                 
@@ -87,7 +85,7 @@ open class RealmTableViewAdapter: BaseTableViewAdapter {
     }
     
     public func delete(index: Int) {
-        if let section = sections.removeValue(forKey: index) as? RealmTableViewSection {
+        if let section = sections.removeValue(forKey: index) {
             itemsCount -= section.count
             
             switch self.rowAnimation {
@@ -96,8 +94,10 @@ open class RealmTableViewAdapter: BaseTableViewAdapter {
             case .row(let animation), .section(let animation):
                 tableView?.deleteSections([index], with: animation)
             }
-            
-            section.notificationToken?.invalidate()
         }
+    }
+    
+    public func deleteAll() {
+        sections.keys.forEach { self.delete(index: $0) }
     }
 }

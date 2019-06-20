@@ -9,19 +9,45 @@
 import UIKit
 import UIAdapterKit
 import RealmSwift
+import PredicateFlow
+
+class RealmUserCollectionViewSection: RealmCollectionViewSection<User>, RealmFilterableSection {
+    init(realm: Realm) {
+        super.init(results: realm.objects(User.self).sorted(UserSchema.lastName.ascending()),
+                   itemBuilder: { UserCollectionViewItem(user: $0) })
+    }
+    
+    required init(instance: RealmCollectionViewSection<User>) {
+        super.init(instance: instance)
+    }
+    
+    func filter(with payload: Any) -> NSPredicate? {
+        if let string = payload as? String {
+            return PredicateBuilder(UserSchema.firstName.contains(string))
+                .or(UserSchema.lastName.contains(string))
+                .or(UserSchema.text.contains(string))
+                .build()
+        }
+        return nil
+    }
+}
 
 class RealmCollectionViewController: UICollectionViewController {
     private var realm: Realm!
-    private var adapter: RealmCollectionViewAdapter!
+    private var adapter: RealmSearchableCollectionViewAdapter!
+    
+    @IBOutlet weak var searchBar: UISearchBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         realm = try! Realm(configuration: Realm.Configuration(inMemoryIdentifier: NSStringFromClass(RealmCollectionViewController.self)))
         
-        adapter = RealmCollectionViewAdapter(animation: .row)
-            .map(section: RealmCollectionViewSection(results: realm.objects(User.self).sorted(byKeyPath: "lastName"),
-                                                     itemBuilder: { UserCollectionViewItem(user: $0) }))
+        searchBar.delegate = self
+        collectionView?.addSubview(searchBar)
+        
+        adapter = RealmSearchableCollectionViewAdapter(animation: .row)
+            .map(section: RealmUserCollectionViewSection(realm: realm))
         adapter.collectionView = collectionView
     }
     
@@ -45,5 +71,19 @@ class RealmCollectionViewController: UICollectionViewController {
         }
         
         super.viewDidDisappear(animated)
+    }
+}
+
+extension RealmCollectionViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        adapter.filterPayload = searchText.isEmpty ? nil : searchText
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
     }
 }

@@ -7,7 +7,7 @@
 
 import RealmSwift
 
-open class RealmTableViewSection<T: Object>: TableViewSection {
+open class RealmTableViewSection<T: Object>: NSObject, TableViewSection, Copyable {
     internal var results: Results<T>
     internal var notificationToken: NotificationToken?
     public let itemBuilder: (T) -> RealmTableViewItem
@@ -23,6 +23,21 @@ open class RealmTableViewSection<T: Object>: TableViewSection {
         self.footerTitle = footerTitle
         self.results = results
         self.itemBuilder = itemBuilder
+    }
+    
+    public required init(instance: RealmTableViewSection<T>) {
+        results = instance.results
+        itemBuilder = instance.itemBuilder
+        headerTitle = instance.headerTitle
+        footerTitle = instance.footerTitle
+    }
+    
+    deinit {
+        notificationToken?.invalidate()
+    }
+    
+    open override func copy() -> Any {
+        return type(of: self).init(instance: self)
     }
     
     open func onInitial() {}
@@ -54,5 +69,14 @@ open class RealmTableViewSection<T: Object>: TableViewSection {
     
     open func configure(footer: UITableViewHeaderFooterView) {
         
+    }
+}
+
+extension RealmTableViewSection: RealmFilterableBridging {
+    func performFilter(with payload: Any) {
+        guard let filterable = self as? RealmFilterableSection else { return }
+        guard let predicate = filterable.filter(with: payload) else { return }
+
+        results = results.filter(predicate)
     }
 }

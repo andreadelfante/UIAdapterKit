@@ -163,8 +163,16 @@
                             <outlet property="delegate" destination="ieJ-FM-Phn" id="VvT-QS-bSZ"/>
                         </connections>
                     </collectionView>
+                    <connections>
+                        <outlet property="searchBar" destination="ecn-wF-MPU" id="pOS-zY-d6q"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wbc-Wg-CsD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchBar contentMode="redraw" id="ecn-wF-MPU">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
             </objects>
             <point key="canvasLocation" x="1566" y="-35"/>
         </scene>
@@ -199,8 +207,16 @@
                             <outlet property="delegate" destination="CjS-iG-4E9" id="AsQ-md-47f"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="searchBar" destination="Fo1-wt-KSG" id="MkZ-j4-3oV"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kWb-af-DeN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchBar contentMode="redraw" id="Fo1-wt-KSG">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
             </objects>
             <point key="canvasLocation" x="1567" y="-705"/>
         </scene>

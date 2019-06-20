@@ -10,21 +10,17 @@ import RealmSwift
 open class RealmCollectionViewAdapter: BaseCollectionViewAdapter {
     public private(set) var itemsCount: Int
     
-    private var sections: [Int: CollectionViewSection]
-    private let itemAnimation: CollectionViewAnimation
+    internal var sections: [Int: CollectionViewSection]
+    private var animation: CollectionViewAnimation
     
     public init(animation: CollectionViewAnimation = .none) {
-        sections = [:]
-        itemsCount = 0
-        itemAnimation = animation
+        self.sections = [:]
+        self.itemsCount = 0
+        self.animation = animation
     }
     
-    deinit {
-        sections.forEach {
-            ($0.value as? RealmCollectionViewSection)?
-                .notificationToken?
-                .invalidate()
-        }
+    open var itemAnimation: CollectionViewAnimation {
+        return animation
     }
     
     open override var sectionCount: Int {
@@ -51,28 +47,30 @@ open class RealmCollectionViewAdapter: BaseCollectionViewAdapter {
         sections[index] = section
         itemsCount += section.count
         
-        section.notificationToken = section.results.observe({ (change) in
+        section.notificationToken = section.results.observe({ [weak self] (change) in
+            guard let strongSelf = self else { return }
+            
             switch change {
             case .initial(_):
                 section.onInitial()
-                self.collectionView?.reloadData()
+                strongSelf.collectionView?.reloadData()
                 break
                 
             case .update(_, let deletions, let insertions, let modifications):
-                self.itemsCount -= deletions.count
-                self.itemsCount += insertions.count
+                strongSelf.itemsCount -= deletions.count
+                strongSelf.itemsCount += insertions.count
                 section.onUpdate()
                 
-                switch self.itemAnimation {
+                switch strongSelf.itemAnimation {
                 case .none:
-                    self.collectionView?.reloadData()
+                    strongSelf.collectionView?.reloadData()
                 case .section:
-                    self.collectionView?.reloadSections([index])
+                    strongSelf.collectionView?.reloadSections([index])
                 case .row:
-                    self.collectionView?.performBatchUpdates({
-                        self.collectionView?.deleteItems(at: deletions.map { IndexPath(row: $0, section: index) })
-                        self.collectionView?.insertItems(at: insertions.map { IndexPath(row: $0, section: index) })
-                        self.collectionView?.reloadItems(at: modifications.map { IndexPath(row: $0, section: index) })
+                    strongSelf.collectionView?.performBatchUpdates({
+                        strongSelf.collectionView?.deleteItems(at: deletions.map { IndexPath(row: $0, section: index) })
+                        strongSelf.collectionView?.insertItems(at: insertions.map { IndexPath(row: $0, section: index) })
+                        strongSelf.collectionView?.reloadItems(at: modifications.map { IndexPath(row: $0, section: index) })
                     })
                 }
                 break
@@ -86,7 +84,7 @@ open class RealmCollectionViewAdapter: BaseCollectionViewAdapter {
     }
     
     public func delete(index: Int) {
-        if let section = sections.removeValue(forKey: index) as? RealmCollectionViewSection {
+        if let section = sections.removeValue(forKey: index) {
             itemsCount -= section.count
             
             switch itemAnimation {
@@ -95,8 +93,10 @@ open class RealmCollectionViewAdapter: BaseCollectionViewAdapter {
             case .section, .row:
                 collectionView?.deleteSections([index])
             }
-            
-            section.notificationToken?.invalidate()
         }
+    }
+    
+    public func deleteAll() {
+        sections.keys.forEach { self.delete(index: $0) }
     }
 }

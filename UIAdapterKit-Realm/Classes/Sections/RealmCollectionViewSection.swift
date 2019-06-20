@@ -7,7 +7,7 @@
 
 import RealmSwift
 
-open class RealmCollectionViewSection<T: Object>: CollectionViewSection {
+open class RealmCollectionViewSection<T: Object>: NSObject, CollectionViewSection, Copyable {
     internal var results: Results<T>
     internal var notificationToken: NotificationToken?
     public let itemBuilder: (T) -> RealmCollectionViewItem
@@ -15,6 +15,19 @@ open class RealmCollectionViewSection<T: Object>: CollectionViewSection {
     public init(results: Results<T>, itemBuilder: @escaping (T) -> RealmCollectionViewItem) {
         self.results = results
         self.itemBuilder = itemBuilder
+    }
+    
+    public required init(instance: RealmCollectionViewSection<T>) {
+        results = instance.results
+        itemBuilder = instance.itemBuilder
+    }
+    
+    deinit {
+        notificationToken?.invalidate()
+    }
+    
+    open override func copy() -> Any {
+        return type(of: self).init(instance: self)
     }
     
     open func onInitial() {}
@@ -62,5 +75,14 @@ open class RealmCollectionViewSection<T: Object>: CollectionViewSection {
     
     open func minimumInteritemSpacing(_ container: Container) -> CGFloat? {
         return nil
+    }
+}
+
+extension RealmCollectionViewSection: RealmFilterableBridging {
+    func performFilter(with payload: Any) {
+        guard let filterable = self as? RealmFilterableSection else { return }
+        guard let predicate = filterable.filter(with: payload) else { return }
+        
+        results = results.filter(predicate)
     }
 }
