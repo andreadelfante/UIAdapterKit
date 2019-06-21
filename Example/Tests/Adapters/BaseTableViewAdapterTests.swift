@@ -291,6 +291,21 @@ class BaseTableViewAdapterTests: XCTestCase {
         wait(for: [expected], timeout: 5)
         XCTAssertTrue(result)
     }
+    
+    func testIndentationLevel() {
+        let number = faker.number.randomInt()
+        adapter.sectionBuilder = { _ in
+            let section = MockSection()
+            section.itemBuilder = { _ in
+                let item = MockItem()
+                item.indentationLevel = number
+                return item
+            }
+            return section
+        }
+        
+        XCTAssertEqual(adapter.tableView(tableView, indentationLevelForRowAt: indexPath), number)
+    }
 }
 
 // MARK: Fileprivate
@@ -302,6 +317,7 @@ fileprivate class MockItem: TableViewItem, EditableTableViewItem, ActionPerforma
     var actions: [UITableViewRowAction] = []
     var canPerform: ((Selector, Any?) -> Bool)?
     var perform: ((Selector, Any?) -> Void)?
+    var indentationLevel: Int = 1
     
     var registrationType: RegistrationType {
         return .clazz(UITableViewCell.self)

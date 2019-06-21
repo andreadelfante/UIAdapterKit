@@ -30,15 +30,15 @@ open class BaseTableViewAdapter: NSObject, Adaptable, UITableViewDelegate, UITab
 
     // MARK: UITableViewDelegate, UITableViewDataSource
 
-    public func numberOfSections(in tableView: UITableView) -> Int {
+    open func numberOfSections(in tableView: UITableView) -> Int {
         return sectionCount
     }
 
-    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    open func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.section(for: section)?.count ?? 0
     }
 
-    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    open func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item = self.item(for: indexPath)!
         let cell = item.dequeueCell(from: tableView, at: indexPath)
 
@@ -46,29 +46,29 @@ open class BaseTableViewAdapter: NSObject, Adaptable, UITableViewDelegate, UITab
         return cell
     }
 
-    public func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
+    open func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
         return self.item(for: indexPath)?.didSelectItem != nil
     }
 
-    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    open func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.item(for: indexPath)?.didSelectItem?()
     }
 
-    public func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+    open func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         self.item(for: indexPath)?.didDeselectItem?()
     }
 
-    public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    open func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return self.item(for: indexPath)?.height(tableView) ?? UITableView.automaticDimension
     }
 
-    public func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    open func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         guard let section = tableViewSection(for: section) else { return nil }
         guard !section.isEmpty else { return nil }
         return section.headerTitle
     }
 
-    public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    open func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         guard let section = tableViewSection(for: section) else { return nil }
         guard !section.isEmpty else { return nil }
         guard let header = section.dequeueHeader(for: tableView) else { return nil }
@@ -77,19 +77,19 @@ open class BaseTableViewAdapter: NSObject, Adaptable, UITableViewDelegate, UITab
         return header
     }
 
-    public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    open func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         guard let section = tableViewSection(for: section) else { return 0 }
         guard !section.isEmpty else { return 0 }
         return section.heightForHeader(tableView) ?? UITableView.automaticDimension
     }
 
-    public func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+    open func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
         guard let section = tableViewSection(for: section) else { return nil }
         guard !section.isEmpty else { return nil }
         return section.footerTitle
     }
 
-    public func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+    open func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         guard let section = tableViewSection(for: section) else { return nil }
         guard !section.isEmpty else { return nil }
         guard let footer = section.dequeueFooter(for: tableView) else { return nil }
@@ -98,26 +98,30 @@ open class BaseTableViewAdapter: NSObject, Adaptable, UITableViewDelegate, UITab
         return footer
     }
 
-    public func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+    open func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         guard let section = tableViewSection(for: section) else { return 0 }
         guard !section.isEmpty else { return 0 }
         return section.heightForFooter(tableView) ?? UITableView.automaticDimension
     }
 
-    public func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+    open func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         return (item(for: indexPath) as? EditableTableViewItem)?.actions
     }
 
-    public func tableView(_ tableView: UITableView, shouldShowMenuForRowAt indexPath: IndexPath) -> Bool {
+    open func tableView(_ tableView: UITableView, shouldShowMenuForRowAt indexPath: IndexPath) -> Bool {
         return item(for: indexPath) is ActionPerformableTableViewItem
     }
 
-    public func tableView(_ tableView: UITableView, canPerformAction action: Selector, forRowAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
+    open func tableView(_ tableView: UITableView, canPerformAction action: Selector, forRowAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
         return (item(for: indexPath) as? ActionPerformableTableViewItem)?.canPerform(action: action, withSender: sender) ?? false
     }
 
-    public func tableView(_ tableView: UITableView, performAction action: Selector, forRowAt indexPath: IndexPath, withSender sender: Any?) {
+    open func tableView(_ tableView: UITableView, performAction action: Selector, forRowAt indexPath: IndexPath, withSender sender: Any?) {
         (item(for: indexPath) as? ActionPerformableTableViewItem)?.perform(action: action, withSender: sender)
+    }
+
+    open func tableView(_ tableView: UITableView, indentationLevelForRowAt indexPath: IndexPath) -> Int {
+        return item(for: indexPath)?.indentationLevel ?? 1
     }
 }
 

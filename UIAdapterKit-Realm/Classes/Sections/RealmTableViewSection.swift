@@ -8,7 +8,7 @@
 import RealmSwift
 
 open class RealmTableViewSection<T: Object>: NSObject, TableViewSection, Copyable {
-    internal var results: Results<T>
+    public internal(set) var results: Results<T>
     internal var notificationToken: NotificationToken?
     public let itemBuilder: (T) -> RealmTableViewItem
     

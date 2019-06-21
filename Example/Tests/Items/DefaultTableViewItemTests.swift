@@ -48,4 +48,10 @@ class DefaultTableViewItemTests: XCTestCase {
         
         XCTAssertEqual(item.registrationType, .clazz(UITableViewCell.self))
     }
+    
+    func testIndentationLevel() {
+        let item = DefaultTableViewItem(text: nil)
+        
+        XCTAssertEqual(item.indentationLevel, 1)
+    }
 }
