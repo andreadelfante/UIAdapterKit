@@ -1,3 +1,10 @@
+0.6.0 Release notes (2019-06-21)
+=============================================================
+### Enhancements
+* Add support for indentationLevel in UITableView items
+* Results in RealmTableViewSection now are read-only outside this library
+* Now adapter functions are open
+
 0.5.0 Release notes (2019-06-21)
 =============================================================
 ### Enhancements
