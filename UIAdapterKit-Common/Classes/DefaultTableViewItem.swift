@@ -5,7 +5,7 @@
 //  Created by Andrea Del Fante on 06/06/2019.
 //
 
-public class DefaultTableViewItem: TableViewItem {
+open class DefaultTableViewItem: TableViewItem {
 
     public let style: UITableViewCell.CellStyle
     public let image: UIImage?
