@@ -1,3 +1,8 @@
+0.6.1 Release notes (2019-06-24)
+=============================================================
+### Enhancements
+* Fix missing open adapter functions (prev. public)
+
 0.6.0 Release notes (2019-06-21)
 =============================================================
 ### Enhancements
