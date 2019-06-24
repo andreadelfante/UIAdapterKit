@@ -2,6 +2,7 @@
 =============================================================
 ### Enhancements
 * Change headerTitle and footerTitle to open in RealmTableViewSection
+* Change DefaultTableViewItem visibility to open
 
 0.6.1 Release notes (2019-06-24)
 =============================================================
