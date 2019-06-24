@@ -1,3 +1,8 @@
+0.6.2 Release notes (2019-06-24)
+=============================================================
+### Enhancements
+* Change headerTitle and footerTitle to open in RealmTableViewSection
+
 0.6.1 Release notes (2019-06-24)
 =============================================================
 ### Enhancements
