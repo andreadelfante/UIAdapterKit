@@ -41,7 +41,7 @@ open class RealmCollectionViewAdapter: BaseCollectionViewAdapter {
     }
     
     @discardableResult
-    public func map<T: Object>(index: Int, for section: RealmCollectionViewSection<T>) -> Self {
+    open func map<T: Object>(index: Int, for section: RealmCollectionViewSection<T>) -> Self {
         delete(index: index)
         
         sections[index] = section
@@ -83,7 +83,7 @@ open class RealmCollectionViewAdapter: BaseCollectionViewAdapter {
         return self
     }
     
-    public func delete(index: Int) {
+    open func delete(index: Int) {
         if let section = sections.removeValue(forKey: index) {
             itemsCount -= section.count
             
@@ -96,7 +96,7 @@ open class RealmCollectionViewAdapter: BaseCollectionViewAdapter {
         }
     }
     
-    public func deleteAll() {
+    open func deleteAll() {
         sections.keys.forEach { self.delete(index: $0) }
     }
 }

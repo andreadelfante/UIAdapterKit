@@ -52,7 +52,7 @@ open class RealmSearchableTableViewAdapter: RealmTableViewAdapter {
         return isSeeking ? .none : super.rowAnimation
     }
     
-    open override var hasItems: Bool {
+    public override var hasItems: Bool {
         return isSeeking ? filteredItemsCount > 0 : super.hasItems
     }
     
@@ -67,7 +67,7 @@ open class RealmSearchableTableViewAdapter: RealmTableViewAdapter {
     }
     
     @discardableResult
-    public override func map<T>(index: Int, for section: RealmTableViewSection<T>) -> Self where T : Object {
+    open override func map<T>(index: Int, for section: RealmTableViewSection<T>) -> Self where T : Object {
         if !(section is RealmFilterableSection) {
             print("[WARNING] The section at index \(index) doesn't implement \(RealmFilterableSection.self). It will be ignored during filtering.")
         }
