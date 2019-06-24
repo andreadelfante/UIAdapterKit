@@ -1,3 +1,14 @@
+0.6.3 Release notes (2019-06-24)
+=============================================================
+### Enhancements
+* Fix missing **heightForHeader** and **heightForFooter** in RealmTableViewSection #
+* Add support for **headerHeight** and **footerHeight** constants in RealmTableViewSection
+* Add support for **headerSize**, **footerSize**, **minimumLineSpacing** and **minimumInteritemSpacing** constants in RealmCollectionViewSection
+* Add check on action in EditableTableViewItem #13
+
+### Breaking changes
+* Now **headerTitle** and **footerTitle** in RealmTableViewSection are public (prev. open)
+
 0.6.2 Release notes (2019-06-24)
 =============================================================
 ### Enhancements
