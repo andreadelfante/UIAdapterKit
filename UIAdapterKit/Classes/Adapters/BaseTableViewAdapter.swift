@@ -78,8 +78,8 @@ open class BaseTableViewAdapter: NSObject, Adaptable, UITableViewDelegate, UITab
     }
 
     open func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        guard let section = tableViewSection(for: section) else { return 0 }
-        guard !section.isEmpty else { return 0 }
+        guard let section = tableViewSection(for: section) else { return 0.1 }
+        guard !section.isEmpty else { return 0.1 }
         return section.heightForHeader(tableView) ?? UITableView.automaticDimension
     }
 
@@ -99,8 +99,8 @@ open class BaseTableViewAdapter: NSObject, Adaptable, UITableViewDelegate, UITab
     }
 
     open func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        guard let section = tableViewSection(for: section) else { return 0 }
-        guard !section.isEmpty else { return 0 }
+        guard let section = tableViewSection(for: section) else { return 0.1 }
+        guard !section.isEmpty else { return 0.1 }
         return section.heightForFooter(tableView) ?? UITableView.automaticDimension
     }
 

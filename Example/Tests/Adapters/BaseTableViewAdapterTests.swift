@@ -166,10 +166,12 @@ class BaseTableViewAdapterTests: XCTestCase {
         }
         
         adapter.sections = 0
-        XCTAssertEqual(adapter.tableView(tableView, heightForHeaderInSection: 0), 0)
+        var result = adapter.tableView(tableView, heightForHeaderInSection: 0)
+        XCTAssert(0 <= result && result <= 0.1)
         
         adapter.sections = 1
-        XCTAssertEqual(adapter.tableView(tableView, heightForHeaderInSection: 0), expected)
+        result = adapter.tableView(tableView, heightForHeaderInSection: 0)
+        XCTAssertEqual(result, expected)
     }
     
     func testTableViewTitleForFooterInSection() {
@@ -214,10 +216,12 @@ class BaseTableViewAdapterTests: XCTestCase {
         }
         
         adapter.sections = 0
-        XCTAssertEqual(adapter.tableView(tableView, heightForFooterInSection: 0), 0)
+        var result = adapter.tableView(tableView, heightForFooterInSection: 0)
+        XCTAssert(0 <= result && result <= 0.1)
         
         adapter.sections = 1
-        XCTAssertEqual(adapter.tableView(tableView, heightForFooterInSection: 0), expected)
+        result = adapter.tableView(tableView, heightForFooterInSection: 0)
+        XCTAssertEqual(result, expected)
     }
     
     func testTableViewEditActionsForRowAt() {

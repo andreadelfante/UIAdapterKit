@@ -12,8 +12,8 @@ open class RealmTableViewSection<T: Object>: NSObject, TableViewSection, Copyabl
     internal var notificationToken: NotificationToken?
     public let itemBuilder: (T) -> RealmTableViewItem
     
-    open var headerTitle: String?
-    open var footerTitle: String?
+    public var headerTitle: String?
+    public var footerTitle: String?
     
     public init(headerTitle: String? = nil,
                 footerTitle: String? = nil,
