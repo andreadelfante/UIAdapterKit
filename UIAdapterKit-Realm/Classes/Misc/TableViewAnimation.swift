@@ -9,7 +9,7 @@ public enum TableViewAnimation: Equatable {
     case none
     case section(_ animation: UITableView.RowAnimation)
     case row(_ animation: UITableView.RowAnimation)
-    
+
     public static func ==(lhs: TableViewAnimation, rhs: TableViewAnimation) -> Bool {
         switch (lhs, rhs) {
         case (.none, .none):

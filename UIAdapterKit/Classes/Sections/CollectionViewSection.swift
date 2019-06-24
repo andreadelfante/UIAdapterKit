@@ -12,11 +12,11 @@ public protocol CollectionViewSection: Section {
     func sizeForHeader(_ container: Container) -> CGSize?
     func sizeForFooter(_ container: Container) -> CGSize?
 
-    func dequeueSupplementaryView(for collectionView: UICollectionView, kind: String, indexPath: IndexPath) -> UICollectionReusableView?
-    func registerSupplementaryView(for collectionView: UICollectionView)
-
     func minimumInteritemSpacing(_ container: Container) -> CGFloat?
     func minimumLineSpacing(_ container: Container) -> CGFloat?
+
+    func dequeueSupplementaryView(for collectionView: UICollectionView, kind: String, indexPath: IndexPath) -> UICollectionReusableView?
+    func registerSupplementaryView(for collectionView: UICollectionView)
 }
 
 public extension CollectionViewSection {

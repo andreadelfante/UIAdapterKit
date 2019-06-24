@@ -21,6 +21,8 @@ class RealmTableViewSectionTests: BaseRealmTestCase {
         faker = Faker()
         section = RealmTableViewSection(headerTitle: faker.lorem.word(),
                                         footerTitle: faker.lorem.word(),
+                                        headerHeight: 0.5,
+                                        footerHeight: 0.7,
                                         results: realm.objects(BasicModel.self),
                                         itemBuilder: { BasicTableViewItem($0) })
     }
@@ -48,5 +50,19 @@ class RealmTableViewSectionTests: BaseRealmTestCase {
     
     func testNibForFooter() {
         XCTAssertNil(section.nibForFooter)
+    }
+    
+    func testHeaderHeight() {
+        let height = section.heightForHeader(UITableView())
+        
+        XCTAssertNotNil(height)
+        XCTAssert(0.5 <= height! && height! <= 0.51)
+    }
+    
+    func testFooterHeight() {
+        let height = section.heightForFooter(UITableView())
+        
+        XCTAssertNotNil(height)
+        XCTAssert(0.7 <= height! && height! <= 0.71)
     }
 }

@@ -9,7 +9,7 @@ public enum CollectionViewAnimation: Equatable {
     case none
     case section
     case row
-    
+
     public static func ==(lhs: CollectionViewAnimation, rhs: CollectionViewAnimation) -> Bool {
         switch (lhs, rhs) {
         case (.none, .none):

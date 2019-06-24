@@ -15,11 +15,21 @@ class RealmCollectionViewSectionTests: BaseRealmTestCase {
     private var section: RealmCollectionViewSection<BasicModel>!
     private var container: MockContainer!
     
+    private let headerSize = CGSize(width: 0.5, height: 0.5)
+    private let footerSize = CGSize(width: 0.7, height: 0.7)
+    private let minimumLineSpacing = CGFloat(0.2)
+    private let minimumInteritemSpacing = CGFloat(0.3)
+    
     override func setUp() {
         super.setUp()
         
         container = MockContainer(x: 0, y: 0, width: 0, height: 0)
-        section = RealmCollectionViewSection(results: realm.objects(BasicModel.self), itemBuilder: { BasicCollectionViewItem($0) })
+        section = RealmCollectionViewSection(headerSize: headerSize,
+                                             footerSize: footerSize,
+                                             minimumLineSpacing: minimumLineSpacing,
+                                             minimumInteritemSpacing: minimumInteritemSpacing,
+                                             results: realm.objects(BasicModel.self),
+                                             itemBuilder: { BasicCollectionViewItem($0) })
     }
     
     func testCount() {
@@ -36,7 +46,7 @@ class RealmCollectionViewSectionTests: BaseRealmTestCase {
     }
     
     func testSizeForHeader() {
-        XCTAssertNil(section.sizeForHeader(container))
+        XCTAssertEqual(section.sizeForHeader(container), headerSize)
     }
     
     func testNibForFooter() {
@@ -44,14 +54,14 @@ class RealmCollectionViewSectionTests: BaseRealmTestCase {
     }
     
     func testSizeForFooter() {
-        XCTAssertNil(section.sizeForFooter(container))
+        XCTAssertEqual(section.sizeForFooter(container), footerSize)
     }
     
     func testMinimumLineSpacing() {
-        XCTAssertNil(section.minimumLineSpacing(container))
+        XCTAssertEqual(section.minimumLineSpacing(container), minimumLineSpacing)
     }
     
     func testMinimumInteritemSpacing() {
-        XCTAssertNil(section.minimumInteritemSpacing(container))
+        XCTAssertEqual(section.minimumInteritemSpacing(container), minimumInteritemSpacing)
     }
 }

@@ -4,6 +4,7 @@ disabled_rules:
 included:
   - UIAdapterKit
   - UIAdapterKit-Common
+  - UIAdapterKit-Realm
 
 excluded:
   - Example/Pods
