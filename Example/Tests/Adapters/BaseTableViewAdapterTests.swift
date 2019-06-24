@@ -224,6 +224,36 @@ class BaseTableViewAdapterTests: XCTestCase {
         XCTAssertEqual(result, expected)
     }
     
+    func testTableViewCanEditRowAt() {
+        adapter.sections = 0
+        XCTAssertFalse(adapter.tableView(tableView, canEditRowAt: indexPath))
+        
+        adapter.sections = 1
+        adapter.sectionBuilder = { _ in
+            let section = MockSection()
+            section.itemBuilder = { _ in
+                let item = MockItem()
+                item.actions = []
+                return item
+            }
+            return section
+        }
+        XCTAssertFalse(adapter.tableView(tableView, canEditRowAt: indexPath))
+        
+        adapter.sectionBuilder = { _ in
+            let section = MockSection()
+            section.itemBuilder = { _ in
+                let item = MockItem()
+                item.actions = [
+                    UITableViewRowAction(style: .default, title: nil, handler: { (_, _) in })
+                ]
+                return item
+            }
+            return section
+        }
+        XCTAssertTrue(adapter.tableView(tableView, canEditRowAt: indexPath))
+    }
+    
     func testTableViewEditActionsForRowAt() {
         adapter.sections = 0
         XCTAssertNil(adapter.tableView(tableView, editActionsForRowAt: indexPath))

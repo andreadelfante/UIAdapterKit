@@ -104,8 +104,16 @@ open class BaseTableViewAdapter: NSObject, Adaptable, UITableViewDelegate, UITab
         return section.heightForFooter(tableView) ?? UITableView.automaticDimension
     }
 
+    public func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        guard let item = item(for: indexPath) as? EditableTableViewItem else { return false }
+        guard !item.actions.isEmpty else { return false }
+        return true
+    }
+
     open func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        return (item(for: indexPath) as? EditableTableViewItem)?.actions
+        guard let item = item(for: indexPath) as? EditableTableViewItem else { return nil }
+        guard !item.actions.isEmpty else { return nil }
+        return item.actions
     }
 
     open func tableView(_ tableView: UITableView, shouldShowMenuForRowAt indexPath: IndexPath) -> Bool {
