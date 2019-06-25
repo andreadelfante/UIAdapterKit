@@ -1,3 +1,8 @@
+0.7.2 Release notes (2019-06-25)
+=============================================================
+### Enhancements
+* Add support for **estimatedHeightForRow** in BaseTableViewAdapter
+
 0.7.1 Release notes (2019-06-25)
 =============================================================
 ### Enhancements
