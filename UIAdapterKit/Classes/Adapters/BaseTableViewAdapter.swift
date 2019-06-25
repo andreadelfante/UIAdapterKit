@@ -62,6 +62,10 @@ open class BaseTableViewAdapter: NSObject, Adaptable, UITableViewDelegate, UITab
         return self.item(for: indexPath)?.height(tableView) ?? UITableView.automaticDimension
     }
 
+	open func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+		return self.tableView(tableView, heightForRowAt: indexPath)
+	}
+
     open func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         guard let section = tableViewSection(for: section) else { return nil }
         guard !section.isEmpty else { return nil }

@@ -123,6 +123,23 @@ class BaseTableViewAdapterTests: XCTestCase {
         
         XCTAssertEqual(expected, adapter.tableView(tableView, heightForRowAt: indexPath))
     }
+	
+	func testTableViewEstimatedHeightForRowAt() {
+		let expected = CGFloat(faker.number.randomInt())
+		
+		adapter.sectionBuilder = { _ in
+			let section = MockSection()
+			section.itemBuilder = { _ in
+				let item = MockItem()
+				item.heightForRow = expected
+				return item
+			}
+			return section
+		}
+		
+		let result = adapter.tableView(tableView, estimatedHeightForRowAt: indexPath)
+		XCTAssertTrue((expected - 0.05) <= result && result <= (expected + 0.05))
+	}
     
     func testTableViewTitleForHeaderInSection() {
         let expected = faker.lorem.paragraph()
