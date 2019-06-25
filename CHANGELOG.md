@@ -1,3 +1,8 @@
+0.7.1 Release notes (2019-06-25)
+=============================================================
+### Enhancements
+* Add more checks in canEditRow (BaseTableViewAdapter)
+
 0.7.0 Release notes (2019-06-25)
 =============================================================
 ### Enhancements
