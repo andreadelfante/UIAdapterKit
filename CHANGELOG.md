@@ -1,3 +1,11 @@
+0.7.0 Release notes (2019-06-25)
+=============================================================
+### Enhancements
+* Add support for editingStyle (.delete, .insert) in BaseTableViewAdapter (with protocol EditableTableViewItem)
+
+### Breaking changes
+* The old EditableTableViewItem is now **SwipeableTableViewItem**
+
 0.6.3 Release notes (2019-06-24)
 =============================================================
 ### Enhancements
