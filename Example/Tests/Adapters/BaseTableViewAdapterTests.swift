@@ -354,6 +354,7 @@ class BaseTableViewAdapterTests: XCTestCase {
 			}
 			return section
 		}
+		
 		XCTAssertEqual(adapter.tableView(tableView, editingStyleForRowAt: indexPath), style)
 	}
 	
@@ -368,7 +369,7 @@ class BaseTableViewAdapterTests: XCTestCase {
 				section.itemBuilder = { _ in
 					let item = MockItem()
 					item.editingStyle = .delete
-					item.editingAction = {
+					item.editingStyleAction = {
 						result = true
 					}
 					return item
@@ -393,7 +394,7 @@ fileprivate class MockItem: TableViewItem, SwipeableTableViewItem, ActionPerform
     var perform: ((Selector, Any?) -> Void)?
     var indentationLevel: Int = 1
 	var editingStyle: UITableViewCell.EditingStyle = .none
-	var editingAction: () -> Void = {}
+	var editingStyleAction: () -> Void = {}
     
     var registrationType: RegistrationType {
         return .clazz(UITableViewCell.self)
@@ -414,6 +415,10 @@ fileprivate class MockItem: TableViewItem, SwipeableTableViewItem, ActionPerform
     func perform(action: Selector, withSender sender: Any?) {
         perform!(action, sender)
     }
+	
+	func editingAction() {
+		self.editingStyleAction()
+	}
 }
 
 fileprivate class MockSection: TableViewSection {

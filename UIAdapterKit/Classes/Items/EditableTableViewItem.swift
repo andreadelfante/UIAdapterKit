@@ -9,5 +9,5 @@ import UIKit
 
 public protocol EditableTableViewItem: TableViewItem {
 	var editingStyle: UITableViewCell.EditingStyle { get }
-	var editingAction: () -> Void { get }
+	func editingAction()
 }

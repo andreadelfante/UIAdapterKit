@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name                    = 'UIAdapterKit'
-  s.version                 = '0.7.0'
+  s.version                 = '0.7.1'
   s.summary                 = 'A set of declarative adapters.'
 
   s.description             = <<-DESC

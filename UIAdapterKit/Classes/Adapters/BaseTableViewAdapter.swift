@@ -104,6 +104,16 @@ open class BaseTableViewAdapter: NSObject, Adaptable, UITableViewDelegate, UITab
         return section.heightForFooter(tableView) ?? UITableView.automaticDimension
     }
 
+	open func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+		let item = self.item(for: indexPath)
+		guard item is SwipeableTableViewItem || item is EditableTableViewItem else { return false }
+
+		if let swipeable = item as? SwipeableTableViewItem {
+			return !swipeable.actions.isEmpty
+		}
+		return true
+	}
+
 	open func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
 		return (self.item(for: indexPath) as? EditableTableViewItem)?.editingStyle ?? .none
 	}
@@ -113,12 +123,6 @@ open class BaseTableViewAdapter: NSObject, Adaptable, UITableViewDelegate, UITab
 			item.editingAction()
 		}
 	}
-
-    open func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        guard let item = item(for: indexPath) as? SwipeableTableViewItem else { return false }
-        guard !item.actions.isEmpty else { return false }
-        return true
-    }
 
     open func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         guard let item = item(for: indexPath) as? SwipeableTableViewItem else { return nil }
