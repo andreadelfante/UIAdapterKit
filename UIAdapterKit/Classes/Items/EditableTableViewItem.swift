@@ -2,9 +2,12 @@
 //  EditableTableViewItem.swift
 //  UIAdapterKit
 //
-//  Created by Andrea Del Fante on 10/06/2019.
+//  Created by Andrea on 25/06/2019.
 //
 
+import UIKit
+
 public protocol EditableTableViewItem: TableViewItem {
-    var actions: [UITableViewRowAction] { get }
+	var editingStyle: UITableViewCell.EditingStyle { get }
+	var editingAction: () -> Void { get }
 }

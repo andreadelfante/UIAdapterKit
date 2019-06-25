@@ -13,7 +13,7 @@ let baseActions = [
     UITableViewRowAction(style: .default, title: "Default", handler: { (_, _) in })
 ]
 
-fileprivate class MockItem: DefaultTableViewItem, EditableTableViewItem {
+fileprivate class MockItem: DefaultTableViewItem, SwipeableTableViewItem {
     var actions: [UITableViewRowAction] {
         return baseActions
     }

@@ -12,7 +12,7 @@ class UserTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
 }
 
-class UserTableViewItem: TableViewItem, RealmTableViewItem, EditableTableViewItem, ActionPerformableTableViewItem {
+class UserTableViewItem: TableViewItem, RealmTableViewItem, SwipeableTableViewItem, ActionPerformableTableViewItem {
     private var user: User
     private var actionForDelete: (() -> Void)?
     

@@ -326,7 +326,7 @@ class BaseTableViewAdapterTests: XCTestCase {
         XCTAssertTrue(result)
     }
     
-    func testIndentationLevel() {
+    func testTableViewIndentationLevelForRowAt() {
         let number = faker.number.randomInt()
         adapter.sectionBuilder = { _ in
             let section = MockSection()
@@ -340,11 +340,51 @@ class BaseTableViewAdapterTests: XCTestCase {
         
         XCTAssertEqual(adapter.tableView(tableView, indentationLevelForRowAt: indexPath), number)
     }
+	
+	func testTableViewEditingStyleForRowAt() {
+		XCTAssertEqual(adapter.tableView(tableView, editingStyleForRowAt: indexPath), .none)
+		
+		let style: UITableViewCell.EditingStyle = [.delete, .insert].randomElement()!
+		adapter.sectionBuilder = { _ in
+			let section = MockSection()
+			section.itemBuilder = { _ in
+				let item = MockItem()
+				item.editingStyle = style
+				return item
+			}
+			return section
+		}
+		XCTAssertEqual(adapter.tableView(tableView, editingStyleForRowAt: indexPath), style)
+	}
+	
+	func testTableViewCommitEditingStyleForRowAt() {
+		[
+			(UITableViewCell.EditingStyle.delete, true),
+			(UITableViewCell.EditingStyle.insert, false)
+		].forEach { (expected) in
+			var result = false
+			adapter.sectionBuilder = { _ in
+				let section = MockSection()
+				section.itemBuilder = { _ in
+					let item = MockItem()
+					item.editingStyle = .delete
+					item.editingAction = {
+						result = true
+					}
+					return item
+				}
+				return section
+			}
+			
+			adapter.tableView(tableView, commit: expected.0, forRowAt: indexPath)
+			XCTAssertEqual(expected.1, result)
+		}
+	}
 }
 
 // MARK: Fileprivate
 
-fileprivate class MockItem: TableViewItem, EditableTableViewItem, ActionPerformableTableViewItem {
+fileprivate class MockItem: TableViewItem, SwipeableTableViewItem, ActionPerformableTableViewItem, EditableTableViewItem {
     var didSelectItem: SelectionCompletion?
     var didDeselectItem: SelectionCompletion?
     var heightForRow: CGFloat?
@@ -352,6 +392,8 @@ fileprivate class MockItem: TableViewItem, EditableTableViewItem, ActionPerforma
     var canPerform: ((Selector, Any?) -> Bool)?
     var perform: ((Selector, Any?) -> Void)?
     var indentationLevel: Int = 1
+	var editingStyle: UITableViewCell.EditingStyle = .none
+	var editingAction: () -> Void = {}
     
     var registrationType: RegistrationType {
         return .clazz(UITableViewCell.self)
