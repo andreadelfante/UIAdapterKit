@@ -1,3 +1,10 @@
+0.8.0 Release notes (2019-06-26)
+=============================================================
+### Enhancements
+* Add support for **didEndDisplayingItem** in BaseTableViewAdapter and BaseCollectionViewAdapter
+* * Add support for **didEndDisplayingHeader** in BaseTableViewAdapter and BaseCollectionViewAdapter
+* * Add support for **didEndDisplayingFooter** in BaseTableViewAdapter and BaseCollectionViewAdapter
+
 0.7.2 Release notes (2019-06-25)
 =============================================================
 ### Enhancements
