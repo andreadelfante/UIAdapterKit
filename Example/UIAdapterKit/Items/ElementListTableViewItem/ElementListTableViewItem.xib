@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="74" id="fcb-br-9Vp" customClass="ElementListTableViewCell" customModule="UIAdapterKit_Example" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="74"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fcb-br-9Vp" id="Ybm-ij-0vO">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="73.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="elo-c8-V0e">
+                        <rect key="frame" x="20" y="11" width="374" height="23.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="9KI-ww-0lM"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="AV8-r1-F5V">
+                        <rect key="frame" x="20" y="38.5" width="374" height="24"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="Lae-vr-eKH"/>
+                        </constraints>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="iIS-Nx-6fe">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="AV8-r1-F5V" secondAttribute="bottom" constant="11" id="7ar-qP-Lwg"/>
+                    <constraint firstItem="elo-c8-V0e" firstAttribute="leading" secondItem="Ybm-ij-0vO" secondAttribute="leadingMargin" id="9Q0-Bv-j73"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="elo-c8-V0e" secondAttribute="trailing" id="PEK-SB-J9D"/>
+                    <constraint firstItem="AV8-r1-F5V" firstAttribute="top" secondItem="elo-c8-V0e" secondAttribute="bottom" constant="4" id="V5x-S7-iad"/>
+                    <constraint firstItem="AV8-r1-F5V" firstAttribute="trailing" secondItem="Ybm-ij-0vO" secondAttribute="trailingMargin" id="VhU-rQ-6C1"/>
+                    <constraint firstItem="elo-c8-V0e" firstAttribute="top" secondItem="Ybm-ij-0vO" secondAttribute="top" constant="11" id="fAT-fG-SN4"/>
+                    <constraint firstItem="AV8-r1-F5V" firstAttribute="leading" secondItem="Ybm-ij-0vO" secondAttribute="leadingMargin" id="ss8-bb-26k"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="collectionView" destination="AV8-r1-F5V" id="Eu2-18-81N"/>
+                <outlet property="titleLabel" destination="elo-c8-V0e" id="v9q-Nk-DTw"/>
+            </connections>
+            <point key="canvasLocation" x="-10.144927536231885" y="79.6875"/>
+        </tableViewCell>
+    </objects>
+</document>

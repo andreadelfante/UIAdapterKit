@@ -64,6 +64,10 @@ open class BaseCollectionViewAdapter: NSObject, Adaptable, UICollectionViewDeleg
             ?? CGSize.zero
     }
 
+    open func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        self.item(for: indexPath)?.didEndDisplayingItem()
+    }
+
     open func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         guard let section = self.collectionViewSection(for: indexPath.section) else { return UICollectionReusableView() }
         guard let supplementary = section.dequeueSupplementaryView(for: collectionView, kind: kind, indexPath: indexPath) else { return UICollectionReusableView() }
@@ -89,6 +93,18 @@ open class BaseCollectionViewAdapter: NSObject, Adaptable, UICollectionViewDeleg
         return self.collectionViewSection(for: section)?.sizeForFooter(collectionView)
             ?? (collectionViewLayout as? UICollectionViewFlowLayout)?.footerReferenceSize
             ?? CGSize.zero
+    }
+
+    open func collectionView(_ collectionView: UICollectionView, didEndDisplayingSupplementaryView view: UICollectionReusableView, forElementOfKind elementKind: String, at indexPath: IndexPath) {
+        let section = collectionViewSection(for: indexPath.section)
+
+        if elementKind == UICollectionView.elementKindSectionHeader {
+            section?.didEndDisplayingHeader()
+        }
+
+        if elementKind == UICollectionView.elementKindSectionFooter {
+            section?.didEndDisplayingFooter()
+        }
     }
 
     open func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {

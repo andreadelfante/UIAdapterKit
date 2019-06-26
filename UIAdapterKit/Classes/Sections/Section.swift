@@ -16,6 +16,9 @@ public protocol Section: Identifiable {
 
     var nibForFooter: UINib? { get }
     var reuseIdentifierForFooter: String { get }
+
+    func didEndDisplayingHeader()
+    func didEndDisplayingFooter()
 }
 
 public extension Section {
@@ -28,4 +31,8 @@ public extension Section {
     var nibForFooter: UINib? { return nil }
 
     var reuseIdentifierForFooter: String { return "\(identifier(self)).Footer" }
+
+    func didEndDisplayingHeader() {}
+
+    func didEndDisplayingFooter() {}
 }

@@ -54,4 +54,10 @@ class DefaultTableViewItemTests: XCTestCase {
         
         XCTAssertEqual(item.indentationLevel, 1)
     }
+    
+    func testDidEndDisplayingItem() {
+        let item = DefaultTableViewItem(text: nil)
+        
+        item.didEndDisplayingItem()
+    }
 }

@@ -66,6 +66,10 @@ open class BaseTableViewAdapter: NSObject, Adaptable, UITableViewDelegate, UITab
 		return self.tableView(tableView, heightForRowAt: indexPath)
 	}
 
+    open func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        self.item(for: indexPath)?.didEndDisplayingItem()
+    }
+
     open func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         guard let section = tableViewSection(for: section) else { return nil }
         guard !section.isEmpty else { return nil }
@@ -87,6 +91,10 @@ open class BaseTableViewAdapter: NSObject, Adaptable, UITableViewDelegate, UITab
         return section.heightForHeader(tableView) ?? UITableView.automaticDimension
     }
 
+    open func tableView(_ tableView: UITableView, didEndDisplayingHeaderView view: UIView, forSection section: Int) {
+        tableViewSection(for: section)?.didEndDisplayingHeader()
+    }
+
     open func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
         guard let section = tableViewSection(for: section) else { return nil }
         guard !section.isEmpty else { return nil }
@@ -106,6 +114,10 @@ open class BaseTableViewAdapter: NSObject, Adaptable, UITableViewDelegate, UITab
         guard let section = tableViewSection(for: section) else { return 0.1 }
         guard !section.isEmpty else { return 0.1 }
         return section.heightForFooter(tableView) ?? UITableView.automaticDimension
+    }
+
+    open func tableView(_ tableView: UITableView, didEndDisplayingFooterView view: UIView, forSection section: Int) {
+        tableViewSection(for: section)?.didEndDisplayingFooter()
     }
 
 	open func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

@@ -398,6 +398,52 @@ class BaseTableViewAdapterTests: XCTestCase {
 			XCTAssertEqual(expected.1, result)
 		}
 	}
+    
+    func testDidEndDisplayingHeader() {
+        var result = false
+        adapter.sectionBuilder = { _ in
+            let section = MockSection()
+            section.endDisplayingHeader = {
+                result = true
+            }
+            return section
+        }
+        
+        adapter.tableView(tableView, didEndDisplayingHeaderView: UIView(), forSection: 0)
+        XCTAssertTrue(result)
+    }
+    
+    func testDidEndDisplayingItem() {
+        var result = false
+        adapter.sectionBuilder = { _ in
+            let section = MockSection()
+            section.itemBuilder = { _ in
+                let item = MockItem()
+                item.endDisplayingItem = {
+                    result = true
+                }
+                return item
+            }
+            return section
+        }
+        
+        adapter.tableView(tableView, didEndDisplaying: UITableViewCell(), forRowAt: indexPath)
+        XCTAssertTrue(result)
+    }
+    
+    func testDidEndDisplayingFooter() {
+        var result = false
+        adapter.sectionBuilder = { _ in
+            let section = MockSection()
+            section.endDisplayingFooter = {
+                result = true
+            }
+            return section
+        }
+        
+        adapter.tableView(tableView, didEndDisplayingFooterView: UIView(), forSection: 0)
+        XCTAssertTrue(result)
+    }
 }
 
 // MARK: Fileprivate
@@ -412,6 +458,7 @@ fileprivate class MockItem: TableViewItem, SwipeableTableViewItem, ActionPerform
     var indentationLevel: Int = 1
 	var editingStyle: UITableViewCell.EditingStyle = .none
 	var editingStyleAction: () -> Void = {}
+    var endDisplayingItem: () -> Void = {}
     
     var registrationType: RegistrationType {
         return .clazz(UITableViewCell.self)
@@ -436,6 +483,10 @@ fileprivate class MockItem: TableViewItem, SwipeableTableViewItem, ActionPerform
 	func editingAction() {
 		self.editingStyleAction()
 	}
+    
+    func didEndDisplayingItem() {
+        self.endDisplayingItem()
+    }
 }
 
 fileprivate class MockSection: TableViewSection {
@@ -447,6 +498,8 @@ fileprivate class MockSection: TableViewSection {
     var footerString: String?
     var headerView: UITableViewHeaderFooterView?
     var footerView: UITableViewHeaderFooterView?
+    var endDisplayingHeader: () -> Void = {}
+    var endDisplayingFooter: () -> Void = {}
     
     var count: Int {
         return items
@@ -483,6 +536,14 @@ fileprivate class MockSection: TableViewSection {
     
     func registerHeaderFooter(for tableView: UITableView) {
         
+    }
+    
+    func didEndDisplayingHeader() {
+        endDisplayingHeader()
+    }
+    
+    func didEndDisplayingFooter() {
+        endDisplayingFooter()
     }
 }
 

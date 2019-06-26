@@ -26,6 +26,8 @@ public protocol Item: Identifiable {
 
     var didSelectItem: SelectionCompletion? { get }
     var didDeselectItem: SelectionCompletion? { get }
+
+    func didEndDisplayingItem()
 }
 
 public extension Item {
@@ -38,4 +40,6 @@ public extension Item {
     var didSelectItem: SelectionCompletion? { return nil }
 
     var didDeselectItem: SelectionCompletion? { return nil }
+
+    func didEndDisplayingItem() {}
 }

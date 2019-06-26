@@ -72,6 +72,10 @@ open class RealmTableViewSection<T: Object>: NSObject, TableViewSection, Copyabl
 
     }
 
+    open func didEndDisplayingHeader() {
+
+    }
+
     open func heightForHeader(_ container: Container) -> CGFloat? {
         return headerHeight
     }
@@ -81,6 +85,10 @@ open class RealmTableViewSection<T: Object>: NSObject, TableViewSection, Copyabl
     }
 
     open func configure(footer: UITableViewHeaderFooterView) {
+
+    }
+
+    open func didEndDisplayingFooter() {
 
     }
 

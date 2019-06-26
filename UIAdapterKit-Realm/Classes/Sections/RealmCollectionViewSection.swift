@@ -71,6 +71,10 @@ open class RealmCollectionViewSection<T: Object>: NSObject, CollectionViewSectio
 
     }
 
+    open func didEndDisplayingHeader() {
+
+    }
+
     open func sizeForHeader(_ container: Container) -> CGSize? {
         return headerSize
     }
@@ -80,6 +84,10 @@ open class RealmCollectionViewSection<T: Object>: NSObject, CollectionViewSectio
     }
 
     open func configure(footer: UICollectionReusableView) {
+
+    }
+
+    open func didEndDisplayingFooter() {
 
     }
 

@@ -139,8 +139,8 @@ class BaseCollectionViewAdapterTests: XCTestCase {
             return section
         }
         
-        XCTAssertEqual(expected, adapter.collectionView(collectionView, viewForSupplementaryElementOfKind: UICollectionElementKindSectionHeader, at: indexPath))
-        XCTAssertEqual(expected, adapter.collectionView(collectionView, viewForSupplementaryElementOfKind: UICollectionElementKindSectionFooter, at: indexPath))
+        XCTAssertEqual(expected, adapter.collectionView(collectionView, viewForSupplementaryElementOfKind: UICollectionView.elementKindSectionHeader, at: indexPath))
+        XCTAssertEqual(expected, adapter.collectionView(collectionView, viewForSupplementaryElementOfKind: UICollectionView.elementKindSectionFooter, at: indexPath))
     }
     
     func testCollectionViewLayoutReferenceSizeForHeaderInSection() {
@@ -224,6 +224,52 @@ class BaseCollectionViewAdapterTests: XCTestCase {
         wait(for: [expected], timeout: 5)
         XCTAssertTrue(result)
     }
+    
+    func testDidEndDisplayingHeader() {
+        var result = false
+        adapter.sectionBuilder = { _ in
+            let section = MockSection()
+            section.endDisplayingHeader = {
+                result = true
+            }
+            return section
+        }
+        
+        adapter.collectionView(collectionView, didEndDisplayingSupplementaryView: UICollectionReusableView(), forElementOfKind: UICollectionView.elementKindSectionHeader, at: indexPath)
+        XCTAssertTrue(result)
+    }
+    
+    func testDidEndDisplayingItem() {
+        var result = false
+        adapter.sectionBuilder = { _ in
+            let section = MockSection()
+            section.itemBuilder = { _ in
+                let item = MockItem()
+                item.endDisplayingItem = {
+                    result = true
+                }
+                return item
+            }
+            return section
+        }
+        
+        adapter.collectionView(collectionView, didEndDisplaying: UICollectionViewCell(), forItemAt: indexPath)
+        XCTAssertTrue(result)
+    }
+    
+    func testDidEndDisplayingFooter() {
+        var result = false
+        adapter.sectionBuilder = { _ in
+            let section = MockSection()
+            section.endDisplayingFooter = {
+                result = true
+            }
+            return section
+        }
+        
+        adapter.collectionView(collectionView, didEndDisplayingSupplementaryView: UICollectionReusableView(), forElementOfKind: UICollectionView.elementKindSectionFooter, at: indexPath)
+        XCTAssertTrue(result)
+    }
 }
 
 fileprivate class MockItem: CollectionViewItem, ActionPerformableCollectionViewItem {
@@ -232,6 +278,7 @@ fileprivate class MockItem: CollectionViewItem, ActionPerformableCollectionViewI
     var size: CGSize?
     var canPerform: ((Selector, Any?) -> Bool)?
     var perform: ((Selector, Any?) -> Void)?
+    var endDisplayingItem: () -> Void = {}
     
     func configure(cell: UICollectionViewCell) {
         
@@ -252,6 +299,10 @@ fileprivate class MockItem: CollectionViewItem, ActionPerformableCollectionViewI
     func perform(action: Selector, withSender sender: Any?) {
         perform!(action, sender)
     }
+    
+    func didEndDisplayingItem() {
+        self.endDisplayingItem()
+    }
 }
 
 fileprivate class MockSection: CollectionViewSection {
@@ -260,6 +311,8 @@ fileprivate class MockSection: CollectionViewSection {
     var sizeForHeader: CGSize?
     var sizeForFooter: CGSize?
     var headerFooterView: UICollectionReusableView?
+    var endDisplayingHeader: () -> Void = {}
+    var endDisplayingFooter: () -> Void = {}
     
     var count: Int {
         return items
@@ -284,6 +337,14 @@ fileprivate class MockSection: CollectionViewSection {
     
     func registerSupplementaryView(for collectionView: UICollectionView) {
         
+    }
+    
+    func didEndDisplayingHeader() {
+        endDisplayingHeader()
+    }
+    
+    func didEndDisplayingFooter() {
+        endDisplayingFooter()
     }
 }
 

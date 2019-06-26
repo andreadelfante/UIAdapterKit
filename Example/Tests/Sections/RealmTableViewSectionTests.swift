@@ -65,4 +65,12 @@ class RealmTableViewSectionTests: BaseRealmTestCase {
         XCTAssertNotNil(height)
         XCTAssert(0.7 <= height! && height! <= 0.71)
     }
+    
+    func testDidEndDisplayingHeader() {
+        section.didEndDisplayingHeader()
+    }
+    
+    func testDidEndDisplayingFooter() {
+        section.didEndDisplayingFooter()
+    }
 }

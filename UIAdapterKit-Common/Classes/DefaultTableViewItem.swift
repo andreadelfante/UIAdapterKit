@@ -31,11 +31,15 @@ open class DefaultTableViewItem: TableViewItem {
         self.didDeselectItem = didDeselectItem
     }
 
-    public func configure(cell: UITableViewCell) {
+    open func configure(cell: UITableViewCell) {
         cell.imageView?.image = image
         cell.textLabel?.text = text
         cell.detailTextLabel?.text = detailText
         cell.accessoryType = accessoryType
+    }
+
+    open func didEndDisplayingItem() {
+
     }
 
     public var registrationType: RegistrationType {

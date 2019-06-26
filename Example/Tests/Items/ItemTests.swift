@@ -26,4 +26,8 @@ class ItemTests: XCTestCase {
     func testRegistrationType() {
         XCTAssertEqual(item.registrationType, .nib(UINib(nibName: item.reuseIdentifier, bundle: nil)))
     }
+    
+    func testDidEndDisplayingItem() {
+        item.didEndDisplayingItem()
+    }
 }

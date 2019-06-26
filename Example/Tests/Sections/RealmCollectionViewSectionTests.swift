@@ -64,4 +64,12 @@ class RealmCollectionViewSectionTests: BaseRealmTestCase {
     func testMinimumInteritemSpacing() {
         XCTAssertEqual(section.minimumInteritemSpacing(container), minimumInteritemSpacing)
     }
+    
+    func testDidEndDisplayingHeader() {
+        section.didEndDisplayingHeader()
+    }
+    
+    func testDidEndDisplayingFooter() {
+        section.didEndDisplayingFooter()
+    }
 }

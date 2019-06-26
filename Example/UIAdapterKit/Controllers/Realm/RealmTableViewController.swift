@@ -39,6 +39,17 @@ class RealmUserTableViewSection: RealmTableViewSection<User>, RealmFilterableSec
     }
 }
 
+class RealmElementListTableViewSection: RealmTableViewSection<ElementList> {
+    init(realm: Realm) {
+        super.init(results: realm.objects(ElementList.self).sorted(ElementListSchema.title.ascending()),
+                   itemBuilder: { ElementListTableViewItem(elementList: $0) })
+    }
+    
+    required init(instance: RealmTableViewSection<ElementList>) {
+        super.init(instance: instance)
+    }
+}
+
 class RealmTableViewController: UITableViewController {
     private var realm: Realm!
     private var adapter: RealmSearchableTableViewAdapter!
@@ -52,9 +63,11 @@ class RealmTableViewController: UITableViewController {
         
         searchBar.delegate = self
         tableView.tableHeaderView = searchBar
+        tableView.isEditing = true
         
         adapter = RealmSearchableTableViewAdapter(animation: .row(.automatic))
             .map(section: RealmUserTableViewSection(realm: realm))
+            .map(section: RealmElementListTableViewSection(realm: realm))
         adapter.tableView = tableView
     }
     
@@ -67,7 +80,7 @@ class RealmTableViewController: UITableViewController {
         
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3) {
             try! self.realm.write {
-                self.realm.add(User.fake(50))
+                self.realm.add(ElementList.fake(50))
             }
         }
     }

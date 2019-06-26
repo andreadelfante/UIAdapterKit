@@ -7,28 +7,45 @@
 //
 
 import XCTest
+import Fakery
 @testable import UIAdapterKit
 
-let baseActions = [
-    UITableViewRowAction(style: .default, title: "Default", handler: { (_, _) in })
-]
-
-fileprivate class MockItem: DefaultTableViewItem, SwipeableTableViewItem {
-    var actions: [UITableViewRowAction] {
-        return baseActions
+fileprivate class MockItem: DefaultTableViewItem, EditableTableViewItem {
+    let editingStyle: UITableViewCell.EditingStyle
+    let action: () -> Void
+    
+    init(editingStyle: UITableViewCell.EditingStyle, action: @escaping () -> Void) {
+        self.editingStyle = editingStyle
+        self.action = action
+        
+        super.init(text: nil)
+    }
+    
+    func editingAction() {
+        action()
     }
 }
 
 class EditableTableViewItemTests: XCTestCase {
     private var item: MockItem!
+    private var actionResult: Bool!
     
     override func setUp() {
         super.setUp()
         
-        item = MockItem(text: nil)
+        actionResult = false
+        item = MockItem(editingStyle: .delete, action: {
+            self.actionResult = true
+        })
     }
     
-    func testActions() {
-        XCTAssertEqual(item.actions, baseActions)
+    func testEditingStyle() {
+        XCTAssertEqual(item.editingStyle, .delete)
+    }
+    
+    func testEditingAction() {
+        item.editingAction()
+        
+        XCTAssertTrue(actionResult)
     }
 }
