@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name                    = 'UIAdapterKit'
-  s.version                 = '0.8.0'
+  s.version                 = '0.9.0'
   s.summary                 = 'A set of declarative adapters.'
 
   s.description             = <<-DESC
@@ -22,7 +22,7 @@ A set of adapters useful to define UITableView and UICollectionView in a declara
 
   s.default_subspec         = 'Basic'
   
-  s.swift_version           = '5.0'
+  s.swift_version           = '5.1'
   s.ios.deployment_target   = '8.0'
   
   s.subspec 'Basic' do |basic|

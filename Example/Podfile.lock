@@ -1,42 +1,42 @@
 PODS:
-  - Fakery (4.0.0)
-  - PredicateFlow (1.2.2):
-    - PredicateFlow/Basic (= 1.2.2)
-    - Sourcery (~> 0.16.0)
-  - PredicateFlow/Basic (1.2.2):
-    - Sourcery (~> 0.16.0)
-  - PredicateFlow/Realm (1.2.2):
+  - Fakery (4.1.1)
+  - PredicateFlow (1.3):
+    - PredicateFlow/Basic (= 1.3)
+    - Sourcery (~> 0.17.0)
+  - PredicateFlow/Basic (1.3):
+    - Sourcery (~> 0.17.0)
+  - PredicateFlow/Realm (1.3):
     - RealmSwift
-    - Sourcery (~> 0.16.0)
-  - R.swift (5.0.3):
-    - R.swift.Library (~> 5.0.0)
-  - R.swift.Library (5.0.1)
-  - Realm (3.16.2):
-    - Realm/Headers (= 3.16.2)
-  - Realm/Headers (3.16.2)
-  - RealmSwift (3.16.2):
-    - Realm (= 3.16.2)
-  - Sourcery (0.16.1)
-  - SwiftLint (0.33.0)
-  - UIAdapterKit (0.8.0):
-    - UIAdapterKit/Basic (= 0.8.0)
-  - UIAdapterKit/Basic (0.8.0)
-  - UIAdapterKit/Common (0.8.0)
-  - UIAdapterKit/Realm (0.8.0):
+    - Sourcery (~> 0.17.0)
+  - R.swift (5.1.0):
+    - R.swift.Library (~> 5.1.0)
+  - R.swift.Library (5.1.0)
+  - Realm (4.1.1):
+    - Realm/Headers (= 4.1.1)
+  - Realm/Headers (4.1.1)
+  - RealmSwift (4.1.1):
+    - Realm (= 4.1.1)
+  - Sourcery (0.17.0)
+  - SwiftLint (0.37.0)
+  - UIAdapterKit (0.9.0):
+    - UIAdapterKit/Basic (= 0.9.0)
+  - UIAdapterKit/Basic (0.9.0)
+  - UIAdapterKit/Common (0.9.0)
+  - UIAdapterKit/Realm (0.9.0):
     - RealmSwift
 
 DEPENDENCIES:
   - Fakery
   - PredicateFlow
   - PredicateFlow/Realm
-  - R.swift (~> 5.0.3)
+  - R.swift
   - SwiftLint
   - UIAdapterKit (from `../`)
   - UIAdapterKit/Common (from `../`)
   - UIAdapterKit/Realm (from `../`)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - Fakery
     - PredicateFlow
     - R.swift
@@ -51,16 +51,16 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Fakery: 476f6d947de432f84703acc830a1e7166330299b
-  PredicateFlow: 815318177d4201d520b830f54ec0b9e9d6b1b413
-  R.swift: f5a87643b91ea569d23d6afb3eee9c743edde239
-  R.swift.Library: cfe85d569d9bae6cb262922db130e7c3a7a5fad1
-  Realm: 0e73b4edeb5b6a90da3d83206883b2e34e00eb38
-  RealmSwift: a81e650171ef0a5f999df1ed8d39ba8d6fce88a4
-  Sourcery: 16779170d35ee204666843b09031f36721a84bcc
-  SwiftLint: fed9c66336e41fc74dc48a73678380718f0c8b0e
-  UIAdapterKit: a07f6761dda9ceb95c1dd02712940db37f6102f4
+  Fakery: d3380c4aa1efe7631c0831d7e26aa9db4491f014
+  PredicateFlow: 76b1bff5b00eeed3f493a5b5366cb01ac417278e
+  R.swift: 8cbc4fc69b740305b6a17c8a8ed968eb788962d9
+  R.swift.Library: fa85ce1e0d0b7e818cd9e080df910ba54d2776cc
+  Realm: 25f0a8244cbb1c2271c922963ea8666fc2d8104d
+  RealmSwift: 9e2657b33764f80e4a4dffd6d440e24715782052
+  Sourcery: 3ed61be7c8a1218fce349266139379dba477efe0
+  SwiftLint: c078a14d7d7ade75e5507795d185e3da41d844d2
+  UIAdapterKit: 36442c40a9482d383796e2a4c2de27d68db92598
 
-PODFILE CHECKSUM: a633c1f4f26b0d6730f8737af221156669926183
+PODFILE CHECKSUM: dfb609fe46473d7183e0acd0cc7e197c47905188
 
-COCOAPODS: 1.7.2
+COCOAPODS: 1.8.4

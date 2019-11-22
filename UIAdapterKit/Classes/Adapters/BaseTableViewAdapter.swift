@@ -163,12 +163,12 @@ open class BaseTableViewAdapter: NSObject, Adaptable, UITableViewDelegate, UITab
     }
 }
 
-fileprivate extension Adaptable where Self: BaseTableViewAdapter {
-    func tableViewSection(for index: Int) -> TableViewSection? {
+extension Adaptable where Self: BaseTableViewAdapter {
+    public func tableViewSection(for index: Int) -> TableViewSection? {
         return section(for: index) as? TableViewSection
     }
 
-    func item(for indexPath: IndexPath) -> TableViewItem? {
+    public func item(for indexPath: IndexPath) -> TableViewItem? {
         return section(for: indexPath.section)?
             .item(for: indexPath.row) as? TableViewItem
     }

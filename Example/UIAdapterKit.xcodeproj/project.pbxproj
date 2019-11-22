@@ -481,7 +481,6 @@
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "UIAdapterKit_Tests" */;
 			buildPhases = (
 				65073672CA26A186457CC954 /* [CP] Check Pods Manifest.lock */,
-				65256FBA22BC2C1A00253E0E /* PredicateFlow */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
@@ -615,25 +614,6 @@
 			showEnvVarsInLog = 0;
 		};
 		65256FB122BBF1AD00253E0E /* PredicateFlow */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = PredicateFlow;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				$SRCROOT/PredicateFlow.generated.swift,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"$PODS_ROOT/Sourcery/bin/sourcery\" --sources \"$PODS_ROOT/PredicateFlow/PredicateFlow/Classes/Utils/\" --sources \"$SRCROOT\"  --sources \"$PODS_ROOT/RealmSwift\" --templates \"$PODS_ROOT/PredicateFlow/PredicateFlow/Templates/PredicateFlow-Realm.stencil\" --output \"$SRCROOT/PredicateFlow.generated.swift\"  --disableCache\n";
-		};
-		65256FBA22BC2C1A00253E0E /* PredicateFlow */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (

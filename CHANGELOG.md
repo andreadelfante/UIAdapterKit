@@ -1,3 +1,10 @@
+0.9.0 Release notes (2019-11-22)
+=============================================================
+### Enhancements
+* Add support for Swift 5.1
+* `tableViewSection(for:)` and `item(for:)` are now public in BaseTableViewAdapter
+* `collectionViewSection(for:)` and `item(for:)` are now public in BaseCollectionViewAdapter
+
 0.8.0 Release notes (2019-06-26)
 =============================================================
 ### Enhancements

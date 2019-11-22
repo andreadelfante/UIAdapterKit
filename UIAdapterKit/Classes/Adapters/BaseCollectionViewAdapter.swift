@@ -120,12 +120,12 @@ open class BaseCollectionViewAdapter: NSObject, Adaptable, UICollectionViewDeleg
     }
 }
 
-fileprivate extension Adaptable where Self: BaseCollectionViewAdapter {
-    func collectionViewSection(for index: Int) -> CollectionViewSection? {
+extension Adaptable where Self: BaseCollectionViewAdapter {
+    public func collectionViewSection(for index: Int) -> CollectionViewSection? {
         return section(for: index) as? CollectionViewSection
     }
 
-    func item(for indexPath: IndexPath) -> CollectionViewItem? {
+    public func item(for indexPath: IndexPath) -> CollectionViewItem? {
         return section(for: indexPath.section)?
             .item(for: indexPath.row) as? CollectionViewItem
     }
