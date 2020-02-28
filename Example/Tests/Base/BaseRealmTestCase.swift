@@ -15,9 +15,9 @@ class BaseRealmTestCase: XCTestCase {
     override func setUp() {
         super.setUp()
         
-        realm = try! Realm(configuration: Realm.Configuration(inMemoryIdentifier: "UITests"))
+        realm = try! Realm(configuration: Realm.Configuration(inMemoryIdentifier: name))
         try! realm.write {
-            realm.add(BasicModel.fake(30))
+            realm.add(BasicModel.fake(30), update: .all)
         }
     }
     

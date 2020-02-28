@@ -12,12 +12,13 @@ import RealmSwift
 
 class RealmTableViewAdapterTests: BaseRealmTestCase {
     private var adapter: RealmTableViewAdapter!
+    private var section: CustomRealmTableViewSection!
     
     override func setUp() {
         super.setUp()
         
-        adapter = RealmTableViewAdapter()
-            .map(section: RealmTableViewSection(results: realm.objects(BasicModel.self), itemBuilder: { BasicTableViewItem($0) }))
+        section = CustomRealmTableViewSection(results: realm.objects(BasicModel.self), itemBuilder: { BasicTableViewItem($0) })
+        adapter = RealmTableViewAdapter().map(section: section)
     }
     
     func testSectionCount() {
@@ -43,5 +44,74 @@ class RealmTableViewAdapterTests: BaseRealmTestCase {
         adapter.deleteAll()
         XCTAssertEqual(adapter.sectionCount, 0)
         XCTAssertEqual(adapter.itemsCount, 0)
+    }
+    
+    func testOnInitial() {
+        var preInitial = false
+        var postInitial = false
+        
+        let ex = expectation(description: name)
+        ex.expectedFulfillmentCount = 2
+        
+        section.preInitial = {
+            preInitial = true
+            XCTAssertFalse(postInitial)
+            ex.fulfill()
+        }
+        section.postInitial = {
+            postInitial = true
+            XCTAssertTrue(preInitial)
+            ex.fulfill()
+        }
+        
+        wait(for: [ex], timeout: 3)
+    }
+    
+    func testOnUpdate() {
+        var preUpdate = false
+        var postUpdate = false
+        
+        let ex = expectation(description: name)
+        ex.expectedFulfillmentCount = 2
+        
+        section.preUpdate = {
+            preUpdate = true
+            XCTAssertFalse(postUpdate)
+            ex.fulfill()
+        }
+        section.postUpdate = {
+            postUpdate = true
+            XCTAssertTrue(preUpdate)
+            ex.fulfill()
+        }
+        
+        try! realm.write {
+            realm.add(BasicModel.fake(), update: .all)
+        }
+        
+        wait(for: [ex], timeout: 3)
+    }
+}
+
+class CustomRealmTableViewSection: RealmTableViewSection<BasicModel> {
+    var preInitial: (() -> Void)?
+    var postInitial: (() -> Void)?
+    var preUpdate: (() -> Void)?
+    var postUpdate: (() -> Void)?
+    
+    override func onPreInitial() {
+        preInitial?()
+    }
+    
+    override func onPostInitial() {
+        postInitial?()
+    }
+    
+    override func onPreUpdate(deletions: [Int], insertions: [Int], modifications: [Int]) {
+        preUpdate?()
+    }
+    
+    override func onPostUpdate(deletions: [Int], insertions: [Int], modifications: [Int]) {
+        postUpdate?()
     }
 }
