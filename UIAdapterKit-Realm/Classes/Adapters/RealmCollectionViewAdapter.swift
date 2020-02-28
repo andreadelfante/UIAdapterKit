@@ -73,7 +73,7 @@ open class RealmCollectionViewAdapter: BaseCollectionViewAdapter {
                         strongSelf.collectionView?.reloadItems(at: modifications.map { IndexPath(row: $0, section: index) })
                     })
                 }
-                
+
                 section.onPostUpdate(deletions: deletions, insertions: insertions, modifications: modifications)
 
             case .error(let error):

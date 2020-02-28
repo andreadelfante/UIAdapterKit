@@ -51,11 +51,11 @@ open class RealmCollectionViewSection<T: Object>: NSObject, CollectionViewSectio
     open func onPreInitial() {}
 
     open func onPostInitial() {}
-    
+
     open func onPreUpdate(deletions: [Int], insertions: [Int], modifications: [Int]) {}
-    
+
     open func onPostUpdate(deletions: [Int], insertions: [Int], modifications: [Int]) {}
-    
+
     open func onError(_ error: Error) {}
 
     open var count: Int {
