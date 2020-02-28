@@ -52,13 +52,14 @@ open class RealmCollectionViewAdapter: BaseCollectionViewAdapter {
 
             switch change {
             case .initial:
-                section.onInitial()
+                section.onPreInitial()
                 strongSelf.collectionView?.reloadData()
+                section.onPostInitial()
 
             case .update(_, let deletions, let insertions, let modifications):
                 strongSelf.itemsCount -= deletions.count
                 strongSelf.itemsCount += insertions.count
-                section.onUpdate()
+                section.onPreUpdate(deletions: deletions, insertions: insertions, modifications: modifications)
 
                 switch strongSelf.itemAnimation {
                 case .none:
@@ -72,6 +73,8 @@ open class RealmCollectionViewAdapter: BaseCollectionViewAdapter {
                         strongSelf.collectionView?.reloadItems(at: modifications.map { IndexPath(row: $0, section: index) })
                     })
                 }
+                
+                section.onPostUpdate(deletions: deletions, insertions: insertions, modifications: modifications)
 
             case .error(let error):
                 section.onError(error)
