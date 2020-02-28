@@ -12,14 +12,14 @@ import Fakery
 @testable import UIAdapterKit
 
 class RealmTableViewSectionTests: BaseRealmTestCase {
-    private var section: RealmTableViewSection<BasicModel>!
+    private var section: CustomRealmTableViewSection!
     private var faker: Faker!
     
     override func setUp() {
         super.setUp()
         
         faker = Faker()
-        section = RealmTableViewSection(headerTitle: faker.lorem.word(),
+        section = CustomRealmTableViewSection(headerTitle: faker.lorem.word(),
                                         footerTitle: faker.lorem.word(),
                                         headerHeight: 0.5,
                                         footerHeight: 0.7,
@@ -59,6 +59,16 @@ class RealmTableViewSectionTests: BaseRealmTestCase {
         XCTAssert(0.5 <= height! && height! <= 0.51)
     }
     
+    func testInitialize() {
+        section.onPreInitial()
+        section.onPostInitial()
+    }
+    
+    func testUpdate() {
+        section.onPreUpdate(deletions: [1,2,3], insertions: [2,3,4], modifications: [4,5,6])
+        section.onPostUpdate(deletions: [1,2,3], insertions: [2,3,4], modifications: [4,5,6])
+    }
+    
     func testFooterHeight() {
         let height = section.heightForFooter(UITableView())
         
@@ -72,5 +82,20 @@ class RealmTableViewSectionTests: BaseRealmTestCase {
     
     func testDidEndDisplayingFooter() {
         section.didEndDisplayingFooter()
+    }
+}
+
+class CustomRealmTableViewSection: RealmTableViewSection<BasicModel> {
+    
+    override func onPreUpdate(deletions: [Int], insertions: [Int], modifications: [Int]) {
+        XCTAssertNotNil(deletions)
+        XCTAssertNotNil(insertions)
+        XCTAssertNotNil(modifications)
+    }
+    
+    override func onPostUpdate(deletions: [Int], insertions: [Int], modifications: [Int]) {
+        XCTAssertNotNil(deletions)
+        XCTAssertNotNil(insertions)
+        XCTAssertNotNil(modifications)
     }
 }

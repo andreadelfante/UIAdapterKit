@@ -52,13 +52,14 @@ open class RealmTableViewAdapter: BaseTableViewAdapter {
 
             switch change {
             case .initial:
-                section.onInitial()
+                section.onPreInitial()
                 strongSelf.tableView?.reloadData()
+                section.onPostInitial()
 
             case .update(_, let deletions, let insertions, let modifications):
                 strongSelf.itemsCount -= deletions.count
                 strongSelf.itemsCount += insertions.count
-                section.onUpdate()
+                section.onPreUpdate(deletions: deletions, insertions: insertions, modifications: modifications)
 
                 switch strongSelf.rowAnimation {
                 case .none:
@@ -72,6 +73,8 @@ open class RealmTableViewAdapter: BaseTableViewAdapter {
                     strongSelf.tableView?.reloadRows(at: modifications.map { IndexPath(row: $0, section: index) }, with: animation)
                     strongSelf.tableView?.endUpdates()
                 }
+
+                section.onPostUpdate(deletions: deletions, insertions: insertions, modifications: modifications)
 
             case .error(let error):
                 section.onError(error)

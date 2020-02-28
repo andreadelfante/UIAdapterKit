@@ -49,9 +49,13 @@ open class RealmTableViewSection<T: Object>: NSObject, TableViewSection, Copyabl
         return type(of: self).init(instance: self)
     }
 
-    open func onInitial() {}
+    open func onPreInitial() {}
 
-    open func onUpdate() {}
+    open func onPostInitial() {}
+    
+    open func onPreUpdate(deletions: [Int], insertions: [Int], modifications: [Int]) {}
+    
+    open func onPostUpdate(deletions: [Int], insertions: [Int], modifications: [Int]) {}
 
     open func onError(_ error: Error) {}
 
