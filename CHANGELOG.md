@@ -1,3 +1,13 @@
+0.10.0 Release notes (2020-02-29)
+=============================================================
+### Breaking changes
+* Now **onInitial()** is now renamed `onPreInitial()` for RealmTableViewSection and RealmCollectionViewSection
+* Now **onUpdate()** is now renamed `onPreUpdate(deletions:insertions:modification:s)` for RealmTableViewSection and RealmCollectionViewSection
+
+### Enhancements
+* Add **onPostInitial()** for RealmTableViewSection and RealmCollectionViewSection
+* Add **onPostUpdate(deletions:insertions:modifications:)** for RealmTableViewSection and RealmCollectionViewSection
+
 0.9.0 Release notes (2019-11-22)
 =============================================================
 ### Enhancements
