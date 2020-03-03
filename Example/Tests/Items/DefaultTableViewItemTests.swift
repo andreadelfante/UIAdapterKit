@@ -55,6 +55,13 @@ class DefaultTableViewItemTests: XCTestCase {
         XCTAssertEqual(item.indentationLevel, 1)
     }
     
+    func testWillDisplay() {
+        let item = DefaultTableViewItem(text: nil)
+        let cell = item.dequeueCell(from: tableView, at: IndexPath())
+        
+        item.willDisplay(cell: cell)
+    }
+    
     func testDidEndDisplayingItem() {
         let item = DefaultTableViewItem(text: nil)
         

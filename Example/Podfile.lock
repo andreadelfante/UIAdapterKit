@@ -18,11 +18,11 @@ PODS:
     - Realm (= 4.1.1)
   - Sourcery (0.17.0)
   - SwiftLint (0.37.0)
-  - UIAdapterKit (0.9.0):
-    - UIAdapterKit/Basic (= 0.9.0)
-  - UIAdapterKit/Basic (0.9.0)
-  - UIAdapterKit/Common (0.9.0)
-  - UIAdapterKit/Realm (0.9.0):
+  - UIAdapterKit (0.10.0):
+    - UIAdapterKit/Basic (= 0.10.0)
+  - UIAdapterKit/Basic (0.10.0)
+  - UIAdapterKit/Common (0.10.0)
+  - UIAdapterKit/Realm (0.10.0):
     - RealmSwift
 
 DEPENDENCIES:
@@ -59,7 +59,7 @@ SPEC CHECKSUMS:
   RealmSwift: 9e2657b33764f80e4a4dffd6d440e24715782052
   Sourcery: 3ed61be7c8a1218fce349266139379dba477efe0
   SwiftLint: c078a14d7d7ade75e5507795d185e3da41d844d2
-  UIAdapterKit: 36442c40a9482d383796e2a4c2de27d68db92598
+  UIAdapterKit: 17d85de5c86997224a475950d3e1a44cfdfbdeb1
 
 PODFILE CHECKSUM: dfb609fe46473d7183e0acd0cc7e197c47905188
 

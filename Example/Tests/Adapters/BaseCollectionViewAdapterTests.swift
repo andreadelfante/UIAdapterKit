@@ -239,6 +239,24 @@ class BaseCollectionViewAdapterTests: XCTestCase {
         XCTAssertTrue(result)
     }
     
+    func testWillDisplay() {
+        var result = false
+        adapter.sectionBuilder = { _ in
+            let section = MockSection()
+            section.itemBuilder = { _ in
+                let item = MockItem()
+                item.willDisplay = { _ in
+                    result = true
+                }
+                return item
+            }
+            return section
+        }
+        
+        adapter.collectionView(collectionView, willDisplay: UICollectionViewCell(), forItemAt: indexPath)
+        XCTAssertTrue(result)
+    }
+    
     func testDidEndDisplayingItem() {
         var result = false
         adapter.sectionBuilder = { _ in
@@ -278,6 +296,7 @@ fileprivate class MockItem: CollectionViewItem, ActionPerformableCollectionViewI
     var size: CGSize?
     var canPerform: ((Selector, Any?) -> Bool)?
     var perform: ((Selector, Any?) -> Void)?
+    var willDisplay: (UICollectionViewCell) -> Void = { _ in }
     var endDisplayingItem: () -> Void = {}
     
     func configure(cell: UICollectionViewCell) {
@@ -298,6 +317,10 @@ fileprivate class MockItem: CollectionViewItem, ActionPerformableCollectionViewI
     
     func perform(action: Selector, withSender sender: Any?) {
         perform!(action, sender)
+    }
+    
+    func willDisplay(cell: UICollectionViewCell) {
+        self.willDisplay(cell)
     }
     
     func didEndDisplayingItem() {

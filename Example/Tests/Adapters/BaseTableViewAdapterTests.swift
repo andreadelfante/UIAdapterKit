@@ -413,6 +413,24 @@ class BaseTableViewAdapterTests: XCTestCase {
         XCTAssertTrue(result)
     }
     
+    func testWillDisplay() {
+        var result = false
+        adapter.sectionBuilder = { _ in
+            let section = MockSection()
+            section.itemBuilder = { _ in
+                let item = MockItem()
+                item.willDisplay = { _ in
+                    result = true
+                }
+                return item
+            }
+            return section
+        }
+        
+        adapter.tableView(tableView, willDisplay: UITableViewCell(), forRowAt: indexPath)
+        XCTAssertTrue(result)
+    }
+    
     func testDidEndDisplayingItem() {
         var result = false
         adapter.sectionBuilder = { _ in
@@ -458,6 +476,7 @@ fileprivate class MockItem: TableViewItem, SwipeableTableViewItem, ActionPerform
     var indentationLevel: Int = 1
 	var editingStyle: UITableViewCell.EditingStyle = .none
 	var editingStyleAction: () -> Void = {}
+    var willDisplay: (UITableViewCell) -> Void = { _ in }
     var endDisplayingItem: () -> Void = {}
     
     var registrationType: RegistrationType {
@@ -483,6 +502,10 @@ fileprivate class MockItem: TableViewItem, SwipeableTableViewItem, ActionPerform
 	func editingAction() {
 		self.editingStyleAction()
 	}
+    
+    func willDisplay(cell: UITableViewCell) {
+        self.willDisplay(cell)
+    }
     
     func didEndDisplayingItem() {
         self.endDisplayingItem()
