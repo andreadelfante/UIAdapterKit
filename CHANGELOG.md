@@ -1,3 +1,8 @@
+0.11.0 Release notes (2020-03-03)
+=============================================================
+### Enhancements
+* Add **willDisplay(cell:)** for TableViewItem and CollectionViewItem
+
 0.10.0 Release notes (2020-02-29)
 =============================================================
 ### Breaking changes
