@@ -8,11 +8,15 @@
 public protocol TableViewItem: Item {
     func configure(cell: UITableViewCell)
 
+    func willDisplay(cell: UITableViewCell)
+    
     func height(_ container: Container) -> CGFloat?
     var indentationLevel: Int { get }
 }
 
 public extension TableViewItem {
+    func willDisplay(cell: UITableViewCell) {}
+    
     func height(_ container: Container) -> CGFloat? { return nil }
 
     var indentationLevel: Int { return 1 }

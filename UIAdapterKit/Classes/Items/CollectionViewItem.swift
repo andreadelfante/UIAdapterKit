@@ -8,10 +8,14 @@
 public protocol CollectionViewItem: Item {
     func configure(cell: UICollectionViewCell)
 
+    func willDisplay(cell: UICollectionViewCell)
+    
     func size(_ container: Container) -> CGSize?
 }
 
 public extension CollectionViewItem {
+    func willDisplay(cell: UICollectionViewCell) {}
+    
     func size(_ container: Container) -> CGSize? { return nil }
 }
 

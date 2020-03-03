@@ -63,6 +63,10 @@ open class BaseCollectionViewAdapter: NSObject, Adaptable, UICollectionViewDeleg
             ?? (collectionViewLayout as? UICollectionViewFlowLayout)?.itemSize
             ?? CGSize.zero
     }
+    
+    public func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        self.item(for: indexPath)?.willDisplay(cell: cell)
+    }
 
     open func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         self.item(for: indexPath)?.didEndDisplayingItem()

@@ -65,6 +65,10 @@ open class BaseTableViewAdapter: NSObject, Adaptable, UITableViewDelegate, UITab
 	open func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
 		return self.tableView(tableView, heightForRowAt: indexPath)
 	}
+    
+    public func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        self.item(for: indexPath)?.willDisplay(cell: cell)
+    }
 
     open func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         self.item(for: indexPath)?.didEndDisplayingItem()
