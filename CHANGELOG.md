@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.12.0
+
+### Enhancements
+* Add support for Swift Package Manager.
+
 ## 0.11.0
 
 ### Enhancements
