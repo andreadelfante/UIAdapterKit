@@ -111,7 +111,8 @@ platform :ios do
     git_add(path: "CHANGELOG.md")
     git_commit(
       path: "CHANGELOG.md",
-      message: "Update CHANGELOG.md for version #{version}"
+      message: "Update CHANGELOG.md for version #{version} [skip ci]",
+      allow_nothing_to_commit: true
     )
 
     puts "Changelog for version #{version} ready!"
@@ -127,7 +128,7 @@ platform :ios do
     git_add(path: "docs")
     git_commit(
       path: "docs",
-      message: "Update docs folder for version #{version}"
+      message: "Update docs folder for version #{version} [skip ci]"
     )
 
     puts "Doc for version #{version} ready!"
@@ -136,8 +137,8 @@ platform :ios do
   private_lane :publish_podspec do |options|
     version = options[:version]
 
-    add_git_tag(tag: version)
-    push_to_git_remote(tags: true)
+    add_git_tag(tag: version, force: true)
+    push_git_tags(force: true)
     
     puts "Ready to publish a podspec with version #{version}"
 
