@@ -1,6 +1,6 @@
 # UIAdapterKit
 
-[![CI Status](https://img.shields.io/travis/andreadelfante/UIAdapterKit.svg?style=flat)](https://travis-ci.org/andreadelfante/UIAdapterKit)
+![UIAdapterKit CI](https://github.com/andreadelfante/UIAdapterKit/workflows/UIAdapterKit%20CI/badge.svg)
 [![Version](https://img.shields.io/cocoapods/v/UIAdapterKit.svg?style=flat)](https://cocoapods.org/pods/UIAdapterKit)
 [![Platform](https://img.shields.io/cocoapods/p/UIAdapterKit.svg?style=flat)](https://cocoapods.org/pods/UIAdapterKit)
 [![License](https://img.shields.io/cocoapods/l/UIAdapterKit.svg?style=flat)](https://cocoapods.org/pods/UIAdapterKit)
