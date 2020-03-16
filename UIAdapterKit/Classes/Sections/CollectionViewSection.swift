@@ -5,6 +5,11 @@
 //  Created by Andrea Del Fante on 04/06/2019.
 //
 
+#if canImport(UIKit)
+
+import Foundation
+import UIKit
+
 public protocol CollectionViewSection: Section {
     func configure(header: UICollectionReusableView)
     func configure(footer: UICollectionReusableView)
@@ -59,3 +64,5 @@ public extension CollectionViewSection {
         }
     }
 }
+
+#endif

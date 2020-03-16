@@ -5,6 +5,10 @@
 //  Created by Andrea Del Fante on 04/06/2019.
 //
 
+#if canImport(UIKit)
+
+import UIKit
+
 public enum RegistrationType: Equatable {
     case nib(_ nib: UINib)
     case clazz(_ clazz: UIView.Type)
@@ -43,3 +47,5 @@ public extension Item {
 
     func didEndDisplayingItem() {}
 }
+
+#endif

@@ -5,6 +5,11 @@
 //  Created by Andrea Del Fante on 10/06/2019.
 //
 
+#if canImport(UIKit)
+
+import Foundation
+import UIKit
+
 public enum TableViewAnimation: Equatable {
     case none
     case section(_ animation: UITableView.RowAnimation)
@@ -23,3 +28,5 @@ public enum TableViewAnimation: Equatable {
         }
     }
 }
+
+#endif

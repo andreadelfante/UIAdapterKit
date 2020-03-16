@@ -5,6 +5,11 @@
 //  Created by Andrea Del Fante on 04/06/2019.
 //
 
+#if canImport(UIKit)
+
+import Foundation
+import UIKit
+
 public protocol CollectionViewItem: Item {
     func configure(cell: UICollectionViewCell)
 
@@ -35,3 +40,5 @@ public extension CollectionViewItem {
         return collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
     }
 }
+
+#endif

@@ -5,6 +5,8 @@
 //  Created by Andrea Del Fante on 04/06/2019.
 //
 
+#if canImport(UIKit)
+
 public protocol Adaptable {
     var sectionCount: Int { get }
     var hasSections: Bool { get }
@@ -15,3 +17,5 @@ public protocol Adaptable {
 public extension Adaptable {
     var hasSections: Bool { return sectionCount > 0 }
 }
+
+#endif

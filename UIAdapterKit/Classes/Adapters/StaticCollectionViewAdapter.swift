@@ -5,6 +5,11 @@
 //  Created by Andrea Del Fante on 04/06/2019.
 //
 
+#if canImport(UIKit)
+
+import Foundation
+import UIKit
+
 open class StaticCollectionViewAdapter: BaseCollectionViewAdapter {
     private var sections: [CollectionViewSection]
 
@@ -21,3 +26,5 @@ open class StaticCollectionViewAdapter: BaseCollectionViewAdapter {
         return sections[index]
     }
 }
+
+#endif

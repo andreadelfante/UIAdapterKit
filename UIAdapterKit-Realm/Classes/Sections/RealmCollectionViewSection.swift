@@ -5,7 +5,14 @@
 //  Created by Andrea Del Fante on 09/06/2019.
 //
 
+#if canImport(UIKit)
+
+import UIKit
 import RealmSwift
+
+#if SWIFT_PACKAGE
+import UIAdapterKit
+#endif
 
 open class RealmCollectionViewSection<T: Object>: NSObject, CollectionViewSection, Copyable {
     public internal(set) var results: Results<T>
@@ -116,3 +123,5 @@ extension RealmCollectionViewSection: RealmFilterableBridging {
         results = results.filter(predicate)
     }
 }
+
+#endif

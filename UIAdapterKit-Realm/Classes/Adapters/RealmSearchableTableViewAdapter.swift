@@ -5,7 +5,14 @@
 //  Created by Andrea Del Fante on 18/06/2019.
 //
 
+#if canImport(UIKit)
+
 import RealmSwift
+
+#if SWIFT_PACKAGE
+import Foundation
+import UIAdapterKit
+#endif
 
 private typealias FilterableSection = NSObject & TableViewSection & RealmFilterableSection & RealmFilterableBridging
 
@@ -75,3 +82,6 @@ open class RealmSearchableTableViewAdapter: RealmTableViewAdapter {
         return self
     }
 }
+
+
+#endif

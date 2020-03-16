@@ -5,6 +5,11 @@
 //  Created by Andrea Del Fante on 04/06/2019.
 //
 
+#if canImport(UIKit)
+
+import Foundation
+import UIKit
+
 open class BaseCollectionViewAdapter: NSObject, Adaptable, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
 
     open var collectionView: UICollectionView? {
@@ -134,3 +139,5 @@ extension Adaptable where Self: BaseCollectionViewAdapter {
             .item(for: indexPath.row) as? CollectionViewItem
     }
 }
+
+#endif

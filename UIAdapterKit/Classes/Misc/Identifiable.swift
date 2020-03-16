@@ -5,6 +5,8 @@
 //  Created by Andrea Del Fante on 04/06/2019.
 //
 
+#if canImport(UIKit)
+
 public protocol Identifiable {
 
 }
@@ -14,3 +16,5 @@ extension Identifiable {
         return (some is Any.Type) ? "\(some)" : "\(type(of: some))"
     }
 }
+
+#endif

@@ -1,0 +1,4874 @@
+// !$*UTF8*$!
+{
+   archiveVersion = "1";
+   objectVersion = "46";
+   objects = {
+      "Fakery::Fakery" = {
+         isa = "PBXNativeTarget";
+         buildConfigurationList = "OBJ_346";
+         buildPhases = (
+            "OBJ_349",
+            "OBJ_378"
+         );
+         dependencies = (
+         );
+         name = "Fakery";
+         productName = "Fakery";
+         productReference = "Fakery::Fakery::Product";
+         productType = "com.apple.product-type.framework";
+      };
+      "Fakery::Fakery::Product" = {
+         isa = "PBXFileReference";
+         path = "Fakery.framework";
+         sourceTree = "BUILT_PRODUCTS_DIR";
+      };
+      "Fakery::SwiftPMPackageDescription" = {
+         isa = "PBXNativeTarget";
+         buildConfigurationList = "OBJ_380";
+         buildPhases = (
+            "OBJ_383"
+         );
+         dependencies = (
+         );
+         name = "FakeryPackageDescription";
+         productName = "FakeryPackageDescription";
+         productType = "com.apple.product-type.framework";
+      };
+      "OBJ_1" = {
+         isa = "PBXProject";
+         attributes = {
+            LastSwiftMigration = "9999";
+            LastUpgradeCheck = "9999";
+         };
+         buildConfigurationList = "OBJ_2";
+         compatibilityVersion = "Xcode 3.2";
+         developmentRegion = "en";
+         hasScannedForEncodings = "0";
+         knownRegions = (
+            "en"
+         );
+         mainGroup = "OBJ_5";
+         productRefGroup = "OBJ_324";
+         projectDirPath = ".";
+         targets = (
+            "Fakery::Fakery",
+            "Fakery::SwiftPMPackageDescription",
+            "Realm::Realm",
+            "RealmCore::RealmCore",
+            "RealmCore::SwiftPMPackageDescription",
+            "Realm::SwiftPMPackageDescription",
+            "Realm::RealmSwift",
+            "UIAdapterKit::UIAdapterKit",
+            "UIAdapterKit::UIAdapterKit/Common",
+            "UIAdapterKit::UIAdapterKit/Realm",
+            "UIAdapterKit::SwiftPMPackageDescription",
+            "UIAdapterKit::UIAdapterKitPackageTests::ProductTarget",
+            "UIAdapterKit::UIAdapterKitTests"
+         );
+      };
+      "OBJ_10" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_11",
+            "OBJ_12",
+            "OBJ_13",
+            "OBJ_14",
+            "OBJ_15"
+         );
+         name = "Adapters";
+         path = "Adapters";
+         sourceTree = "<group>";
+      };
+      "OBJ_100" = {
+         isa = "PBXFileReference";
+         path = "Car.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_101" = {
+         isa = "PBXFileReference";
+         path = "Cat.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_102" = {
+         isa = "PBXFileReference";
+         path = "Commerce.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_103" = {
+         isa = "PBXFileReference";
+         path = "Company.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_104" = {
+         isa = "PBXFileReference";
+         path = "Date.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_105" = {
+         isa = "PBXFileReference";
+         path = "Gender.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_106" = {
+         isa = "PBXFileReference";
+         path = "Generator.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_107" = {
+         isa = "PBXFileReference";
+         path = "Ham.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_108" = {
+         isa = "PBXFileReference";
+         path = "Hobbit.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_109" = {
+         isa = "PBXFileReference";
+         path = "House.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_11" = {
+         isa = "PBXFileReference";
+         path = "Adaptable.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_110" = {
+         isa = "PBXFileReference";
+         path = "Internet.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_111" = {
+         isa = "PBXFileReference";
+         path = "Lorem.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_112" = {
+         isa = "PBXFileReference";
+         path = "Name.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_113" = {
+         isa = "PBXFileReference";
+         path = "Number.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_114" = {
+         isa = "PBXFileReference";
+         path = "PhoneNumber.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_115" = {
+         isa = "PBXFileReference";
+         path = "ProgrammingLanguage.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_116" = {
+         isa = "PBXFileReference";
+         path = "Team.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_117" = {
+         isa = "PBXFileReference";
+         path = "Vehicle.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_118" = {
+         isa = "PBXFileReference";
+         path = "Zelda.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_119" = {
+         isa = "PBXFileReference";
+         explicitFileType = "sourcecode.swift";
+         name = "Package.swift";
+         path = "/Users/andrea/Desktop/UIAdapterKit/.build/checkouts/Fakery/Package.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_12" = {
+         isa = "PBXFileReference";
+         path = "BaseCollectionViewAdapter.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_120" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_121",
+            "OBJ_228",
+            "OBJ_248",
+            "OBJ_249"
+         );
+         name = "Realm 4.3.2";
+         path = "";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_121" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_122",
+            "OBJ_181"
+         );
+         name = "Realm";
+         path = ".build/checkouts/realm-cocoa";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_122" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_123",
+            "OBJ_154",
+            "OBJ_155",
+            "OBJ_156",
+            "OBJ_157",
+            "OBJ_158",
+            "OBJ_159",
+            "OBJ_160",
+            "OBJ_161",
+            "OBJ_162",
+            "OBJ_163",
+            "OBJ_164",
+            "OBJ_165",
+            "OBJ_166",
+            "OBJ_167",
+            "OBJ_168",
+            "OBJ_169",
+            "OBJ_170",
+            "OBJ_171",
+            "OBJ_172",
+            "OBJ_173",
+            "OBJ_174",
+            "OBJ_175",
+            "OBJ_176",
+            "OBJ_177",
+            "OBJ_178",
+            "OBJ_179",
+            "OBJ_180"
+         );
+         name = "Realm";
+         path = "Realm";
+         sourceTree = "<group>";
+      };
+      "OBJ_123" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_124"
+         );
+         name = "ObjectStore";
+         path = "ObjectStore";
+         sourceTree = "<group>";
+      };
+      "OBJ_124" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_125",
+            "OBJ_126",
+            "OBJ_127",
+            "OBJ_140",
+            "OBJ_141",
+            "OBJ_142",
+            "OBJ_143",
+            "OBJ_144",
+            "OBJ_145",
+            "OBJ_146",
+            "OBJ_147",
+            "OBJ_148",
+            "OBJ_149",
+            "OBJ_150"
+         );
+         name = "src";
+         path = "src";
+         sourceTree = "<group>";
+      };
+      "OBJ_125" = {
+         isa = "PBXFileReference";
+         path = "binding_callback_thread_observer.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_126" = {
+         isa = "PBXFileReference";
+         path = "collection_notifications.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_127" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_128",
+            "OBJ_131",
+            "OBJ_132",
+            "OBJ_133",
+            "OBJ_134",
+            "OBJ_135",
+            "OBJ_136",
+            "OBJ_137",
+            "OBJ_138",
+            "OBJ_139"
+         );
+         name = "impl";
+         path = "impl";
+         sourceTree = "<group>";
+      };
+      "OBJ_128" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_129",
+            "OBJ_130"
+         );
+         name = "apple";
+         path = "apple";
+         sourceTree = "<group>";
+      };
+      "OBJ_129" = {
+         isa = "PBXFileReference";
+         path = "external_commit_helper.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_13" = {
+         isa = "PBXFileReference";
+         path = "BaseTableViewAdapter.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_130" = {
+         isa = "PBXFileReference";
+         path = "keychain_helper.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_131" = {
+         isa = "PBXFileReference";
+         path = "collection_change_builder.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_132" = {
+         isa = "PBXFileReference";
+         path = "collection_notifier.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_133" = {
+         isa = "PBXFileReference";
+         path = "list_notifier.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_134" = {
+         isa = "PBXFileReference";
+         path = "object_notifier.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_135" = {
+         isa = "PBXFileReference";
+         path = "primitive_list_notifier.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_136" = {
+         isa = "PBXFileReference";
+         path = "realm_coordinator.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_137" = {
+         isa = "PBXFileReference";
+         path = "results_notifier.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_138" = {
+         isa = "PBXFileReference";
+         path = "transact_log_handler.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_139" = {
+         isa = "PBXFileReference";
+         path = "weak_realm_notifier.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_14" = {
+         isa = "PBXFileReference";
+         path = "StaticCollectionViewAdapter.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_140" = {
+         isa = "PBXFileReference";
+         path = "index_set.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_141" = {
+         isa = "PBXFileReference";
+         path = "list.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_142" = {
+         isa = "PBXFileReference";
+         path = "object.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_143" = {
+         isa = "PBXFileReference";
+         path = "object_schema.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_144" = {
+         isa = "PBXFileReference";
+         path = "object_store.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_145" = {
+         isa = "PBXFileReference";
+         path = "placeholder.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_146" = {
+         isa = "PBXFileReference";
+         path = "results.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_147" = {
+         isa = "PBXFileReference";
+         path = "schema.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_148" = {
+         isa = "PBXFileReference";
+         path = "shared_realm.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_149" = {
+         isa = "PBXFileReference";
+         path = "thread_safe_reference.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_15" = {
+         isa = "PBXFileReference";
+         path = "StaticTableViewAdapter.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_150" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_151",
+            "OBJ_153"
+         );
+         name = "util";
+         path = "util";
+         sourceTree = "<group>";
+      };
+      "OBJ_151" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_152"
+         );
+         name = "generic";
+         path = "generic";
+         sourceTree = "<group>";
+      };
+      "OBJ_152" = {
+         isa = "PBXFileReference";
+         path = "event_loop_signal.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_153" = {
+         isa = "PBXFileReference";
+         path = "uuid.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_154" = {
+         isa = "PBXFileReference";
+         path = "RLMAccessor.mm";
+         sourceTree = "<group>";
+      };
+      "OBJ_155" = {
+         isa = "PBXFileReference";
+         path = "RLMAnalytics.mm";
+         sourceTree = "<group>";
+      };
+      "OBJ_156" = {
+         isa = "PBXFileReference";
+         path = "RLMArray.mm";
+         sourceTree = "<group>";
+      };
+      "OBJ_157" = {
+         isa = "PBXFileReference";
+         path = "RLMClassInfo.mm";
+         sourceTree = "<group>";
+      };
+      "OBJ_158" = {
+         isa = "PBXFileReference";
+         path = "RLMCollection.mm";
+         sourceTree = "<group>";
+      };
+      "OBJ_159" = {
+         isa = "PBXFileReference";
+         path = "RLMConstants.m";
+         sourceTree = "<group>";
+      };
+      "OBJ_16" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_17",
+            "OBJ_18",
+            "OBJ_19",
+            "OBJ_20",
+            "OBJ_21",
+            "OBJ_22"
+         );
+         name = "Items";
+         path = "Items";
+         sourceTree = "<group>";
+      };
+      "OBJ_160" = {
+         isa = "PBXFileReference";
+         path = "RLMListBase.mm";
+         sourceTree = "<group>";
+      };
+      "OBJ_161" = {
+         isa = "PBXFileReference";
+         path = "RLMManagedArray.mm";
+         sourceTree = "<group>";
+      };
+      "OBJ_162" = {
+         isa = "PBXFileReference";
+         path = "RLMMigration.mm";
+         sourceTree = "<group>";
+      };
+      "OBJ_163" = {
+         isa = "PBXFileReference";
+         path = "RLMObject.mm";
+         sourceTree = "<group>";
+      };
+      "OBJ_164" = {
+         isa = "PBXFileReference";
+         path = "RLMObjectBase.mm";
+         sourceTree = "<group>";
+      };
+      "OBJ_165" = {
+         isa = "PBXFileReference";
+         path = "RLMObjectSchema.mm";
+         sourceTree = "<group>";
+      };
+      "OBJ_166" = {
+         isa = "PBXFileReference";
+         path = "RLMObjectStore.mm";
+         sourceTree = "<group>";
+      };
+      "OBJ_167" = {
+         isa = "PBXFileReference";
+         path = "RLMObservation.mm";
+         sourceTree = "<group>";
+      };
+      "OBJ_168" = {
+         isa = "PBXFileReference";
+         path = "RLMOptionalBase.mm";
+         sourceTree = "<group>";
+      };
+      "OBJ_169" = {
+         isa = "PBXFileReference";
+         path = "RLMPredicateUtil.mm";
+         sourceTree = "<group>";
+      };
+      "OBJ_17" = {
+         isa = "PBXFileReference";
+         path = "ActionPerformableTableViewItem.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_170" = {
+         isa = "PBXFileReference";
+         path = "RLMProperty.mm";
+         sourceTree = "<group>";
+      };
+      "OBJ_171" = {
+         isa = "PBXFileReference";
+         path = "RLMQueryUtil.mm";
+         sourceTree = "<group>";
+      };
+      "OBJ_172" = {
+         isa = "PBXFileReference";
+         path = "RLMRealm.mm";
+         sourceTree = "<group>";
+      };
+      "OBJ_173" = {
+         isa = "PBXFileReference";
+         path = "RLMRealmConfiguration.mm";
+         sourceTree = "<group>";
+      };
+      "OBJ_174" = {
+         isa = "PBXFileReference";
+         path = "RLMRealmUtil.mm";
+         sourceTree = "<group>";
+      };
+      "OBJ_175" = {
+         isa = "PBXFileReference";
+         path = "RLMResults.mm";
+         sourceTree = "<group>";
+      };
+      "OBJ_176" = {
+         isa = "PBXFileReference";
+         path = "RLMSchema.mm";
+         sourceTree = "<group>";
+      };
+      "OBJ_177" = {
+         isa = "PBXFileReference";
+         path = "RLMSwiftSupport.m";
+         sourceTree = "<group>";
+      };
+      "OBJ_178" = {
+         isa = "PBXFileReference";
+         path = "RLMThreadSafeReference.mm";
+         sourceTree = "<group>";
+      };
+      "OBJ_179" = {
+         isa = "PBXFileReference";
+         path = "RLMUpdateChecker.mm";
+         sourceTree = "<group>";
+      };
+      "OBJ_18" = {
+         isa = "PBXFileReference";
+         path = "CollectionViewItem.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_180" = {
+         isa = "PBXFileReference";
+         path = "RLMUtil.mm";
+         sourceTree = "<group>";
+      };
+      "OBJ_181" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_182",
+            "OBJ_227"
+         );
+         name = "include";
+         path = "include";
+         sourceTree = "<group>";
+      };
+      "OBJ_182" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_183",
+            "OBJ_184",
+            "OBJ_185",
+            "OBJ_186",
+            "OBJ_187",
+            "OBJ_188",
+            "OBJ_189",
+            "OBJ_190",
+            "OBJ_191",
+            "OBJ_192",
+            "OBJ_193",
+            "OBJ_194",
+            "OBJ_195",
+            "OBJ_196",
+            "OBJ_197",
+            "OBJ_198",
+            "OBJ_199",
+            "OBJ_200",
+            "OBJ_201",
+            "OBJ_202",
+            "OBJ_203",
+            "OBJ_204",
+            "OBJ_205",
+            "OBJ_206",
+            "OBJ_207",
+            "OBJ_208",
+            "OBJ_209",
+            "OBJ_210",
+            "OBJ_211",
+            "OBJ_212",
+            "OBJ_213",
+            "OBJ_214",
+            "OBJ_215",
+            "OBJ_216",
+            "OBJ_217",
+            "OBJ_218",
+            "OBJ_219",
+            "OBJ_220",
+            "OBJ_221",
+            "OBJ_222",
+            "OBJ_223",
+            "OBJ_224",
+            "OBJ_225",
+            "OBJ_226"
+         );
+         name = "Realm";
+         path = "Realm";
+         sourceTree = "<group>";
+      };
+      "OBJ_183" = {
+         isa = "PBXFileReference";
+         path = "RLMObjectBase.h";
+         sourceTree = "<group>";
+      };
+      "OBJ_184" = {
+         isa = "PBXFileReference";
+         path = "RLMArray_Private.h";
+         sourceTree = "<group>";
+      };
+      "OBJ_185" = {
+         isa = "PBXFileReference";
+         path = "RLMSyncCredentials.h";
+         sourceTree = "<group>";
+      };
+      "OBJ_186" = {
+         isa = "PBXFileReference";
+         path = "RLMObjectBase_Private.h";
+         sourceTree = "<group>";
+      };
+      "OBJ_187" = {
+         isa = "PBXFileReference";
+         path = "RLMThreadSafeReference.h";
+         sourceTree = "<group>";
+      };
+      "OBJ_188" = {
+         isa = "PBXFileReference";
+         path = "RLMObjectBase_Dynamic.h";
+         sourceTree = "<group>";
+      };
+      "OBJ_189" = {
+         isa = "PBXFileReference";
+         path = "RLMSyncUser.h";
+         sourceTree = "<group>";
+      };
+      "OBJ_19" = {
+         isa = "PBXFileReference";
+         path = "EditableTableViewItem.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_190" = {
+         isa = "PBXFileReference";
+         path = "RLMSyncSubscription.h";
+         sourceTree = "<group>";
+      };
+      "OBJ_191" = {
+         isa = "PBXFileReference";
+         path = "RLMConstants.h";
+         sourceTree = "<group>";
+      };
+      "OBJ_192" = {
+         isa = "PBXFileReference";
+         path = "RLMRealm_Private.h";
+         sourceTree = "<group>";
+      };
+      "OBJ_193" = {
+         isa = "PBXFileReference";
+         path = "RLMSyncUtil.h";
+         sourceTree = "<group>";
+      };
+      "OBJ_194" = {
+         isa = "PBXFileReference";
+         path = "RLMRealm_Dynamic.h";
+         sourceTree = "<group>";
+      };
+      "OBJ_195" = {
+         isa = "PBXFileReference";
+         path = "RLMSyncUtil_Private.h";
+         sourceTree = "<group>";
+      };
+      "OBJ_196" = {
+         isa = "PBXFileReference";
+         path = "RLMSchema.h";
+         sourceTree = "<group>";
+      };
+      "OBJ_197" = {
+         isa = "PBXFileReference";
+         path = "RLMCollection_Private.h";
+         sourceTree = "<group>";
+      };
+      "OBJ_198" = {
+         isa = "PBXFileReference";
+         path = "RLMResults_Private.h";
+         sourceTree = "<group>";
+      };
+      "OBJ_199" = {
+         isa = "PBXFileReference";
+         path = "RLMPlatform.h";
+         sourceTree = "<group>";
+      };
+      "OBJ_2" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_3",
+            "OBJ_4"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_20" = {
+         isa = "PBXFileReference";
+         path = "Item.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_200" = {
+         isa = "PBXFileReference";
+         path = "RLMRealmConfiguration_Private.h";
+         sourceTree = "<group>";
+      };
+      "OBJ_201" = {
+         isa = "PBXFileReference";
+         path = "RLMSyncManager.h";
+         sourceTree = "<group>";
+      };
+      "OBJ_202" = {
+         isa = "PBXFileReference";
+         path = "RLMRealm+Sync.h";
+         sourceTree = "<group>";
+      };
+      "OBJ_203" = {
+         isa = "PBXFileReference";
+         path = "RLMProperty.h";
+         sourceTree = "<group>";
+      };
+      "OBJ_204" = {
+         isa = "PBXFileReference";
+         path = "RLMAccessor.h";
+         sourceTree = "<group>";
+      };
+      "OBJ_205" = {
+         isa = "PBXFileReference";
+         path = "RLMSyncConfiguration.h";
+         sourceTree = "<group>";
+      };
+      "OBJ_206" = {
+         isa = "PBXFileReference";
+         path = "NSError+RLMSync.h";
+         sourceTree = "<group>";
+      };
+      "OBJ_207" = {
+         isa = "PBXFileReference";
+         path = "RLMObject.h";
+         sourceTree = "<group>";
+      };
+      "OBJ_208" = {
+         isa = "PBXFileReference";
+         path = "RLMObjectSchema_Private.h";
+         sourceTree = "<group>";
+      };
+      "OBJ_209" = {
+         isa = "PBXFileReference";
+         path = "RLMArray.h";
+         sourceTree = "<group>";
+      };
+      "OBJ_21" = {
+         isa = "PBXFileReference";
+         path = "SwipeableTableViewItem.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_210" = {
+         isa = "PBXFileReference";
+         path = "Realm.h";
+         sourceTree = "<group>";
+      };
+      "OBJ_211" = {
+         isa = "PBXFileReference";
+         path = "RLMCollection.h";
+         sourceTree = "<group>";
+      };
+      "OBJ_212" = {
+         isa = "PBXFileReference";
+         path = "RLMObjectStore.h";
+         sourceTree = "<group>";
+      };
+      "OBJ_213" = {
+         isa = "PBXFileReference";
+         path = "RLMResults.h";
+         sourceTree = "<group>";
+      };
+      "OBJ_214" = {
+         isa = "PBXFileReference";
+         path = "RLMRealm.h";
+         sourceTree = "<group>";
+      };
+      "OBJ_215" = {
+         isa = "PBXFileReference";
+         path = "RLMObjectSchema.h";
+         sourceTree = "<group>";
+      };
+      "OBJ_216" = {
+         isa = "PBXFileReference";
+         path = "RLMSyncSession.h";
+         sourceTree = "<group>";
+      };
+      "OBJ_217" = {
+         isa = "PBXFileReference";
+         path = "RLMSchema_Private.h";
+         sourceTree = "<group>";
+      };
+      "OBJ_218" = {
+         isa = "PBXFileReference";
+         path = "RLMObject_Private.h";
+         sourceTree = "<group>";
+      };
+      "OBJ_219" = {
+         isa = "PBXFileReference";
+         path = "RLMProperty_Private.h";
+         sourceTree = "<group>";
+      };
+      "OBJ_22" = {
+         isa = "PBXFileReference";
+         path = "TableViewItem.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_220" = {
+         isa = "PBXFileReference";
+         path = "RLMListBase.h";
+         sourceTree = "<group>";
+      };
+      "OBJ_221" = {
+         isa = "PBXFileReference";
+         path = "RLMSyncPermission.h";
+         sourceTree = "<group>";
+      };
+      "OBJ_222" = {
+         isa = "PBXFileReference";
+         path = "RLMRealmConfiguration.h";
+         sourceTree = "<group>";
+      };
+      "OBJ_223" = {
+         isa = "PBXFileReference";
+         path = "RLMMigration.h";
+         sourceTree = "<group>";
+      };
+      "OBJ_224" = {
+         isa = "PBXFileReference";
+         path = "RLMSyncConfiguration_Private.h";
+         sourceTree = "<group>";
+      };
+      "OBJ_225" = {
+         isa = "PBXFileReference";
+         path = "RLMOptionalBase.h";
+         sourceTree = "<group>";
+      };
+      "OBJ_226" = {
+         isa = "PBXFileReference";
+         path = "RLMRealmConfiguration+Sync.h";
+         sourceTree = "<group>";
+      };
+      "OBJ_227" = {
+         isa = "PBXFileReference";
+         name = "module.modulemap";
+         path = "/Users/andrea/Desktop/UIAdapterKit/.build/checkouts/realm-cocoa/include/module.modulemap";
+         sourceTree = "<group>";
+      };
+      "OBJ_228" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_229",
+            "OBJ_230",
+            "OBJ_231",
+            "OBJ_232",
+            "OBJ_233",
+            "OBJ_234",
+            "OBJ_235",
+            "OBJ_236",
+            "OBJ_237",
+            "OBJ_238",
+            "OBJ_239",
+            "OBJ_240",
+            "OBJ_241",
+            "OBJ_242",
+            "OBJ_243",
+            "OBJ_244",
+            "OBJ_245",
+            "OBJ_246",
+            "OBJ_247"
+         );
+         name = "RealmSwift";
+         path = ".build/checkouts/realm-cocoa/RealmSwift";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_229" = {
+         isa = "PBXFileReference";
+         path = "Aliases.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_23" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_24",
+            "OBJ_25"
+         );
+         name = "Misc";
+         path = "Misc";
+         sourceTree = "<group>";
+      };
+      "OBJ_230" = {
+         isa = "PBXFileReference";
+         path = "Error.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_231" = {
+         isa = "PBXFileReference";
+         path = "LinkingObjects.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_232" = {
+         isa = "PBXFileReference";
+         path = "List.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_233" = {
+         isa = "PBXFileReference";
+         path = "Migration.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_234" = {
+         isa = "PBXFileReference";
+         path = "Nonsync.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_235" = {
+         isa = "PBXFileReference";
+         path = "Object.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_236" = {
+         isa = "PBXFileReference";
+         path = "ObjectSchema.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_237" = {
+         isa = "PBXFileReference";
+         path = "ObjectiveCSupport.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_238" = {
+         isa = "PBXFileReference";
+         path = "Optional.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_239" = {
+         isa = "PBXFileReference";
+         path = "Property.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_24" = {
+         isa = "PBXFileReference";
+         path = "Container.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_240" = {
+         isa = "PBXFileReference";
+         path = "Realm.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_241" = {
+         isa = "PBXFileReference";
+         path = "RealmCollection.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_242" = {
+         isa = "PBXFileReference";
+         path = "RealmConfiguration.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_243" = {
+         isa = "PBXFileReference";
+         path = "Results.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_244" = {
+         isa = "PBXFileReference";
+         path = "Schema.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_245" = {
+         isa = "PBXFileReference";
+         path = "SortDescriptor.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_246" = {
+         isa = "PBXFileReference";
+         path = "ThreadSafeReference.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_247" = {
+         isa = "PBXFileReference";
+         path = "Util.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_248" = {
+         isa = "PBXGroup";
+         children = (
+         );
+         name = "RealmTestSupport";
+         path = ".build/checkouts/realm-cocoa/Realm/TestUtils";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_249" = {
+         isa = "PBXFileReference";
+         explicitFileType = "sourcecode.swift";
+         name = "Package.swift";
+         path = "/Users/andrea/Desktop/UIAdapterKit/.build/checkouts/realm-cocoa/Package.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_25" = {
+         isa = "PBXFileReference";
+         path = "Identifiable.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_250" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_251",
+            "OBJ_252",
+            "OBJ_321",
+            "OBJ_323"
+         );
+         name = "RealmCore 5.23.8";
+         path = ".build/checkouts/realm-core/src";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_251" = {
+         isa = "PBXFileReference";
+         explicitFileType = "sourcecode.swift";
+         name = "Package.swift";
+         path = "/Users/andrea/Desktop/UIAdapterKit/.build/checkouts/realm-core/Package.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_252" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_253",
+            "OBJ_254",
+            "OBJ_255",
+            "OBJ_256",
+            "OBJ_257",
+            "OBJ_258",
+            "OBJ_259",
+            "OBJ_260",
+            "OBJ_261",
+            "OBJ_262",
+            "OBJ_263",
+            "OBJ_264",
+            "OBJ_265",
+            "OBJ_266",
+            "OBJ_267",
+            "OBJ_268",
+            "OBJ_269",
+            "OBJ_270",
+            "OBJ_271",
+            "OBJ_272",
+            "OBJ_273",
+            "OBJ_274",
+            "OBJ_275",
+            "OBJ_276",
+            "OBJ_277",
+            "OBJ_278",
+            "OBJ_279",
+            "OBJ_280",
+            "OBJ_281",
+            "OBJ_285",
+            "OBJ_286",
+            "OBJ_287",
+            "OBJ_288",
+            "OBJ_289",
+            "OBJ_290",
+            "OBJ_291",
+            "OBJ_292",
+            "OBJ_293",
+            "OBJ_294",
+            "OBJ_295",
+            "OBJ_296",
+            "OBJ_297",
+            "OBJ_298",
+            "OBJ_317",
+            "OBJ_318",
+            "OBJ_319",
+            "OBJ_320"
+         );
+         name = "realm";
+         path = "realm";
+         sourceTree = "<group>";
+      };
+      "OBJ_253" = {
+         isa = "PBXFileReference";
+         path = "alloc.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_254" = {
+         isa = "PBXFileReference";
+         path = "alloc_slab.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_255" = {
+         isa = "PBXFileReference";
+         path = "array.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_256" = {
+         isa = "PBXFileReference";
+         path = "array_binary.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_257" = {
+         isa = "PBXFileReference";
+         path = "array_blob.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_258" = {
+         isa = "PBXFileReference";
+         path = "array_blobs_big.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_259" = {
+         isa = "PBXFileReference";
+         path = "array_integer.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_26" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_27",
+            "OBJ_28",
+            "OBJ_29"
+         );
+         name = "Sections";
+         path = "Sections";
+         sourceTree = "<group>";
+      };
+      "OBJ_260" = {
+         isa = "PBXFileReference";
+         path = "array_string.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_261" = {
+         isa = "PBXFileReference";
+         path = "array_string_long.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_262" = {
+         isa = "PBXFileReference";
+         path = "bptree.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_263" = {
+         isa = "PBXFileReference";
+         path = "column.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_264" = {
+         isa = "PBXFileReference";
+         path = "column_backlink.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_265" = {
+         isa = "PBXFileReference";
+         path = "column_binary.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_266" = {
+         isa = "PBXFileReference";
+         path = "column_link.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_267" = {
+         isa = "PBXFileReference";
+         path = "column_link_base.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_268" = {
+         isa = "PBXFileReference";
+         path = "column_linklist.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_269" = {
+         isa = "PBXFileReference";
+         path = "column_mixed.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_27" = {
+         isa = "PBXFileReference";
+         path = "CollectionViewSection.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_270" = {
+         isa = "PBXFileReference";
+         path = "column_string.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_271" = {
+         isa = "PBXFileReference";
+         path = "column_string_enum.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_272" = {
+         isa = "PBXFileReference";
+         path = "column_table.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_273" = {
+         isa = "PBXFileReference";
+         path = "column_timestamp.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_274" = {
+         isa = "PBXFileReference";
+         path = "descriptor.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_275" = {
+         isa = "PBXFileReference";
+         path = "disable_sync_to_disk.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_276" = {
+         isa = "PBXFileReference";
+         path = "exceptions.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_277" = {
+         isa = "PBXFileReference";
+         path = "group.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_278" = {
+         isa = "PBXFileReference";
+         path = "group_shared.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_279" = {
+         isa = "PBXFileReference";
+         path = "group_writer.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_28" = {
+         isa = "PBXFileReference";
+         path = "Section.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_280" = {
+         isa = "PBXFileReference";
+         path = "history.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_281" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_282",
+            "OBJ_283",
+            "OBJ_284"
+         );
+         name = "impl";
+         path = "impl";
+         sourceTree = "<group>";
+      };
+      "OBJ_282" = {
+         isa = "PBXFileReference";
+         path = "output_stream.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_283" = {
+         isa = "PBXFileReference";
+         path = "simulated_failure.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_284" = {
+         isa = "PBXFileReference";
+         path = "transact_log.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_285" = {
+         isa = "PBXFileReference";
+         path = "index_string.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_286" = {
+         isa = "PBXFileReference";
+         path = "lang_bind_helper.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_287" = {
+         isa = "PBXFileReference";
+         path = "link_view.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_288" = {
+         isa = "PBXFileReference";
+         path = "query.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_289" = {
+         isa = "PBXFileReference";
+         path = "query_engine.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_29" = {
+         isa = "PBXFileReference";
+         path = "TableViewSection.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_290" = {
+         isa = "PBXFileReference";
+         path = "query_expression.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_291" = {
+         isa = "PBXFileReference";
+         path = "replication.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_292" = {
+         isa = "PBXFileReference";
+         path = "row.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_293" = {
+         isa = "PBXFileReference";
+         path = "spec.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_294" = {
+         isa = "PBXFileReference";
+         path = "string_data.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_295" = {
+         isa = "PBXFileReference";
+         path = "table.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_296" = {
+         isa = "PBXFileReference";
+         path = "table_view.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_297" = {
+         isa = "PBXFileReference";
+         path = "unicode.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_298" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_299",
+            "OBJ_300",
+            "OBJ_301",
+            "OBJ_302",
+            "OBJ_303",
+            "OBJ_304",
+            "OBJ_305",
+            "OBJ_306",
+            "OBJ_307",
+            "OBJ_308",
+            "OBJ_309",
+            "OBJ_310",
+            "OBJ_311",
+            "OBJ_312",
+            "OBJ_313",
+            "OBJ_314",
+            "OBJ_315",
+            "OBJ_316"
+         );
+         name = "util";
+         path = "util";
+         sourceTree = "<group>";
+      };
+      "OBJ_299" = {
+         isa = "PBXFileReference";
+         path = "allocator.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_3" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            CLANG_ENABLE_OBJC_ARC = "YES";
+            COMBINE_HIDPI_IMAGES = "YES";
+            COPY_PHASE_STRIP = "NO";
+            DEBUG_INFORMATION_FORMAT = "dwarf";
+            DYLIB_INSTALL_NAME_BASE = "@rpath";
+            ENABLE_NS_ASSERTIONS = "YES";
+            GCC_OPTIMIZATION_LEVEL = "0";
+            GCC_PREPROCESSOR_DEFINITIONS = (
+               "$(inherited)",
+               "SWIFT_PACKAGE=1",
+               "DEBUG=1"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "10.10";
+            ONLY_ACTIVE_ARCH = "YES";
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)",
+               "-DXcode"
+            );
+            PRODUCT_NAME = "$(TARGET_NAME)";
+            SDKROOT = "macosx";
+            SUPPORTED_PLATFORMS = (
+               "macosx",
+               "iphoneos",
+               "iphonesimulator",
+               "appletvos",
+               "appletvsimulator",
+               "watchos",
+               "watchsimulator"
+            );
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)",
+               "SWIFT_PACKAGE",
+               "DEBUG"
+            );
+            SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+            USE_HEADERMAP = "NO";
+         };
+         name = "Debug";
+      };
+      "OBJ_30" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_31"
+         );
+         name = "UIAdapterKit/Common";
+         path = "UIAdapterKit-Common";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_300" = {
+         isa = "PBXFileReference";
+         path = "backtrace.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_301" = {
+         isa = "PBXFileReference";
+         path = "base64.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_302" = {
+         isa = "PBXFileReference";
+         path = "basic_system_errors.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_303" = {
+         isa = "PBXFileReference";
+         path = "encrypted_file_mapping.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_304" = {
+         isa = "PBXFileReference";
+         path = "fifo_helper.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_305" = {
+         isa = "PBXFileReference";
+         path = "file.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_306" = {
+         isa = "PBXFileReference";
+         path = "file_mapper.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_307" = {
+         isa = "PBXFileReference";
+         path = "interprocess_condvar.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_308" = {
+         isa = "PBXFileReference";
+         path = "interprocess_mutex.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_309" = {
+         isa = "PBXFileReference";
+         path = "logger.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_31" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_32"
+         );
+         name = "Classes";
+         path = "Classes";
+         sourceTree = "<group>";
+      };
+      "OBJ_310" = {
+         isa = "PBXFileReference";
+         path = "memory_stream.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_311" = {
+         isa = "PBXFileReference";
+         path = "misc_errors.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_312" = {
+         isa = "PBXFileReference";
+         path = "serializer.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_313" = {
+         isa = "PBXFileReference";
+         path = "terminate.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_314" = {
+         isa = "PBXFileReference";
+         path = "thread.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_315" = {
+         isa = "PBXFileReference";
+         path = "to_string.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_316" = {
+         isa = "PBXFileReference";
+         path = "features.h";
+         sourceTree = "<group>";
+      };
+      "OBJ_317" = {
+         isa = "PBXFileReference";
+         path = "utilities.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_318" = {
+         isa = "PBXFileReference";
+         path = "version.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_319" = {
+         isa = "PBXFileReference";
+         path = "views.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_32" = {
+         isa = "PBXFileReference";
+         path = "DefaultTableViewItem.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_320" = {
+         isa = "PBXFileReference";
+         path = "realm_nmmintrin.h";
+         sourceTree = "<group>";
+      };
+      "OBJ_321" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_322"
+         );
+         name = "win32";
+         path = "win32";
+         sourceTree = "<group>";
+      };
+      "OBJ_322" = {
+         isa = "PBXFileReference";
+         path = "getopt.h";
+         sourceTree = "<group>";
+      };
+      "OBJ_323" = {
+         isa = "PBXFileReference";
+         name = "module.modulemap";
+         path = "/Users/andrea/Desktop/UIAdapterKit/UIAdapterKit.xcodeproj/GeneratedModuleMap/RealmCore/module.modulemap";
+         sourceTree = "<group>";
+      };
+      "OBJ_324" = {
+         isa = "PBXGroup";
+         children = (
+            "Realm::RealmSwift::Product",
+            "RealmCore::RealmCore::Product",
+            "UIAdapterKit::UIAdapterKit/Realm::Product",
+            "Realm::Realm::Product",
+            "Fakery::Fakery::Product",
+            "UIAdapterKit::UIAdapterKit::Product",
+            "UIAdapterKit::UIAdapterKitTests::Product",
+            "UIAdapterKit::UIAdapterKit/Common::Product"
+         );
+         name = "Products";
+         path = "";
+         sourceTree = "BUILT_PRODUCTS_DIR";
+      };
+      "OBJ_33" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_34"
+         );
+         name = "UIAdapterKit/Realm";
+         path = "UIAdapterKit-Realm";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_333" = {
+         isa = "PBXFileReference";
+         path = "UIAdapterKit";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_334" = {
+         isa = "PBXFileReference";
+         path = "Example";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_335" = {
+         isa = "PBXFileReference";
+         path = "UIAdapterKit-Realm";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_336" = {
+         isa = "PBXFileReference";
+         path = "fastlane";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_337" = {
+         isa = "PBXFileReference";
+         path = "UIAdapterKit-Common";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_338" = {
+         isa = "PBXFileReference";
+         path = "prep.sh";
+         sourceTree = "<group>";
+      };
+      "OBJ_339" = {
+         isa = "PBXFileReference";
+         path = "LICENSE";
+         sourceTree = "<group>";
+      };
+      "OBJ_34" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_35",
+            "OBJ_40",
+            "OBJ_42",
+            "OBJ_46"
+         );
+         name = "Classes";
+         path = "Classes";
+         sourceTree = "<group>";
+      };
+      "OBJ_340" = {
+         isa = "PBXFileReference";
+         path = "CHANGELOG.md";
+         sourceTree = "<group>";
+      };
+      "OBJ_341" = {
+         isa = "PBXFileReference";
+         path = "README.md";
+         sourceTree = "<group>";
+      };
+      "OBJ_342" = {
+         isa = "PBXFileReference";
+         path = "Gemfile";
+         sourceTree = "<group>";
+      };
+      "OBJ_343" = {
+         isa = "PBXFileReference";
+         path = "Gemfile.lock";
+         sourceTree = "<group>";
+      };
+      "OBJ_344" = {
+         isa = "PBXFileReference";
+         path = "UIAdapterKit.podspec";
+         sourceTree = "<group>";
+      };
+      "OBJ_346" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_347",
+            "OBJ_348"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_347" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            ENABLE_TESTABILITY = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)"
+            );
+            INFOPLIST_FILE = "UIAdapterKit.xcodeproj/Fakery_Info.plist";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
+            );
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)"
+            );
+            PRODUCT_BUNDLE_IDENTIFIER = "Fakery";
+            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+            SKIP_INSTALL = "YES";
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            SWIFT_VERSION = "4.2";
+            TARGET_NAME = "Fakery";
+         };
+         name = "Debug";
+      };
+      "OBJ_348" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            ENABLE_TESTABILITY = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)"
+            );
+            INFOPLIST_FILE = "UIAdapterKit.xcodeproj/Fakery_Info.plist";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
+            );
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)"
+            );
+            PRODUCT_BUNDLE_IDENTIFIER = "Fakery";
+            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+            SKIP_INSTALL = "YES";
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            SWIFT_VERSION = "4.2";
+            TARGET_NAME = "Fakery";
+         };
+         name = "Release";
+      };
+      "OBJ_349" = {
+         isa = "PBXSourcesBuildPhase";
+         files = (
+            "OBJ_350",
+            "OBJ_351",
+            "OBJ_352",
+            "OBJ_353",
+            "OBJ_354",
+            "OBJ_355",
+            "OBJ_356",
+            "OBJ_357",
+            "OBJ_358",
+            "OBJ_359",
+            "OBJ_360",
+            "OBJ_361",
+            "OBJ_362",
+            "OBJ_363",
+            "OBJ_364",
+            "OBJ_365",
+            "OBJ_366",
+            "OBJ_367",
+            "OBJ_368",
+            "OBJ_369",
+            "OBJ_370",
+            "OBJ_371",
+            "OBJ_372",
+            "OBJ_373",
+            "OBJ_374",
+            "OBJ_375",
+            "OBJ_376",
+            "OBJ_377"
+         );
+      };
+      "OBJ_35" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_36",
+            "OBJ_37",
+            "OBJ_38",
+            "OBJ_39"
+         );
+         name = "Adapters";
+         path = "Adapters";
+         sourceTree = "<group>";
+      };
+      "OBJ_350" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_88";
+      };
+      "OBJ_351" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_90";
+      };
+      "OBJ_352" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_91";
+      };
+      "OBJ_353" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_93";
+      };
+      "OBJ_354" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_94";
+      };
+      "OBJ_355" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_96";
+      };
+      "OBJ_356" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_97";
+      };
+      "OBJ_357" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_98";
+      };
+      "OBJ_358" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_99";
+      };
+      "OBJ_359" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_100";
+      };
+      "OBJ_36" = {
+         isa = "PBXFileReference";
+         path = "RealmCollectionViewAdapter.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_360" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_101";
+      };
+      "OBJ_361" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_102";
+      };
+      "OBJ_362" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_103";
+      };
+      "OBJ_363" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_104";
+      };
+      "OBJ_364" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_105";
+      };
+      "OBJ_365" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_106";
+      };
+      "OBJ_366" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_107";
+      };
+      "OBJ_367" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_108";
+      };
+      "OBJ_368" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_109";
+      };
+      "OBJ_369" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_110";
+      };
+      "OBJ_37" = {
+         isa = "PBXFileReference";
+         path = "RealmSearchableCollectionViewAdapter.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_370" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_111";
+      };
+      "OBJ_371" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_112";
+      };
+      "OBJ_372" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_113";
+      };
+      "OBJ_373" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_114";
+      };
+      "OBJ_374" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_115";
+      };
+      "OBJ_375" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_116";
+      };
+      "OBJ_376" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_117";
+      };
+      "OBJ_377" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_118";
+      };
+      "OBJ_378" = {
+         isa = "PBXFrameworksBuildPhase";
+         files = (
+         );
+      };
+      "OBJ_38" = {
+         isa = "PBXFileReference";
+         path = "RealmSearchableTableViewAdapter.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_380" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_381",
+            "OBJ_382"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_381" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            LD = "/usr/bin/true";
+            OTHER_SWIFT_FLAGS = (
+               "-swift-version",
+               "4.2",
+               "-I",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2",
+               "-target",
+               "x86_64-apple-macosx10.10",
+               "-sdk",
+               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk",
+               "-package-description-version",
+               "4.2"
+            );
+            SWIFT_VERSION = "4.2";
+         };
+         name = "Debug";
+      };
+      "OBJ_382" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            LD = "/usr/bin/true";
+            OTHER_SWIFT_FLAGS = (
+               "-swift-version",
+               "4.2",
+               "-I",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2",
+               "-target",
+               "x86_64-apple-macosx10.10",
+               "-sdk",
+               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk",
+               "-package-description-version",
+               "4.2"
+            );
+            SWIFT_VERSION = "4.2";
+         };
+         name = "Release";
+      };
+      "OBJ_383" = {
+         isa = "PBXSourcesBuildPhase";
+         files = (
+            "OBJ_384"
+         );
+      };
+      "OBJ_384" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_119";
+      };
+      "OBJ_386" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_387",
+            "OBJ_388"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_387" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            CLANG_CXX_LANGUAGE_STANDARD = "c++14";
+            DEFINES_MODULE = "NO";
+            ENABLE_TESTABILITY = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            GCC_PREPROCESSOR_DEFINITIONS = (
+               "REALM_SPM=1",
+               "REALM_COCOA_VERSION=@\"4.3.2\"",
+               "REALM_VERSION=\"5.23.8\"",
+               "REALM_NO_CONFIG",
+               "REALM_INSTALL_LIBEXECDIR=",
+               "REALM_ENABLE_ASSERTIONS=1",
+               "REALM_ENABLE_ENCRYPTION=1",
+               "REALM_VERSION_MAJOR=5",
+               "REALM_VERSION_MINOR=23",
+               "REALM_VERSION_PATCH=8",
+               "REALM_VERSION_EXTRA=\"\"",
+               "REALM_VERSION_STRING=\"5.23.8\""
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(SRCROOT)/.build/checkouts/realm-cocoa/include",
+               "$(SRCROOT)/.build/checkouts/realm-core/src",
+               ".",
+               "include",
+               "Realm/ObjectStore/src"
+            );
+            INFOPLIST_FILE = "UIAdapterKit.xcodeproj/Realm_Info.plist";
+            IPHONEOS_DEPLOYMENT_TARGET = "8.0";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "10.10";
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)"
+            );
+            PRODUCT_BUNDLE_IDENTIFIER = "Realm";
+            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+            SKIP_INSTALL = "YES";
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            TARGET_NAME = "Realm";
+            TVOS_DEPLOYMENT_TARGET = "9.0";
+            WATCHOS_DEPLOYMENT_TARGET = "2.0";
+         };
+         name = "Debug";
+      };
+      "OBJ_388" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            CLANG_CXX_LANGUAGE_STANDARD = "c++14";
+            DEFINES_MODULE = "NO";
+            ENABLE_TESTABILITY = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            GCC_PREPROCESSOR_DEFINITIONS = (
+               "REALM_SPM=1",
+               "REALM_COCOA_VERSION=@\"4.3.2\"",
+               "REALM_VERSION=\"5.23.8\"",
+               "REALM_NO_CONFIG",
+               "REALM_INSTALL_LIBEXECDIR=",
+               "REALM_ENABLE_ASSERTIONS=1",
+               "REALM_ENABLE_ENCRYPTION=1",
+               "REALM_VERSION_MAJOR=5",
+               "REALM_VERSION_MINOR=23",
+               "REALM_VERSION_PATCH=8",
+               "REALM_VERSION_EXTRA=\"\"",
+               "REALM_VERSION_STRING=\"5.23.8\""
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(SRCROOT)/.build/checkouts/realm-cocoa/include",
+               "$(SRCROOT)/.build/checkouts/realm-core/src",
+               ".",
+               "include",
+               "Realm/ObjectStore/src"
+            );
+            INFOPLIST_FILE = "UIAdapterKit.xcodeproj/Realm_Info.plist";
+            IPHONEOS_DEPLOYMENT_TARGET = "8.0";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "10.10";
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)"
+            );
+            PRODUCT_BUNDLE_IDENTIFIER = "Realm";
+            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+            SKIP_INSTALL = "YES";
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            TARGET_NAME = "Realm";
+            TVOS_DEPLOYMENT_TARGET = "9.0";
+            WATCHOS_DEPLOYMENT_TARGET = "2.0";
+         };
+         name = "Release";
+      };
+      "OBJ_389" = {
+         isa = "PBXSourcesBuildPhase";
+         files = (
+            "OBJ_390",
+            "OBJ_391",
+            "OBJ_392",
+            "OBJ_393",
+            "OBJ_394",
+            "OBJ_395",
+            "OBJ_396",
+            "OBJ_397",
+            "OBJ_398",
+            "OBJ_399",
+            "OBJ_400",
+            "OBJ_401",
+            "OBJ_402",
+            "OBJ_403",
+            "OBJ_404",
+            "OBJ_405",
+            "OBJ_406",
+            "OBJ_407",
+            "OBJ_408",
+            "OBJ_409",
+            "OBJ_410",
+            "OBJ_411",
+            "OBJ_412",
+            "OBJ_413",
+            "OBJ_414",
+            "OBJ_415",
+            "OBJ_416",
+            "OBJ_417",
+            "OBJ_418",
+            "OBJ_419",
+            "OBJ_420",
+            "OBJ_421",
+            "OBJ_422",
+            "OBJ_423",
+            "OBJ_424",
+            "OBJ_425",
+            "OBJ_426",
+            "OBJ_427",
+            "OBJ_428",
+            "OBJ_429",
+            "OBJ_430",
+            "OBJ_431",
+            "OBJ_432",
+            "OBJ_433",
+            "OBJ_434",
+            "OBJ_435",
+            "OBJ_436",
+            "OBJ_437",
+            "OBJ_438",
+            "OBJ_439",
+            "OBJ_440",
+            "OBJ_441"
+         );
+      };
+      "OBJ_39" = {
+         isa = "PBXFileReference";
+         path = "RealmTableViewAdapter.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_390" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_125";
+      };
+      "OBJ_391" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_126";
+      };
+      "OBJ_392" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_129";
+      };
+      "OBJ_393" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_130";
+      };
+      "OBJ_394" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_131";
+      };
+      "OBJ_395" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_132";
+      };
+      "OBJ_396" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_133";
+      };
+      "OBJ_397" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_134";
+      };
+      "OBJ_398" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_135";
+      };
+      "OBJ_399" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_136";
+      };
+      "OBJ_4" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            CLANG_ENABLE_OBJC_ARC = "YES";
+            COMBINE_HIDPI_IMAGES = "YES";
+            COPY_PHASE_STRIP = "YES";
+            DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+            DYLIB_INSTALL_NAME_BASE = "@rpath";
+            GCC_OPTIMIZATION_LEVEL = "s";
+            GCC_PREPROCESSOR_DEFINITIONS = (
+               "$(inherited)",
+               "SWIFT_PACKAGE=1"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "10.10";
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)",
+               "-DXcode"
+            );
+            PRODUCT_NAME = "$(TARGET_NAME)";
+            SDKROOT = "macosx";
+            SUPPORTED_PLATFORMS = (
+               "macosx",
+               "iphoneos",
+               "iphonesimulator",
+               "appletvos",
+               "appletvsimulator",
+               "watchos",
+               "watchsimulator"
+            );
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)",
+               "SWIFT_PACKAGE"
+            );
+            SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+            USE_HEADERMAP = "NO";
+         };
+         name = "Release";
+      };
+      "OBJ_40" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_41"
+         );
+         name = "Items";
+         path = "Items";
+         sourceTree = "<group>";
+      };
+      "OBJ_400" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_137";
+      };
+      "OBJ_401" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_138";
+      };
+      "OBJ_402" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_139";
+      };
+      "OBJ_403" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_140";
+      };
+      "OBJ_404" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_141";
+      };
+      "OBJ_405" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_142";
+      };
+      "OBJ_406" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_143";
+      };
+      "OBJ_407" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_144";
+      };
+      "OBJ_408" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_145";
+      };
+      "OBJ_409" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_146";
+      };
+      "OBJ_41" = {
+         isa = "PBXFileReference";
+         path = "RealmItem.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_410" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_147";
+      };
+      "OBJ_411" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_148";
+      };
+      "OBJ_412" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_149";
+      };
+      "OBJ_413" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_152";
+      };
+      "OBJ_414" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_153";
+      };
+      "OBJ_415" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_154";
+      };
+      "OBJ_416" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_155";
+      };
+      "OBJ_417" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_156";
+      };
+      "OBJ_418" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_157";
+      };
+      "OBJ_419" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_158";
+      };
+      "OBJ_42" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_43",
+            "OBJ_44",
+            "OBJ_45"
+         );
+         name = "Misc";
+         path = "Misc";
+         sourceTree = "<group>";
+      };
+      "OBJ_420" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_159";
+      };
+      "OBJ_421" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_160";
+      };
+      "OBJ_422" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_161";
+      };
+      "OBJ_423" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_162";
+      };
+      "OBJ_424" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_163";
+      };
+      "OBJ_425" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_164";
+      };
+      "OBJ_426" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_165";
+      };
+      "OBJ_427" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_166";
+      };
+      "OBJ_428" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_167";
+      };
+      "OBJ_429" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_168";
+      };
+      "OBJ_43" = {
+         isa = "PBXFileReference";
+         path = "CollectionViewAnimation.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_430" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_169";
+      };
+      "OBJ_431" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_170";
+      };
+      "OBJ_432" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_171";
+      };
+      "OBJ_433" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_172";
+      };
+      "OBJ_434" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_173";
+      };
+      "OBJ_435" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_174";
+      };
+      "OBJ_436" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_175";
+      };
+      "OBJ_437" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_176";
+      };
+      "OBJ_438" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_177";
+      };
+      "OBJ_439" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_178";
+      };
+      "OBJ_44" = {
+         isa = "PBXFileReference";
+         path = "Copyable.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_440" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_179";
+      };
+      "OBJ_441" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_180";
+      };
+      "OBJ_442" = {
+         isa = "PBXFrameworksBuildPhase";
+         files = (
+            "OBJ_443"
+         );
+      };
+      "OBJ_443" = {
+         isa = "PBXBuildFile";
+         fileRef = "RealmCore::RealmCore::Product";
+      };
+      "OBJ_444" = {
+         isa = "PBXTargetDependency";
+         target = "RealmCore::RealmCore";
+      };
+      "OBJ_446" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_447",
+            "OBJ_448"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_447" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            CLANG_CXX_LANGUAGE_STANDARD = "c++14";
+            DEFINES_MODULE = "NO";
+            ENABLE_TESTABILITY = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            GCC_PREPROCESSOR_DEFINITIONS = (
+               "REALM_NO_CONFIG",
+               "REALM_INSTALL_LIBEXECDIR=",
+               "REALM_ENABLE_ASSERTIONS=1",
+               "REALM_ENABLE_ENCRYPTION=1",
+               "REALM_VERSION_MAJOR=5",
+               "REALM_VERSION_MINOR=23",
+               "REALM_VERSION_PATCH=8",
+               "REALM_VERSION_EXTRA=\"\"",
+               "REALM_VERSION_STRING=\"5.23.8\""
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(SRCROOT)/.build/checkouts/realm-core/src",
+               "src"
+            );
+            INFOPLIST_FILE = "UIAdapterKit.xcodeproj/RealmCore_Info.plist";
+            IPHONEOS_DEPLOYMENT_TARGET = "8.0";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "10.10";
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)"
+            );
+            PRODUCT_BUNDLE_IDENTIFIER = "RealmCore";
+            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+            SKIP_INSTALL = "YES";
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            TARGET_NAME = "RealmCore";
+            TVOS_DEPLOYMENT_TARGET = "9.0";
+            WATCHOS_DEPLOYMENT_TARGET = "2.0";
+         };
+         name = "Debug";
+      };
+      "OBJ_448" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            CLANG_CXX_LANGUAGE_STANDARD = "c++14";
+            DEFINES_MODULE = "NO";
+            ENABLE_TESTABILITY = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            GCC_PREPROCESSOR_DEFINITIONS = (
+               "REALM_NO_CONFIG",
+               "REALM_INSTALL_LIBEXECDIR=",
+               "REALM_ENABLE_ASSERTIONS=1",
+               "REALM_ENABLE_ENCRYPTION=1",
+               "REALM_VERSION_MAJOR=5",
+               "REALM_VERSION_MINOR=23",
+               "REALM_VERSION_PATCH=8",
+               "REALM_VERSION_EXTRA=\"\"",
+               "REALM_VERSION_STRING=\"5.23.8\""
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(SRCROOT)/.build/checkouts/realm-core/src",
+               "src"
+            );
+            INFOPLIST_FILE = "UIAdapterKit.xcodeproj/RealmCore_Info.plist";
+            IPHONEOS_DEPLOYMENT_TARGET = "8.0";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "10.10";
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)"
+            );
+            PRODUCT_BUNDLE_IDENTIFIER = "RealmCore";
+            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+            SKIP_INSTALL = "YES";
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            TARGET_NAME = "RealmCore";
+            TVOS_DEPLOYMENT_TARGET = "9.0";
+            WATCHOS_DEPLOYMENT_TARGET = "2.0";
+         };
+         name = "Release";
+      };
+      "OBJ_449" = {
+         isa = "PBXSourcesBuildPhase";
+         files = (
+            "OBJ_450",
+            "OBJ_451",
+            "OBJ_452",
+            "OBJ_453",
+            "OBJ_454",
+            "OBJ_455",
+            "OBJ_456",
+            "OBJ_457",
+            "OBJ_458",
+            "OBJ_459",
+            "OBJ_460",
+            "OBJ_461",
+            "OBJ_462",
+            "OBJ_463",
+            "OBJ_464",
+            "OBJ_465",
+            "OBJ_466",
+            "OBJ_467",
+            "OBJ_468",
+            "OBJ_469",
+            "OBJ_470",
+            "OBJ_471",
+            "OBJ_472",
+            "OBJ_473",
+            "OBJ_474",
+            "OBJ_475",
+            "OBJ_476",
+            "OBJ_477",
+            "OBJ_478",
+            "OBJ_479",
+            "OBJ_480",
+            "OBJ_481",
+            "OBJ_482",
+            "OBJ_483",
+            "OBJ_484",
+            "OBJ_485",
+            "OBJ_486",
+            "OBJ_487",
+            "OBJ_488",
+            "OBJ_489",
+            "OBJ_490",
+            "OBJ_491",
+            "OBJ_492",
+            "OBJ_493",
+            "OBJ_494",
+            "OBJ_495",
+            "OBJ_496",
+            "OBJ_497",
+            "OBJ_498",
+            "OBJ_499",
+            "OBJ_500",
+            "OBJ_501",
+            "OBJ_502",
+            "OBJ_503",
+            "OBJ_504",
+            "OBJ_505",
+            "OBJ_506",
+            "OBJ_507",
+            "OBJ_508",
+            "OBJ_509",
+            "OBJ_510",
+            "OBJ_511",
+            "OBJ_512",
+            "OBJ_513"
+         );
+      };
+      "OBJ_45" = {
+         isa = "PBXFileReference";
+         path = "TableViewAnimation.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_450" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_253";
+      };
+      "OBJ_451" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_254";
+      };
+      "OBJ_452" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_255";
+      };
+      "OBJ_453" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_256";
+      };
+      "OBJ_454" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_257";
+      };
+      "OBJ_455" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_258";
+      };
+      "OBJ_456" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_259";
+      };
+      "OBJ_457" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_260";
+      };
+      "OBJ_458" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_261";
+      };
+      "OBJ_459" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_262";
+      };
+      "OBJ_46" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_47",
+            "OBJ_48",
+            "OBJ_49"
+         );
+         name = "Sections";
+         path = "Sections";
+         sourceTree = "<group>";
+      };
+      "OBJ_460" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_263";
+      };
+      "OBJ_461" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_264";
+      };
+      "OBJ_462" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_265";
+      };
+      "OBJ_463" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_266";
+      };
+      "OBJ_464" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_267";
+      };
+      "OBJ_465" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_268";
+      };
+      "OBJ_466" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_269";
+      };
+      "OBJ_467" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_270";
+      };
+      "OBJ_468" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_271";
+      };
+      "OBJ_469" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_272";
+      };
+      "OBJ_47" = {
+         isa = "PBXFileReference";
+         path = "RealmCollectionViewSection.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_470" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_273";
+      };
+      "OBJ_471" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_274";
+      };
+      "OBJ_472" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_275";
+      };
+      "OBJ_473" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_276";
+      };
+      "OBJ_474" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_277";
+      };
+      "OBJ_475" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_278";
+      };
+      "OBJ_476" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_279";
+      };
+      "OBJ_477" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_280";
+      };
+      "OBJ_478" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_282";
+      };
+      "OBJ_479" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_283";
+      };
+      "OBJ_48" = {
+         isa = "PBXFileReference";
+         path = "RealmFilterableSection.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_480" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_284";
+      };
+      "OBJ_481" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_285";
+      };
+      "OBJ_482" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_286";
+      };
+      "OBJ_483" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_287";
+      };
+      "OBJ_484" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_288";
+      };
+      "OBJ_485" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_289";
+      };
+      "OBJ_486" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_290";
+      };
+      "OBJ_487" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_291";
+      };
+      "OBJ_488" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_292";
+      };
+      "OBJ_489" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_293";
+      };
+      "OBJ_49" = {
+         isa = "PBXFileReference";
+         path = "RealmTableViewSection.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_490" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_294";
+      };
+      "OBJ_491" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_295";
+      };
+      "OBJ_492" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_296";
+      };
+      "OBJ_493" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_297";
+      };
+      "OBJ_494" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_299";
+      };
+      "OBJ_495" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_300";
+      };
+      "OBJ_496" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_301";
+      };
+      "OBJ_497" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_302";
+      };
+      "OBJ_498" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_303";
+      };
+      "OBJ_499" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_304";
+      };
+      "OBJ_5" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_6",
+            "OBJ_7",
+            "OBJ_50",
+            "OBJ_85",
+            "OBJ_324",
+            "OBJ_333",
+            "OBJ_334",
+            "OBJ_335",
+            "OBJ_336",
+            "OBJ_337",
+            "OBJ_338",
+            "OBJ_339",
+            "OBJ_340",
+            "OBJ_341",
+            "OBJ_342",
+            "OBJ_343",
+            "OBJ_344"
+         );
+         path = "";
+         sourceTree = "<group>";
+      };
+      "OBJ_50" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_51",
+            "OBJ_52",
+            "OBJ_61",
+            "OBJ_63",
+            "OBJ_68",
+            "OBJ_70",
+            "OBJ_81"
+         );
+         name = "Tests";
+         path = "Example/Tests";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_500" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_305";
+      };
+      "OBJ_501" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_306";
+      };
+      "OBJ_502" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_307";
+      };
+      "OBJ_503" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_308";
+      };
+      "OBJ_504" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_309";
+      };
+      "OBJ_505" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_310";
+      };
+      "OBJ_506" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_311";
+      };
+      "OBJ_507" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_312";
+      };
+      "OBJ_508" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_313";
+      };
+      "OBJ_509" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_314";
+      };
+      "OBJ_51" = {
+         isa = "PBXFileReference";
+         path = "Info.plist";
+         sourceTree = "<group>";
+      };
+      "OBJ_510" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_315";
+      };
+      "OBJ_511" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_317";
+      };
+      "OBJ_512" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_318";
+      };
+      "OBJ_513" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_319";
+      };
+      "OBJ_514" = {
+         isa = "PBXFrameworksBuildPhase";
+         files = (
+         );
+      };
+      "OBJ_516" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_517",
+            "OBJ_518"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_517" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            LD = "/usr/bin/true";
+            OTHER_SWIFT_FLAGS = (
+               "-swift-version",
+               "5",
+               "-I",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2",
+               "-target",
+               "x86_64-apple-macosx10.10",
+               "-sdk",
+               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk",
+               "-package-description-version",
+               "5"
+            );
+            SWIFT_VERSION = "5.0";
+         };
+         name = "Debug";
+      };
+      "OBJ_518" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            LD = "/usr/bin/true";
+            OTHER_SWIFT_FLAGS = (
+               "-swift-version",
+               "5",
+               "-I",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2",
+               "-target",
+               "x86_64-apple-macosx10.10",
+               "-sdk",
+               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk",
+               "-package-description-version",
+               "5"
+            );
+            SWIFT_VERSION = "5.0";
+         };
+         name = "Release";
+      };
+      "OBJ_519" = {
+         isa = "PBXSourcesBuildPhase";
+         files = (
+            "OBJ_520"
+         );
+      };
+      "OBJ_52" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_53",
+            "OBJ_54",
+            "OBJ_55",
+            "OBJ_56",
+            "OBJ_57",
+            "OBJ_58",
+            "OBJ_59",
+            "OBJ_60"
+         );
+         name = "Adapters";
+         path = "Adapters";
+         sourceTree = "<group>";
+      };
+      "OBJ_520" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_251";
+      };
+      "OBJ_522" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_523",
+            "OBJ_524"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_523" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            LD = "/usr/bin/true";
+            OTHER_SWIFT_FLAGS = (
+               "-swift-version",
+               "5",
+               "-I",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2",
+               "-target",
+               "x86_64-apple-macosx10.10",
+               "-sdk",
+               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk",
+               "-package-description-version",
+               "5"
+            );
+            SWIFT_VERSION = "5.0";
+         };
+         name = "Debug";
+      };
+      "OBJ_524" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            LD = "/usr/bin/true";
+            OTHER_SWIFT_FLAGS = (
+               "-swift-version",
+               "5",
+               "-I",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2",
+               "-target",
+               "x86_64-apple-macosx10.10",
+               "-sdk",
+               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk",
+               "-package-description-version",
+               "5"
+            );
+            SWIFT_VERSION = "5.0";
+         };
+         name = "Release";
+      };
+      "OBJ_525" = {
+         isa = "PBXSourcesBuildPhase";
+         files = (
+            "OBJ_526"
+         );
+      };
+      "OBJ_526" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_249";
+      };
+      "OBJ_528" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_529",
+            "OBJ_530"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_529" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            ENABLE_TESTABILITY = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(SRCROOT)/.build/checkouts/realm-cocoa/include",
+               "$(SRCROOT)/.build/checkouts/realm-core/src",
+               "$(SRCROOT)/UIAdapterKit.xcodeproj/GeneratedModuleMap/RealmCore"
+            );
+            INFOPLIST_FILE = "UIAdapterKit.xcodeproj/RealmSwift_Info.plist";
+            IPHONEOS_DEPLOYMENT_TARGET = "8.0";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "10.10";
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)",
+               "-Xcc",
+               "-fmodule-map-file=$(SRCROOT)/.build/checkouts/realm-cocoa/include/module.modulemap",
+               "-Xcc",
+               "-fmodule-map-file=$(SRCROOT)/UIAdapterKit.xcodeproj/GeneratedModuleMap/RealmCore/module.modulemap"
+            );
+            PRODUCT_BUNDLE_IDENTIFIER = "RealmSwift";
+            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+            SKIP_INSTALL = "YES";
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            SWIFT_VERSION = "5.0";
+            TARGET_NAME = "RealmSwift";
+            TVOS_DEPLOYMENT_TARGET = "9.0";
+            WATCHOS_DEPLOYMENT_TARGET = "2.0";
+         };
+         name = "Debug";
+      };
+      "OBJ_53" = {
+         isa = "PBXFileReference";
+         path = "BaseCollectionViewAdapterTests.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_530" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            ENABLE_TESTABILITY = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(SRCROOT)/.build/checkouts/realm-cocoa/include",
+               "$(SRCROOT)/.build/checkouts/realm-core/src",
+               "$(SRCROOT)/UIAdapterKit.xcodeproj/GeneratedModuleMap/RealmCore"
+            );
+            INFOPLIST_FILE = "UIAdapterKit.xcodeproj/RealmSwift_Info.plist";
+            IPHONEOS_DEPLOYMENT_TARGET = "8.0";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "10.10";
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)",
+               "-Xcc",
+               "-fmodule-map-file=$(SRCROOT)/.build/checkouts/realm-cocoa/include/module.modulemap",
+               "-Xcc",
+               "-fmodule-map-file=$(SRCROOT)/UIAdapterKit.xcodeproj/GeneratedModuleMap/RealmCore/module.modulemap"
+            );
+            PRODUCT_BUNDLE_IDENTIFIER = "RealmSwift";
+            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+            SKIP_INSTALL = "YES";
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            SWIFT_VERSION = "5.0";
+            TARGET_NAME = "RealmSwift";
+            TVOS_DEPLOYMENT_TARGET = "9.0";
+            WATCHOS_DEPLOYMENT_TARGET = "2.0";
+         };
+         name = "Release";
+      };
+      "OBJ_531" = {
+         isa = "PBXSourcesBuildPhase";
+         files = (
+            "OBJ_532",
+            "OBJ_533",
+            "OBJ_534",
+            "OBJ_535",
+            "OBJ_536",
+            "OBJ_537",
+            "OBJ_538",
+            "OBJ_539",
+            "OBJ_540",
+            "OBJ_541",
+            "OBJ_542",
+            "OBJ_543",
+            "OBJ_544",
+            "OBJ_545",
+            "OBJ_546",
+            "OBJ_547",
+            "OBJ_548",
+            "OBJ_549",
+            "OBJ_550"
+         );
+      };
+      "OBJ_532" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_229";
+      };
+      "OBJ_533" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_230";
+      };
+      "OBJ_534" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_231";
+      };
+      "OBJ_535" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_232";
+      };
+      "OBJ_536" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_233";
+      };
+      "OBJ_537" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_234";
+      };
+      "OBJ_538" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_235";
+      };
+      "OBJ_539" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_236";
+      };
+      "OBJ_54" = {
+         isa = "PBXFileReference";
+         path = "BaseTableViewAdapterTests.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_540" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_237";
+      };
+      "OBJ_541" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_238";
+      };
+      "OBJ_542" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_239";
+      };
+      "OBJ_543" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_240";
+      };
+      "OBJ_544" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_241";
+      };
+      "OBJ_545" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_242";
+      };
+      "OBJ_546" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_243";
+      };
+      "OBJ_547" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_244";
+      };
+      "OBJ_548" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_245";
+      };
+      "OBJ_549" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_246";
+      };
+      "OBJ_55" = {
+         isa = "PBXFileReference";
+         path = "RealmCollectionViewAdapterTests.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_550" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_247";
+      };
+      "OBJ_551" = {
+         isa = "PBXFrameworksBuildPhase";
+         files = (
+            "OBJ_552",
+            "OBJ_553"
+         );
+      };
+      "OBJ_552" = {
+         isa = "PBXBuildFile";
+         fileRef = "Realm::Realm::Product";
+      };
+      "OBJ_553" = {
+         isa = "PBXBuildFile";
+         fileRef = "RealmCore::RealmCore::Product";
+      };
+      "OBJ_554" = {
+         isa = "PBXTargetDependency";
+         target = "Realm::Realm";
+      };
+      "OBJ_555" = {
+         isa = "PBXTargetDependency";
+         target = "RealmCore::RealmCore";
+      };
+      "OBJ_557" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_558",
+            "OBJ_559"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_558" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            ENABLE_TESTABILITY = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)"
+            );
+            INFOPLIST_FILE = "UIAdapterKit.xcodeproj/UIAdapterKit_Info.plist";
+            IPHONEOS_DEPLOYMENT_TARGET = "8.0";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "10.10";
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)"
+            );
+            PRODUCT_BUNDLE_IDENTIFIER = "UIAdapterKit";
+            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+            SKIP_INSTALL = "YES";
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            SWIFT_VERSION = "5.0";
+            TARGET_NAME = "UIAdapterKit";
+            TVOS_DEPLOYMENT_TARGET = "9.0";
+            WATCHOS_DEPLOYMENT_TARGET = "2.0";
+         };
+         name = "Debug";
+      };
+      "OBJ_559" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            ENABLE_TESTABILITY = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)"
+            );
+            INFOPLIST_FILE = "UIAdapterKit.xcodeproj/UIAdapterKit_Info.plist";
+            IPHONEOS_DEPLOYMENT_TARGET = "8.0";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "10.10";
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)"
+            );
+            PRODUCT_BUNDLE_IDENTIFIER = "UIAdapterKit";
+            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+            SKIP_INSTALL = "YES";
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            SWIFT_VERSION = "5.0";
+            TARGET_NAME = "UIAdapterKit";
+            TVOS_DEPLOYMENT_TARGET = "9.0";
+            WATCHOS_DEPLOYMENT_TARGET = "2.0";
+         };
+         name = "Release";
+      };
+      "OBJ_56" = {
+         isa = "PBXFileReference";
+         path = "RealmSearchableCollectionViewAdapterTests.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_560" = {
+         isa = "PBXSourcesBuildPhase";
+         files = (
+            "OBJ_561",
+            "OBJ_562",
+            "OBJ_563",
+            "OBJ_564",
+            "OBJ_565",
+            "OBJ_566",
+            "OBJ_567",
+            "OBJ_568",
+            "OBJ_569",
+            "OBJ_570",
+            "OBJ_571",
+            "OBJ_572",
+            "OBJ_573",
+            "OBJ_574",
+            "OBJ_575",
+            "OBJ_576"
+         );
+      };
+      "OBJ_561" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_11";
+      };
+      "OBJ_562" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_12";
+      };
+      "OBJ_563" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_13";
+      };
+      "OBJ_564" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_14";
+      };
+      "OBJ_565" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_15";
+      };
+      "OBJ_566" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_17";
+      };
+      "OBJ_567" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_18";
+      };
+      "OBJ_568" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_19";
+      };
+      "OBJ_569" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_20";
+      };
+      "OBJ_57" = {
+         isa = "PBXFileReference";
+         path = "RealmSearchableTableViewAdapterTests.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_570" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_21";
+      };
+      "OBJ_571" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_22";
+      };
+      "OBJ_572" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_24";
+      };
+      "OBJ_573" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_25";
+      };
+      "OBJ_574" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_27";
+      };
+      "OBJ_575" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_28";
+      };
+      "OBJ_576" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_29";
+      };
+      "OBJ_577" = {
+         isa = "PBXFrameworksBuildPhase";
+         files = (
+         );
+      };
+      "OBJ_579" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_580",
+            "OBJ_581"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_58" = {
+         isa = "PBXFileReference";
+         path = "RealmTableViewAdapterTests.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_580" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            ENABLE_TESTABILITY = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)"
+            );
+            INFOPLIST_FILE = "UIAdapterKit.xcodeproj/UIAdapterKit_Common_Info.plist";
+            IPHONEOS_DEPLOYMENT_TARGET = "8.0";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "10.10";
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)"
+            );
+            PRODUCT_BUNDLE_IDENTIFIER = "UIAdapterKit-Common";
+            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+            SKIP_INSTALL = "YES";
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            SWIFT_VERSION = "5.0";
+            TARGET_NAME = "UIAdapterKit/Common";
+            TVOS_DEPLOYMENT_TARGET = "9.0";
+            WATCHOS_DEPLOYMENT_TARGET = "2.0";
+         };
+         name = "Debug";
+      };
+      "OBJ_581" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            ENABLE_TESTABILITY = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)"
+            );
+            INFOPLIST_FILE = "UIAdapterKit.xcodeproj/UIAdapterKit_Common_Info.plist";
+            IPHONEOS_DEPLOYMENT_TARGET = "8.0";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "10.10";
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)"
+            );
+            PRODUCT_BUNDLE_IDENTIFIER = "UIAdapterKit-Common";
+            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+            SKIP_INSTALL = "YES";
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            SWIFT_VERSION = "5.0";
+            TARGET_NAME = "UIAdapterKit/Common";
+            TVOS_DEPLOYMENT_TARGET = "9.0";
+            WATCHOS_DEPLOYMENT_TARGET = "2.0";
+         };
+         name = "Release";
+      };
+      "OBJ_582" = {
+         isa = "PBXSourcesBuildPhase";
+         files = (
+            "OBJ_583"
+         );
+      };
+      "OBJ_583" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_32";
+      };
+      "OBJ_584" = {
+         isa = "PBXFrameworksBuildPhase";
+         files = (
+            "OBJ_585"
+         );
+      };
+      "OBJ_585" = {
+         isa = "PBXBuildFile";
+         fileRef = "UIAdapterKit::UIAdapterKit::Product";
+      };
+      "OBJ_586" = {
+         isa = "PBXTargetDependency";
+         target = "UIAdapterKit::UIAdapterKit";
+      };
+      "OBJ_588" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_589",
+            "OBJ_590"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_589" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            ENABLE_TESTABILITY = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(SRCROOT)/.build/checkouts/realm-cocoa/include",
+               "$(SRCROOT)/.build/checkouts/realm-core/src",
+               "$(SRCROOT)/UIAdapterKit.xcodeproj/GeneratedModuleMap/RealmCore"
+            );
+            INFOPLIST_FILE = "UIAdapterKit.xcodeproj/UIAdapterKit_Realm_Info.plist";
+            IPHONEOS_DEPLOYMENT_TARGET = "8.0";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "10.10";
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)",
+               "-Xcc",
+               "-fmodule-map-file=$(SRCROOT)/.build/checkouts/realm-cocoa/include/module.modulemap",
+               "-Xcc",
+               "-fmodule-map-file=$(SRCROOT)/UIAdapterKit.xcodeproj/GeneratedModuleMap/RealmCore/module.modulemap"
+            );
+            PRODUCT_BUNDLE_IDENTIFIER = "UIAdapterKit-Realm";
+            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+            SKIP_INSTALL = "YES";
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            SWIFT_VERSION = "5.0";
+            TARGET_NAME = "UIAdapterKit/Realm";
+            TVOS_DEPLOYMENT_TARGET = "9.0";
+            WATCHOS_DEPLOYMENT_TARGET = "2.0";
+         };
+         name = "Debug";
+      };
+      "OBJ_59" = {
+         isa = "PBXFileReference";
+         path = "StaticCollectionViewAdapterTests.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_590" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            ENABLE_TESTABILITY = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(SRCROOT)/.build/checkouts/realm-cocoa/include",
+               "$(SRCROOT)/.build/checkouts/realm-core/src",
+               "$(SRCROOT)/UIAdapterKit.xcodeproj/GeneratedModuleMap/RealmCore"
+            );
+            INFOPLIST_FILE = "UIAdapterKit.xcodeproj/UIAdapterKit_Realm_Info.plist";
+            IPHONEOS_DEPLOYMENT_TARGET = "8.0";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "10.10";
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)",
+               "-Xcc",
+               "-fmodule-map-file=$(SRCROOT)/.build/checkouts/realm-cocoa/include/module.modulemap",
+               "-Xcc",
+               "-fmodule-map-file=$(SRCROOT)/UIAdapterKit.xcodeproj/GeneratedModuleMap/RealmCore/module.modulemap"
+            );
+            PRODUCT_BUNDLE_IDENTIFIER = "UIAdapterKit-Realm";
+            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+            SKIP_INSTALL = "YES";
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            SWIFT_VERSION = "5.0";
+            TARGET_NAME = "UIAdapterKit/Realm";
+            TVOS_DEPLOYMENT_TARGET = "9.0";
+            WATCHOS_DEPLOYMENT_TARGET = "2.0";
+         };
+         name = "Release";
+      };
+      "OBJ_591" = {
+         isa = "PBXSourcesBuildPhase";
+         files = (
+            "OBJ_592",
+            "OBJ_593",
+            "OBJ_594",
+            "OBJ_595",
+            "OBJ_596",
+            "OBJ_597",
+            "OBJ_598",
+            "OBJ_599",
+            "OBJ_600",
+            "OBJ_601",
+            "OBJ_602"
+         );
+      };
+      "OBJ_592" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_36";
+      };
+      "OBJ_593" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_37";
+      };
+      "OBJ_594" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_38";
+      };
+      "OBJ_595" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_39";
+      };
+      "OBJ_596" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_41";
+      };
+      "OBJ_597" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_43";
+      };
+      "OBJ_598" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_44";
+      };
+      "OBJ_599" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_45";
+      };
+      "OBJ_6" = {
+         isa = "PBXFileReference";
+         explicitFileType = "sourcecode.swift";
+         path = "Package.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_60" = {
+         isa = "PBXFileReference";
+         path = "StaticTableViewAdapterTests.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_600" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_47";
+      };
+      "OBJ_601" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_48";
+      };
+      "OBJ_602" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_49";
+      };
+      "OBJ_603" = {
+         isa = "PBXFrameworksBuildPhase";
+         files = (
+            "OBJ_604",
+            "OBJ_605",
+            "OBJ_606",
+            "OBJ_607"
+         );
+      };
+      "OBJ_604" = {
+         isa = "PBXBuildFile";
+         fileRef = "Realm::RealmSwift::Product";
+      };
+      "OBJ_605" = {
+         isa = "PBXBuildFile";
+         fileRef = "Realm::Realm::Product";
+      };
+      "OBJ_606" = {
+         isa = "PBXBuildFile";
+         fileRef = "RealmCore::RealmCore::Product";
+      };
+      "OBJ_607" = {
+         isa = "PBXBuildFile";
+         fileRef = "UIAdapterKit::UIAdapterKit::Product";
+      };
+      "OBJ_608" = {
+         isa = "PBXTargetDependency";
+         target = "Realm::RealmSwift";
+      };
+      "OBJ_609" = {
+         isa = "PBXTargetDependency";
+         target = "Realm::Realm";
+      };
+      "OBJ_61" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_62"
+         );
+         name = "Base";
+         path = "Base";
+         sourceTree = "<group>";
+      };
+      "OBJ_610" = {
+         isa = "PBXTargetDependency";
+         target = "RealmCore::RealmCore";
+      };
+      "OBJ_611" = {
+         isa = "PBXTargetDependency";
+         target = "UIAdapterKit::UIAdapterKit";
+      };
+      "OBJ_613" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_614",
+            "OBJ_615"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_614" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            LD = "/usr/bin/true";
+            OTHER_SWIFT_FLAGS = (
+               "-swift-version",
+               "5",
+               "-I",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2",
+               "-target",
+               "x86_64-apple-macosx10.10",
+               "-sdk",
+               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk",
+               "-package-description-version",
+               "5.1"
+            );
+            SWIFT_VERSION = "5.0";
+         };
+         name = "Debug";
+      };
+      "OBJ_615" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            LD = "/usr/bin/true";
+            OTHER_SWIFT_FLAGS = (
+               "-swift-version",
+               "5",
+               "-I",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2",
+               "-target",
+               "x86_64-apple-macosx10.10",
+               "-sdk",
+               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk",
+               "-package-description-version",
+               "5.1"
+            );
+            SWIFT_VERSION = "5.0";
+         };
+         name = "Release";
+      };
+      "OBJ_616" = {
+         isa = "PBXSourcesBuildPhase";
+         files = (
+            "OBJ_617"
+         );
+      };
+      "OBJ_617" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_6";
+      };
+      "OBJ_619" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_620",
+            "OBJ_621"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_62" = {
+         isa = "PBXFileReference";
+         path = "BaseRealmTestCase.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_620" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+         };
+         name = "Debug";
+      };
+      "OBJ_621" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+         };
+         name = "Release";
+      };
+      "OBJ_622" = {
+         isa = "PBXTargetDependency";
+         target = "UIAdapterKit::UIAdapterKitTests";
+      };
+      "OBJ_624" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_625",
+            "OBJ_626"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_625" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            CLANG_ENABLE_MODULES = "YES";
+            EMBEDDED_CONTENT_CONTAINS_SWIFT = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(SRCROOT)/.build/checkouts/realm-cocoa/include",
+               "$(SRCROOT)/.build/checkouts/realm-core/src",
+               "$(SRCROOT)/UIAdapterKit.xcodeproj/GeneratedModuleMap/RealmCore"
+            );
+            INFOPLIST_FILE = "UIAdapterKit.xcodeproj/UIAdapterKitTests_Info.plist";
+            IPHONEOS_DEPLOYMENT_TARGET = "8.0";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "@loader_path/../Frameworks",
+               "@loader_path/Frameworks"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "10.10";
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)",
+               "-Xcc",
+               "-fmodule-map-file=$(SRCROOT)/.build/checkouts/realm-cocoa/include/module.modulemap",
+               "-Xcc",
+               "-fmodule-map-file=$(SRCROOT)/UIAdapterKit.xcodeproj/GeneratedModuleMap/RealmCore/module.modulemap"
+            );
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            SWIFT_VERSION = "5.0";
+            TARGET_NAME = "UIAdapterKitTests";
+            TVOS_DEPLOYMENT_TARGET = "9.0";
+            WATCHOS_DEPLOYMENT_TARGET = "2.0";
+         };
+         name = "Debug";
+      };
+      "OBJ_626" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            CLANG_ENABLE_MODULES = "YES";
+            EMBEDDED_CONTENT_CONTAINS_SWIFT = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(SRCROOT)/.build/checkouts/realm-cocoa/include",
+               "$(SRCROOT)/.build/checkouts/realm-core/src",
+               "$(SRCROOT)/UIAdapterKit.xcodeproj/GeneratedModuleMap/RealmCore"
+            );
+            INFOPLIST_FILE = "UIAdapterKit.xcodeproj/UIAdapterKitTests_Info.plist";
+            IPHONEOS_DEPLOYMENT_TARGET = "8.0";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "@loader_path/../Frameworks",
+               "@loader_path/Frameworks"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "10.10";
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)",
+               "-Xcc",
+               "-fmodule-map-file=$(SRCROOT)/.build/checkouts/realm-cocoa/include/module.modulemap",
+               "-Xcc",
+               "-fmodule-map-file=$(SRCROOT)/UIAdapterKit.xcodeproj/GeneratedModuleMap/RealmCore/module.modulemap"
+            );
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            SWIFT_VERSION = "5.0";
+            TARGET_NAME = "UIAdapterKitTests";
+            TVOS_DEPLOYMENT_TARGET = "9.0";
+            WATCHOS_DEPLOYMENT_TARGET = "2.0";
+         };
+         name = "Release";
+      };
+      "OBJ_627" = {
+         isa = "PBXSourcesBuildPhase";
+         files = (
+            "OBJ_628",
+            "OBJ_629",
+            "OBJ_630",
+            "OBJ_631",
+            "OBJ_632",
+            "OBJ_633",
+            "OBJ_634",
+            "OBJ_635",
+            "OBJ_636",
+            "OBJ_637",
+            "OBJ_638",
+            "OBJ_639",
+            "OBJ_640",
+            "OBJ_641",
+            "OBJ_642",
+            "OBJ_643",
+            "OBJ_644",
+            "OBJ_645",
+            "OBJ_646",
+            "OBJ_647",
+            "OBJ_648",
+            "OBJ_649",
+            "OBJ_650",
+            "OBJ_651",
+            "OBJ_652"
+         );
+      };
+      "OBJ_628" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_53";
+      };
+      "OBJ_629" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_54";
+      };
+      "OBJ_63" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_64",
+            "OBJ_65",
+            "OBJ_66",
+            "OBJ_67"
+         );
+         name = "Items";
+         path = "Items";
+         sourceTree = "<group>";
+      };
+      "OBJ_630" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_55";
+      };
+      "OBJ_631" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_56";
+      };
+      "OBJ_632" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_57";
+      };
+      "OBJ_633" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_58";
+      };
+      "OBJ_634" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_59";
+      };
+      "OBJ_635" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_60";
+      };
+      "OBJ_636" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_62";
+      };
+      "OBJ_637" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_64";
+      };
+      "OBJ_638" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_65";
+      };
+      "OBJ_639" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_66";
+      };
+      "OBJ_64" = {
+         isa = "PBXFileReference";
+         path = "DefaultTableViewItemTests.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_640" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_67";
+      };
+      "OBJ_641" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_69";
+      };
+      "OBJ_642" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_71";
+      };
+      "OBJ_643" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_72";
+      };
+      "OBJ_644" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_74";
+      };
+      "OBJ_645" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_75";
+      };
+      "OBJ_646" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_76";
+      };
+      "OBJ_647" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_78";
+      };
+      "OBJ_648" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_79";
+      };
+      "OBJ_649" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_80";
+      };
+      "OBJ_65" = {
+         isa = "PBXFileReference";
+         path = "EditableTableViewItemTests.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_650" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_82";
+      };
+      "OBJ_651" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_83";
+      };
+      "OBJ_652" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_84";
+      };
+      "OBJ_653" = {
+         isa = "PBXFrameworksBuildPhase";
+         files = (
+            "OBJ_654",
+            "OBJ_655",
+            "OBJ_656",
+            "OBJ_657",
+            "OBJ_658"
+         );
+      };
+      "OBJ_654" = {
+         isa = "PBXBuildFile";
+         fileRef = "Fakery::Fakery::Product";
+      };
+      "OBJ_655" = {
+         isa = "PBXBuildFile";
+         fileRef = "Realm::RealmSwift::Product";
+      };
+      "OBJ_656" = {
+         isa = "PBXBuildFile";
+         fileRef = "Realm::Realm::Product";
+      };
+      "OBJ_657" = {
+         isa = "PBXBuildFile";
+         fileRef = "RealmCore::RealmCore::Product";
+      };
+      "OBJ_658" = {
+         isa = "PBXBuildFile";
+         fileRef = "UIAdapterKit::UIAdapterKit::Product";
+      };
+      "OBJ_659" = {
+         isa = "PBXTargetDependency";
+         target = "Fakery::Fakery";
+      };
+      "OBJ_66" = {
+         isa = "PBXFileReference";
+         path = "ItemTests.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_660" = {
+         isa = "PBXTargetDependency";
+         target = "Realm::RealmSwift";
+      };
+      "OBJ_661" = {
+         isa = "PBXTargetDependency";
+         target = "Realm::Realm";
+      };
+      "OBJ_662" = {
+         isa = "PBXTargetDependency";
+         target = "RealmCore::RealmCore";
+      };
+      "OBJ_663" = {
+         isa = "PBXTargetDependency";
+         target = "UIAdapterKit::UIAdapterKit";
+      };
+      "OBJ_67" = {
+         isa = "PBXFileReference";
+         path = "SwipeableTableViewItemTests.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_68" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_69"
+         );
+         name = "Misc";
+         path = "Misc";
+         sourceTree = "<group>";
+      };
+      "OBJ_69" = {
+         isa = "PBXFileReference";
+         path = "ContainerTests.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_7" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_8",
+            "OBJ_30",
+            "OBJ_33"
+         );
+         name = "Sources";
+         path = "";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_70" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_71",
+            "OBJ_72",
+            "OBJ_73",
+            "OBJ_77"
+         );
+         name = "Models";
+         path = "Models";
+         sourceTree = "<group>";
+      };
+      "OBJ_71" = {
+         isa = "PBXFileReference";
+         path = "BasicModel.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_72" = {
+         isa = "PBXFileReference";
+         path = "Fakeable.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_73" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_74",
+            "OBJ_75",
+            "OBJ_76"
+         );
+         name = "Items";
+         path = "Items";
+         sourceTree = "<group>";
+      };
+      "OBJ_74" = {
+         isa = "PBXFileReference";
+         path = "BasicCollectionViewItem.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_75" = {
+         isa = "PBXFileReference";
+         path = "BasicItem.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_76" = {
+         isa = "PBXFileReference";
+         path = "BasicTableViewItem.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_77" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_78",
+            "OBJ_79",
+            "OBJ_80"
+         );
+         name = "Sections";
+         path = "Sections";
+         sourceTree = "<group>";
+      };
+      "OBJ_78" = {
+         isa = "PBXFileReference";
+         path = "BasicCollectionViewSection.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_79" = {
+         isa = "PBXFileReference";
+         path = "BasicSection.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_8" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_9"
+         );
+         name = "UIAdapterKit";
+         path = "UIAdapterKit";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_80" = {
+         isa = "PBXFileReference";
+         path = "BasicTableViewSection.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_81" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_82",
+            "OBJ_83",
+            "OBJ_84"
+         );
+         name = "Sections";
+         path = "Sections";
+         sourceTree = "<group>";
+      };
+      "OBJ_82" = {
+         isa = "PBXFileReference";
+         path = "RealmCollectionViewSectionTests.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_83" = {
+         isa = "PBXFileReference";
+         path = "RealmTableViewSectionTests.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_84" = {
+         isa = "PBXFileReference";
+         path = "SectionTests.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_85" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_86",
+            "OBJ_120",
+            "OBJ_250"
+         );
+         name = "Dependencies";
+         path = "";
+         sourceTree = "<group>";
+      };
+      "OBJ_86" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_87",
+            "OBJ_119"
+         );
+         name = "Fakery 4.1.1";
+         path = "";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_87" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_88",
+            "OBJ_89",
+            "OBJ_92",
+            "OBJ_94",
+            "OBJ_95"
+         );
+         name = "Fakery";
+         path = ".build/checkouts/Fakery/Sources/Fakery";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_88" = {
+         isa = "PBXFileReference";
+         path = "Config.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_89" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_90",
+            "OBJ_91"
+         );
+         name = "Data";
+         path = "Data";
+         sourceTree = "<group>";
+      };
+      "OBJ_9" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_10",
+            "OBJ_16",
+            "OBJ_23",
+            "OBJ_26"
+         );
+         name = "Classes";
+         path = "Classes";
+         sourceTree = "<group>";
+      };
+      "OBJ_90" = {
+         isa = "PBXFileReference";
+         path = "Parser.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_91" = {
+         isa = "PBXFileReference";
+         path = "Provider.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_92" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_93"
+         );
+         name = "Extensions";
+         path = "Extensions";
+         sourceTree = "<group>";
+      };
+      "OBJ_93" = {
+         isa = "PBXFileReference";
+         path = "ArrayExtension.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_94" = {
+         isa = "PBXFileReference";
+         path = "Faker.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_95" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_96",
+            "OBJ_97",
+            "OBJ_98",
+            "OBJ_99",
+            "OBJ_100",
+            "OBJ_101",
+            "OBJ_102",
+            "OBJ_103",
+            "OBJ_104",
+            "OBJ_105",
+            "OBJ_106",
+            "OBJ_107",
+            "OBJ_108",
+            "OBJ_109",
+            "OBJ_110",
+            "OBJ_111",
+            "OBJ_112",
+            "OBJ_113",
+            "OBJ_114",
+            "OBJ_115",
+            "OBJ_116",
+            "OBJ_117",
+            "OBJ_118"
+         );
+         name = "Generators";
+         path = "Generators";
+         sourceTree = "<group>";
+      };
+      "OBJ_96" = {
+         isa = "PBXFileReference";
+         path = "Address.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_97" = {
+         isa = "PBXFileReference";
+         path = "App.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_98" = {
+         isa = "PBXFileReference";
+         path = "Bank.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_99" = {
+         isa = "PBXFileReference";
+         path = "Business.swift";
+         sourceTree = "<group>";
+      };
+      "Realm::Realm" = {
+         isa = "PBXNativeTarget";
+         buildConfigurationList = "OBJ_386";
+         buildPhases = (
+            "OBJ_389",
+            "OBJ_442"
+         );
+         dependencies = (
+            "OBJ_444"
+         );
+         name = "Realm";
+         productName = "Realm";
+         productReference = "Realm::Realm::Product";
+         productType = "com.apple.product-type.framework";
+      };
+      "Realm::Realm::Product" = {
+         isa = "PBXFileReference";
+         path = "Realm.framework";
+         sourceTree = "BUILT_PRODUCTS_DIR";
+      };
+      "Realm::RealmSwift" = {
+         isa = "PBXNativeTarget";
+         buildConfigurationList = "OBJ_528";
+         buildPhases = (
+            "OBJ_531",
+            "OBJ_551"
+         );
+         dependencies = (
+            "OBJ_554",
+            "OBJ_555"
+         );
+         name = "RealmSwift";
+         productName = "RealmSwift";
+         productReference = "Realm::RealmSwift::Product";
+         productType = "com.apple.product-type.framework";
+      };
+      "Realm::RealmSwift::Product" = {
+         isa = "PBXFileReference";
+         path = "RealmSwift.framework";
+         sourceTree = "BUILT_PRODUCTS_DIR";
+      };
+      "Realm::SwiftPMPackageDescription" = {
+         isa = "PBXNativeTarget";
+         buildConfigurationList = "OBJ_522";
+         buildPhases = (
+            "OBJ_525"
+         );
+         dependencies = (
+         );
+         name = "RealmPackageDescription";
+         productName = "RealmPackageDescription";
+         productType = "com.apple.product-type.framework";
+      };
+      "RealmCore::RealmCore" = {
+         isa = "PBXNativeTarget";
+         buildConfigurationList = "OBJ_446";
+         buildPhases = (
+            "OBJ_449",
+            "OBJ_514"
+         );
+         dependencies = (
+         );
+         name = "RealmCore";
+         productName = "RealmCore";
+         productReference = "RealmCore::RealmCore::Product";
+         productType = "com.apple.product-type.framework";
+      };
+      "RealmCore::RealmCore::Product" = {
+         isa = "PBXFileReference";
+         path = "RealmCore.framework";
+         sourceTree = "BUILT_PRODUCTS_DIR";
+      };
+      "RealmCore::SwiftPMPackageDescription" = {
+         isa = "PBXNativeTarget";
+         buildConfigurationList = "OBJ_516";
+         buildPhases = (
+            "OBJ_519"
+         );
+         dependencies = (
+         );
+         name = "RealmCorePackageDescription";
+         productName = "RealmCorePackageDescription";
+         productType = "com.apple.product-type.framework";
+      };
+      "UIAdapterKit::SwiftPMPackageDescription" = {
+         isa = "PBXNativeTarget";
+         buildConfigurationList = "OBJ_613";
+         buildPhases = (
+            "OBJ_616"
+         );
+         dependencies = (
+         );
+         name = "UIAdapterKitPackageDescription";
+         productName = "UIAdapterKitPackageDescription";
+         productType = "com.apple.product-type.framework";
+      };
+      "UIAdapterKit::UIAdapterKit" = {
+         isa = "PBXNativeTarget";
+         buildConfigurationList = "OBJ_557";
+         buildPhases = (
+            "OBJ_560",
+            "OBJ_577"
+         );
+         dependencies = (
+         );
+         name = "UIAdapterKit";
+         productName = "UIAdapterKit";
+         productReference = "UIAdapterKit::UIAdapterKit::Product";
+         productType = "com.apple.product-type.framework";
+      };
+      "UIAdapterKit::UIAdapterKit/Common" = {
+         isa = "PBXNativeTarget";
+         buildConfigurationList = "OBJ_579";
+         buildPhases = (
+            "OBJ_582",
+            "OBJ_584"
+         );
+         dependencies = (
+            "OBJ_586"
+         );
+         name = "UIAdapterKit/Common";
+         productName = "UIAdapterKit_Common";
+         productReference = "UIAdapterKit::UIAdapterKit/Common::Product";
+         productType = "com.apple.product-type.framework";
+      };
+      "UIAdapterKit::UIAdapterKit/Common::Product" = {
+         isa = "PBXFileReference";
+         path = "UIAdapterKit_Common.framework";
+         sourceTree = "BUILT_PRODUCTS_DIR";
+      };
+      "UIAdapterKit::UIAdapterKit/Realm" = {
+         isa = "PBXNativeTarget";
+         buildConfigurationList = "OBJ_588";
+         buildPhases = (
+            "OBJ_591",
+            "OBJ_603"
+         );
+         dependencies = (
+            "OBJ_608",
+            "OBJ_609",
+            "OBJ_610",
+            "OBJ_611"
+         );
+         name = "UIAdapterKit/Realm";
+         productName = "UIAdapterKit_Realm";
+         productReference = "UIAdapterKit::UIAdapterKit/Realm::Product";
+         productType = "com.apple.product-type.framework";
+      };
+      "UIAdapterKit::UIAdapterKit/Realm::Product" = {
+         isa = "PBXFileReference";
+         path = "UIAdapterKit_Realm.framework";
+         sourceTree = "BUILT_PRODUCTS_DIR";
+      };
+      "UIAdapterKit::UIAdapterKit::Product" = {
+         isa = "PBXFileReference";
+         path = "UIAdapterKit.framework";
+         sourceTree = "BUILT_PRODUCTS_DIR";
+      };
+      "UIAdapterKit::UIAdapterKitPackageTests::ProductTarget" = {
+         isa = "PBXAggregateTarget";
+         buildConfigurationList = "OBJ_619";
+         buildPhases = (
+         );
+         dependencies = (
+            "OBJ_622"
+         );
+         name = "UIAdapterKitPackageTests";
+         productName = "UIAdapterKitPackageTests";
+      };
+      "UIAdapterKit::UIAdapterKitTests" = {
+         isa = "PBXNativeTarget";
+         buildConfigurationList = "OBJ_624";
+         buildPhases = (
+            "OBJ_627",
+            "OBJ_653"
+         );
+         dependencies = (
+            "OBJ_659",
+            "OBJ_660",
+            "OBJ_661",
+            "OBJ_662",
+            "OBJ_663"
+         );
+         name = "UIAdapterKitTests";
+         productName = "UIAdapterKitTests";
+         productReference = "UIAdapterKit::UIAdapterKitTests::Product";
+         productType = "com.apple.product-type.bundle.unit-test";
+      };
+      "UIAdapterKit::UIAdapterKitTests::Product" = {
+         isa = "PBXFileReference";
+         path = "UIAdapterKitTests.xctest";
+         sourceTree = "BUILT_PRODUCTS_DIR";
+      };
+   };
+   rootObject = "OBJ_1";
+}

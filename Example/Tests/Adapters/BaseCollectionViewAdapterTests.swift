@@ -10,6 +10,10 @@ import XCTest
 import Fakery
 @testable import UIAdapterKit
 
+#if SWIFT_PACKAGE
+@testable import UIAdapterKit
+#endif
+
 class BaseCollectionViewAdapterTests: XCTestCase {
     private var adapter: MockCollectionViewAdapter!
     private var collectionView: UICollectionView!
