@@ -1,10 +1,12 @@
-0.11.0 Release notes (2020-03-03)
-=============================================================
+# Changelog
+
+## 0.11.0
+
 ### Enhancements
 * Add **willDisplay(cell:)** for TableViewItem and CollectionViewItem
 
-0.10.0 Release notes (2020-02-29)
-=============================================================
+## 0.10.0
+
 ### Breaking changes
 * Now **onInitial()** is now renamed `onPreInitial()` for RealmTableViewSection and RealmCollectionViewSection
 * Now **onUpdate()** is now renamed `onPreUpdate(deletions:insertions:modification:s)` for RealmTableViewSection and RealmCollectionViewSection
@@ -13,40 +15,40 @@
 * Add **onPostInitial()** for RealmTableViewSection and RealmCollectionViewSection
 * Add **onPostUpdate(deletions:insertions:modifications:)** for RealmTableViewSection and RealmCollectionViewSection
 
-0.9.0 Release notes (2019-11-22)
-=============================================================
+## 0.9.0
+
 ### Enhancements
 * Add support for Swift 5.1
 * **tableViewSection(for:)** and **item(for:)** are now public in BaseTableViewAdapter
 * **collectionViewSection(for:)** and **item(for:)** are now public in BaseCollectionViewAdapter
 
-0.8.0 Release notes (2019-06-26)
-=============================================================
+## 0.8.0
+
 ### Enhancements
 * Add support for **didEndDisplayingItem** in BaseTableViewAdapter and BaseCollectionViewAdapter
 * * Add support for **didEndDisplayingHeader** in BaseTableViewAdapter and BaseCollectionViewAdapter
 * * Add support for **didEndDisplayingFooter** in BaseTableViewAdapter and BaseCollectionViewAdapter
 
-0.7.2 Release notes (2019-06-25)
-=============================================================
+## 0.7.2
+
 ### Enhancements
 * Add support for **estimatedHeightForRow** in BaseTableViewAdapter
 
-0.7.1 Release notes (2019-06-25)
-=============================================================
+## 0.7.1
+
 ### Enhancements
 * Add more checks in canEditRow (BaseTableViewAdapter)
 
-0.7.0 Release notes (2019-06-25)
-=============================================================
+## 0.7.0
+
 ### Enhancements
 * Add support for editingStyle (.delete, .insert) in BaseTableViewAdapter (with protocol EditableTableViewItem)
 
 ### Breaking changes
 * The old EditableTableViewItem is now **SwipeableTableViewItem**
 
-0.6.3 Release notes (2019-06-24)
-=============================================================
+## 0.6.3
+
 ### Enhancements
 * Fix missing **heightForHeader** and **heightForFooter** in RealmTableViewSection #
 * Add support for **headerHeight** and **footerHeight** constants in RealmTableViewSection
@@ -56,49 +58,49 @@
 ### Breaking changes
 * Now **headerTitle** and **footerTitle** in RealmTableViewSection are public (prev. open)
 
-0.6.2 Release notes (2019-06-24)
-=============================================================
+## 0.6.2
+
 ### Enhancements
 * Change headerTitle and footerTitle to open in RealmTableViewSection
 * Change DefaultTableViewItem visibility to open
 
-0.6.1 Release notes (2019-06-24)
-=============================================================
+## 0.6.1
+
 ### Enhancements
 * Fix missing open adapter functions (prev. public)
 
-0.6.0 Release notes (2019-06-21)
-=============================================================
+## 0.6.0
+
 ### Enhancements
 * Add support for indentationLevel in UITableView items
 * Results in RealmTableViewSection now are read-only outside this library
 * Now adapter functions are open
 
-0.5.0 Release notes (2019-06-21)
-=============================================================
+## 0.5.0
+
 ### Enhancements
 * Add support for filtering Realm results in UITableView and UICollectionView with RealmSearchableTableViewAdapter and RealmSearchableCollectionViewAdapter
 
-0.4.0 Release notes (2019-06-14)
-=============================================================
+## 0.4.0
+
 ### Enhancements
 * Add support for UITableView and UICollectionView menu actions
 
-0.3.1 Release notes (2019-06-11)
-=============================================================
+## 0.3.1
+
 ### Enhancements
 * Fix crash when using DefaultTableViewItem with StaticTableViewAdapter
 
-0.3.0 Release notes (2019-06-11)
-=============================================================
+## 0.3.0
+
 ### Enhancements
 * Add support to UITableView editing actions
 
-0.2.0 Release notes (2019-06-09)
-=============================================================
+##0.2.0
+
 ### Enhancements
 * Add support to Realm Adapters
 
-0.1.0 Release notes (2019-06-06)
-=============================================================
+## 0.1.0
+
 Hello World!
