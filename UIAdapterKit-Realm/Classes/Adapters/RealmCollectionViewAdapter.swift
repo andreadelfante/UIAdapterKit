@@ -5,7 +5,14 @@
 //  Created by Andrea Del Fante on 09/06/2019.
 //
 
+#if canImport(UIKit)
+
+import UIKit
 import RealmSwift
+
+#if SWIFT_PACKAGE
+import UIAdapterKit
+#endif
 
 open class RealmCollectionViewAdapter: BaseCollectionViewAdapter {
     public private(set) var itemsCount: Int
@@ -100,3 +107,5 @@ open class RealmCollectionViewAdapter: BaseCollectionViewAdapter {
         sections.keys.forEach { self.delete(index: $0) }
     }
 }
+
+#endif

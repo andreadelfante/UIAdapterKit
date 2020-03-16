@@ -10,6 +10,9 @@ import XCTest
 import RealmSwift
 import Fakery
 @testable import UIAdapterKit
+#if SWIFT_PACKAGE
+@testable import UIAdapterKit_Realm
+#endif
 
 class RealmSearchableCollectionViewAdapterTests: BaseRealmTestCase {
     private var adapter: RealmSearchableCollectionViewAdapter!

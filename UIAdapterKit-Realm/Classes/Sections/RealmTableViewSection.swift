@@ -5,7 +5,15 @@
 //  Created by Andrea Del Fante on 08/06/2019.
 //
 
+#if canImport(UIKit)
+
+import Foundation
+import UIKit
 import RealmSwift
+
+#if SWIFT_PACKAGE
+import UIAdapterKit
+#endif
 
 open class RealmTableViewSection<T: Object>: NSObject, TableViewSection, Copyable {
     public internal(set) var results: Results<T>
@@ -109,3 +117,5 @@ extension RealmTableViewSection: RealmFilterableBridging {
         results = results.filter(predicate)
     }
 }
+
+#endif

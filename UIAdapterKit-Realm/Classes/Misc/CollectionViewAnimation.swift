@@ -5,6 +5,10 @@
 //  Created by Andrea Del Fante on 10/06/2019.
 //
 
+#if canImport(UIKit)
+
+import Foundation
+
 public enum CollectionViewAnimation: Equatable {
     case none
     case section
@@ -23,3 +27,5 @@ public enum CollectionViewAnimation: Equatable {
         }
     }
 }
+
+#endif

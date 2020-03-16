@@ -5,6 +5,11 @@
 //  Created by Andrea Del Fante on 04/06/2019.
 //
 
+#if canImport(UIKit)
+
+import Foundation
+import UIKit
+
 open class BaseTableViewAdapter: NSObject, Adaptable, UITableViewDelegate, UITableViewDataSource {
 
     open var tableView: UITableView? {
@@ -177,3 +182,5 @@ extension Adaptable where Self: BaseTableViewAdapter {
             .item(for: indexPath.row) as? TableViewItem
     }
 }
+
+#endif

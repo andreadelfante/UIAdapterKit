@@ -5,6 +5,15 @@
 //  Created by Andrea Del Fante on 06/06/2019.
 //
 
+#if canImport(UIKit)
+
+import Foundation
+import UIKit
+
+#if SWIFT_PACKAGE
+import UIAdapterKit
+#endif
+
 open class DefaultTableViewItem: TableViewItem {
 
     public let style: UITableViewCell.CellStyle
@@ -54,3 +63,5 @@ open class DefaultTableViewItem: TableViewItem {
         return UITableViewCell(style: style, reuseIdentifier: reuseIdentifier)
     }
 }
+
+#endif

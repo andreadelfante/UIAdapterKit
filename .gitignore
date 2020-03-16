@@ -42,3 +42,5 @@ Carthage/Build
 # fastlane
 fastlane/test_output/
 fastlane/report.xml
+.build
+Package.resolved

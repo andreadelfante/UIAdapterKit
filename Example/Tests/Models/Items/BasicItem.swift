@@ -6,7 +6,7 @@
 //  Copyright © 2019 CocoaPods. All rights reserved.
 //
 
-import UIAdapterKit
+@testable import UIAdapterKit
 
 class BasicItem: Item {
     

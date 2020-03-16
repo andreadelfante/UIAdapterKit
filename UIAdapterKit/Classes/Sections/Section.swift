@@ -5,6 +5,11 @@
 //  Created by Andrea Del Fante on 04/06/2019.
 //
 
+#if canImport(UIKit)
+
+import Foundation
+import UIKit
+
 public protocol Section: Identifiable {
     var count: Int { get }
     var isEmpty: Bool { get }
@@ -36,3 +41,5 @@ public extension Section {
 
     func didEndDisplayingFooter() {}
 }
+
+#endif

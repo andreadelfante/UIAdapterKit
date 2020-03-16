@@ -1,0 +1,4 @@
+module RealmCore {
+    umbrella "/Users/andrea/Desktop/UIAdapterKit/.build/checkouts/realm-core/src"
+    export *
+}

@@ -5,6 +5,11 @@
 //  Created by Andrea Del Fante on 04/06/2019.
 //
 
+#if canImport(UIKit)
+
+import Foundation
+import UIKit
+
 public protocol TableViewSection: Section {
     var headerTitle: String? { get }
     var footerTitle: String? { get }
@@ -63,3 +68,5 @@ public extension TableViewSection {
         }
     }
 }
+
+#endif

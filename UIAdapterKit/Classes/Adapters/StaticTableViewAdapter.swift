@@ -5,6 +5,11 @@
 //  Created by Andrea Del Fante on 04/06/2019.
 //
 
+#if canImport(UIKit)
+
+import Foundation
+import UIKit
+
 open class StaticTableViewAdapter: BaseTableViewAdapter {
     private var sections: [TableViewSection]
 
@@ -21,3 +26,5 @@ open class StaticTableViewAdapter: BaseTableViewAdapter {
         return sections[index]
     }
 }
+
+#endif

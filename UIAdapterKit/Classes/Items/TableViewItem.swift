@@ -5,6 +5,11 @@
 //  Created by Andrea Del Fante on 04/06/2019.
 //
 
+#if canImport(UIKit)
+
+import Foundation
+import UIKit
+
 public protocol TableViewItem: Item {
     func configure(cell: UITableViewCell)
 
@@ -41,3 +46,5 @@ public extension TableViewItem {
         return tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
     }
 }
+
+#endif

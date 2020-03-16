@@ -9,6 +9,9 @@
 import XCTest
 import RealmSwift
 @testable import UIAdapterKit
+#if SWIFT_PACKAGE
+@testable import UIAdapterKit_Realm
+#endif
 
 class RealmCollectionViewAdapterTests: BaseRealmTestCase {
     private var adapter: RealmCollectionViewAdapter!
