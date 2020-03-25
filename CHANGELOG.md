@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.12.1
+
+### Enhancements
+* Fix precondition crash on IndexPath if it has no section and row/item values
+
 ## 0.12.0
 
 ### Enhancements
