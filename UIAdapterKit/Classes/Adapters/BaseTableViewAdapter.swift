@@ -178,6 +178,7 @@ extension Adaptable where Self: BaseTableViewAdapter {
     }
 
     public func item(for indexPath: IndexPath) -> TableViewItem? {
+        guard indexPath.hasSectionAndItem else { return nil }
         return section(for: indexPath.section)?
             .item(for: indexPath.row) as? TableViewItem
     }

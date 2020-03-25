@@ -292,6 +292,24 @@ class BaseCollectionViewAdapterTests: XCTestCase {
         adapter.collectionView(collectionView, didEndDisplayingSupplementaryView: UICollectionReusableView(), forElementOfKind: UICollectionView.elementKindSectionFooter, at: indexPath)
         XCTAssertTrue(result)
     }
+    
+    func testCollectionViewSectionForIndex() {
+        adapter.sectionBuilder = { _ in MockSection() }
+        
+        XCTAssertNil(adapter.collectionViewSection(for: -1))
+        XCTAssertNotNil(adapter.collectionViewSection(for: 0))
+    }
+    
+    func testItemForIndexPath() {
+        adapter.sectionBuilder = { _ in
+            let section = MockSection()
+            section.itemBuilder = { _ in MockItem() }
+            return section
+        }
+        
+        XCTAssertNil(adapter.item(for: IndexPath()))
+        XCTAssertNotNil(adapter.item(for: indexPath))
+    }
 }
 
 fileprivate class MockItem: CollectionViewItem, ActionPerformableCollectionViewItem {
