@@ -462,6 +462,24 @@ class BaseTableViewAdapterTests: XCTestCase {
         adapter.tableView(tableView, didEndDisplayingFooterView: UIView(), forSection: 0)
         XCTAssertTrue(result)
     }
+    
+    func testCollectionViewSectionForIndex() {
+        adapter.sectionBuilder = { _ in MockSection() }
+        
+        XCTAssertNil(adapter.tableViewSection(for: -1))
+        XCTAssertNotNil(adapter.tableViewSection(for: 0))
+    }
+    
+    func testItemForIndexPath() {
+        adapter.sectionBuilder = { _ in
+            let section = MockSection()
+            section.itemBuilder = { _ in MockItem() }
+            return section
+        }
+        
+        XCTAssertNil(adapter.item(for: IndexPath()))
+        XCTAssertNotNil(adapter.item(for: indexPath))
+    }
 }
 
 // MARK: Fileprivate

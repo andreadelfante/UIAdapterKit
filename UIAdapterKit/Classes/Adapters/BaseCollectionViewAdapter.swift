@@ -135,6 +135,7 @@ extension Adaptable where Self: BaseCollectionViewAdapter {
     }
 
     public func item(for indexPath: IndexPath) -> CollectionViewItem? {
+        guard indexPath.hasSectionAndItem else { return nil }
         return section(for: indexPath.section)?
             .item(for: indexPath.row) as? CollectionViewItem
     }
