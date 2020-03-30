@@ -14,10 +14,10 @@ import Foundation
 import UIAdapterKit
 #endif
 
-private typealias FilterableSection = NSObject & TableViewSection & RealmFilterableSection & RealmFilterableBridging
+private typealias FilterableSection = BaseTableViewSection & RealmFilterableSection & RealmFilterableBridging
 
 open class RealmSearchableTableViewAdapter: RealmTableViewAdapter {
-    internal var filteredSections: [Int: TableViewSection]
+    internal var filteredSections: [Int: BaseTableViewSection]
     internal var filteredItemsCount: Int
 
     public private(set) var isSeeking: Bool

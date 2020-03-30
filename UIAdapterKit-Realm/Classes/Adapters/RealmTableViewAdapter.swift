@@ -17,7 +17,7 @@ import UIAdapterKit
 open class RealmTableViewAdapter: BaseTableViewAdapter {
     public private(set) var itemsCount: Int
 
-    internal var sections: [Int: TableViewSection]
+    internal var sections: [Int: BaseTableViewSection]
     private var animation: TableViewAnimation
 
     public init(animation: TableViewAnimation = .none) {
