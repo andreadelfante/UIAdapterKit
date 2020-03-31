@@ -16,7 +16,7 @@ open class BaseTableViewSection: Section, Copyable {
     public let headerHeight: CGFloat?
     public let footerHeight: CGFloat?
 
-    internal init(
+    public init(
         headerTitle: String? = nil,
         footerTitle: String? = nil,
         headerHeight: CGFloat? = nil,

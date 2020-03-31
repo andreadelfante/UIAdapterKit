@@ -16,7 +16,7 @@ open class BaseCollectionViewSection: Section, Copyable {
     public let minimumLineSpacing: CGFloat?
     public let minimumInteritemSpacing: CGFloat?
 
-    internal init(
+    public init(
         headerSize: CGSize? = nil,
         footerSize: CGSize? = nil,
         minimumLineSpacing: CGFloat? = nil,
