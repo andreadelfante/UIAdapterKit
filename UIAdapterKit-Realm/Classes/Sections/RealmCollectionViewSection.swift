@@ -35,7 +35,7 @@ open class RealmCollectionViewSection<T: Object>: BaseCollectionViewSection, Rea
     }
 
     public required init(instance: BaseCollectionViewSection) {
-        let instance = instance as! RealmCollectionViewSection<T>
+        let instance = instance as! RealmCollectionViewSection<T> // swiftlint:disable:this force_cast
         results = instance.results
         itemBuilder = instance.itemBuilder
 

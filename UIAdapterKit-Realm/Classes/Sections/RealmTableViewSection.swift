@@ -36,7 +36,7 @@ open class RealmTableViewSection<T: Object>: BaseTableViewSection, RealmFilterab
     }
 
     public required init(instance: BaseTableViewSection) {
-        let instance = instance as! RealmTableViewSection<T>
+        let instance = instance as! RealmTableViewSection<T> // swiftlint:disable:this force_cast
         results = instance.results
         itemBuilder = instance.itemBuilder
 

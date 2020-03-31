@@ -28,7 +28,7 @@ open class StaticCollectionViewSection: BaseCollectionViewSection {
     }
 
     public required init(instance: BaseCollectionViewSection) {
-        let instance = instance as! StaticCollectionViewSection
+        let instance = instance as! StaticCollectionViewSection // swiftlint:disable:this force_cast
         items = instance.items
 
         super.init(instance: instance)

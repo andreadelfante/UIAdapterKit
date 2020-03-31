@@ -32,7 +32,7 @@ open class ArrayCollectionViewSection<T>: BaseCollectionViewSection, FilterableS
     }
 
     public required init(instance: BaseCollectionViewSection) {
-        let instance = instance as! ArrayCollectionViewSection<T>
+        let instance = instance as! ArrayCollectionViewSection<T> // swiftlint:disable:this force_cast
         items = instance.items
         itemBuilder = instance.itemBuilder
 

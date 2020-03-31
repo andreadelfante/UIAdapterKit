@@ -28,7 +28,7 @@ open class StaticTableViewSection: BaseTableViewSection {
     }
 
     public required init(instance: BaseTableViewSection) {
-        let instance = instance as! StaticTableViewSection
+        let instance = instance as! StaticTableViewSection // swiftlint:disable:this force_cast
         items = instance.items
 
         super.init(instance: instance)

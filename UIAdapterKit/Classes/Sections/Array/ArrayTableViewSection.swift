@@ -32,7 +32,7 @@ open class ArrayTableViewSection<T: AnyObject>: BaseTableViewSection, Filterable
     }
 
     public required init(instance: BaseTableViewSection) {
-        let instance = instance as! ArrayTableViewSection<T>
+        let instance = instance as! ArrayTableViewSection<T> // swiftlint:disable:this force_cast
         items = instance.items
         itemBuilder = instance.itemBuilder
 

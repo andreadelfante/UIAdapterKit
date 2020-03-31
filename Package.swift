@@ -21,7 +21,7 @@ let package = Package(
         .package(url: "https://github.com/realm/realm-cocoa.git", from: "4.0.0"),
 
 	// Test dependencies
-	.package(url: "https://github.com/vadymmarkov/Fakery.git", from: "4.1.1")
+	//.package(url: "https://github.com/vadymmarkov/Fakery.git", from: "4.1.1")
     ],
     targets: [
         .target(
@@ -37,10 +37,10 @@ let package = Package(
 	    dependencies: ["UIAdapterKit"],
 	    path: "UIAdapterKit-Common"),
 
-        .testTarget(
-            name: "UIAdapterKitTests",
-            dependencies: ["UIAdapterKit", "UIAdapterKit/Realm", "UIAdapterKit/Common",  "RealmSwift", "Fakery"],
-            path: "Example/Tests")
+        //.testTarget(
+        //    name: "UIAdapterKitTests",
+        //    dependencies: ["UIAdapterKit", "UIAdapterKit/Realm", "UIAdapterKit/Common",  "RealmSwift", "Fakery"],
+        //    path: "Example/Tests")
     ],
     swiftLanguageVersions: [.v5]
 )
