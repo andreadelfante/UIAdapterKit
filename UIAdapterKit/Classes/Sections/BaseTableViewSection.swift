@@ -10,51 +10,47 @@
 import Foundation
 import UIKit
 
-open class BaseTableViewSection: NSObject, Section, Copyable {
-    private let _headerTitle: String?
-    private let _footerTitle: String?
-    private let _headerHeight: CGFloat?
-    private let _footerHeight: CGFloat?
-    
-    public init(
+open class BaseTableViewSection: Section, Copyable {
+    public let headerTitle: String?
+    public let footerTitle: String?
+    public let headerHeight: CGFloat?
+    public let footerHeight: CGFloat?
+
+    internal init(
         headerTitle: String? = nil,
         footerTitle: String? = nil,
         headerHeight: CGFloat? = nil,
         footerHeight: CGFloat? = nil
     ) {
-        self._headerTitle = headerTitle
-        self._footerTitle = footerTitle
-        self._headerHeight = headerHeight
-        self._footerHeight = footerHeight
+        self.headerTitle = headerTitle
+        self.footerTitle = footerTitle
+        self.headerHeight = headerHeight
+        self.footerHeight = footerHeight
     }
-    
+
     public required init(instance: BaseTableViewSection) {
-        _headerTitle = instance._headerTitle
-        _footerTitle = instance._footerTitle
-        _headerHeight = instance._headerHeight
-        _footerHeight = instance._footerHeight
+        headerTitle = instance.headerTitle
+        footerTitle = instance.footerTitle
+        headerHeight = instance.headerHeight
+        footerHeight = instance.footerHeight
     }
-    
-    public override func copy() -> Any {
-        return type(of: self).init(instance: self)
-    }
-    
+
     public var count: Int {
         fatalError("Must override")
     }
-    
+
     public func item(for index: Int) -> Item? {
         fatalError("Must override")
     }
-    
+
     open var titleForHeader: String? {
-        return _headerTitle
+        return headerTitle
     }
-    
+
     open var titleForFooter: String? {
-        return _footerTitle
+        return footerTitle
     }
-    
+
     open var nibForHeader: UINib? {
         return nil
     }
@@ -63,14 +59,28 @@ open class BaseTableViewSection: NSObject, Section, Copyable {
         return nil
     }
 
+    open var reuseIdentifierForHeader: String {
+        return "\(identifier(self)).Header"
+    }
+
+    open var reuseIdentifierForFooter: String {
+        return "\(identifier(self)).Footer"
+    }
+
+    open func configure(header: UITableViewHeaderFooterView) {
+    }
+
+    open func configure(footer: UITableViewHeaderFooterView) {
+    }
+
     open func heightForHeader(_ container: Container) -> CGFloat? {
-        return _headerHeight
+        return headerHeight
     }
-    
+
     open func heightForFooter(_ container: Container) -> CGFloat? {
-        return _footerHeight
+        return footerHeight
     }
-    
+
     open func didEndDisplayingHeader() {
     }
 

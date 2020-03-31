@@ -17,7 +17,7 @@ class BaseRealmTestCase: XCTestCase {
         
         realm = try! Realm(configuration: Realm.Configuration(inMemoryIdentifier: name))
         try! realm.write {
-            realm.add(BasicModel.fake(30), update: .all)
+            realm.add(BasicModel.fake(10), update: .all)
         }
     }
     

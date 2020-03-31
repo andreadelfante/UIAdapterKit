@@ -14,7 +14,7 @@ import RealmSwift
 import UIAdapterKit
 #endif
 
-open class RealmCollectionViewSection<T: Object>: BaseCollectionViewSection {
+open class RealmCollectionViewSection<T: Object>: BaseCollectionViewSection, RealmFilterableSection {
     public internal(set) var results: Results<T>!
     internal var notificationToken: NotificationToken?
     private var itemBuilder: ((T) -> CollectionViewItem)!
@@ -27,7 +27,7 @@ open class RealmCollectionViewSection<T: Object>: BaseCollectionViewSection {
                 itemBuilder: @escaping (T) -> CollectionViewItem) {
         self.results = results
         self.itemBuilder = itemBuilder
-        
+
         super.init(headerSize: headerSize,
                    footerSize: footerSize,
                    minimumLineSpacing: minimumLineSpacing,
@@ -35,22 +35,21 @@ open class RealmCollectionViewSection<T: Object>: BaseCollectionViewSection {
     }
 
     public required init(instance: BaseCollectionViewSection) {
+        let instance = instance as! RealmCollectionViewSection<T>
+        results = instance.results
+        itemBuilder = instance.itemBuilder
+
         super.init(instance: instance)
-        
-        if let instance = instance as? RealmCollectionViewSection<T> {
-            results = instance.results
-            itemBuilder = instance.itemBuilder
-        }
     }
 
     deinit {
         notificationToken?.invalidate()
     }
-    
+
     open override var count: Int {
         return results.count
     }
-    
+
     open override func item(for index: Int) -> Item? {
         guard 0 <= index && index < count else { return nil }
         return itemBuilder(results[index])
@@ -65,12 +64,13 @@ open class RealmCollectionViewSection<T: Object>: BaseCollectionViewSection {
     open func onPostUpdate(deletions: [Int], insertions: [Int], modifications: [Int]) {}
 
     open func onError(_ error: Error) {}
-}
 
-extension RealmCollectionViewSection: RealmFilterableBridging {
-    func performFilter(with payload: Any) {
-        guard let filterable = self as? RealmFilterableSection else { return }
-        guard let predicate = filterable.filter(with: payload) else { return }
+    open func filter(with payload: Any) -> NSPredicate? {
+        return nil
+    }
+
+    public func performFilter(with payload: Any) {
+        guard let predicate = filter(with: payload) else { return }
 
         results = results.filter(predicate)
     }

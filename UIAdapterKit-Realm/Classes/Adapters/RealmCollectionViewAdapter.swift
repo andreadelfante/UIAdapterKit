@@ -17,7 +17,7 @@ import UIAdapterKit
 open class RealmCollectionViewAdapter: BaseCollectionViewAdapter {
     public private(set) var itemsCount: Int
 
-    internal var sections: [Int: CollectionViewSection]
+    internal var sections: [Int: BaseCollectionViewSection]
     private var animation: CollectionViewAnimation
 
     public init(animation: CollectionViewAnimation = .none) {

@@ -1,5 +1,5 @@
 //
-//  StaticTableViewAdapter.swift
+//  StaticCollectionViewAdapter.swift
 //  UIAdapterKit
 //
 //  Created by Andrea Del Fante on 04/06/2019.
@@ -10,10 +10,10 @@
 import Foundation
 import UIKit
 
-open class StaticTableViewAdapter: BaseTableViewAdapter {
-    private var sections: [TableViewSection]
+open class StaticCollectionViewAdapter: BaseCollectionViewAdapter {
+    private var sections: [StaticCollectionViewSection]
 
-    public init(sections: [TableViewSection]) {
+    public init(sections: [StaticCollectionViewSection]) {
         self.sections = sections
     }
 

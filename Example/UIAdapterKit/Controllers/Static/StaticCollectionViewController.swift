@@ -12,8 +12,8 @@ import UIAdapterKit
 class StaticCollectionViewController: UICollectionViewController {
     
     private let adapter = StaticCollectionViewAdapter(sections: [
-        UserCollectionViewSection(items: User.fake(10).map { UserCollectionViewItem(user: $0) }),
-        UserCollectionViewSection(items: User.fake(10).map { UserCollectionViewItem(user: $0) })
+        UserStaticCollectionViewSection(items: User.fake(10).map { UserCollectionViewItem(user: $0) }),
+        UserStaticCollectionViewSection(items: User.fake(10).map { UserCollectionViewItem(user: $0) })
         ])
     
     override func viewDidLoad() {

@@ -5,66 +5,86 @@
 //  Created by Andrea Del Fante on 30/03/2020.
 //
 
+#if canImport(UIKit)
+
 import Foundation
 import UIKit
 
-open class BaseCollectionViewSection: NSObject, Section, Copyable {
-    private let _headerSize: CGSize?
-    private let _footerSize: CGSize?
-    private let _minimumLineSpacing: CGFloat?
-    private let _minimumInteritemSpacing: CGFloat?
-    
+open class BaseCollectionViewSection: Section, Copyable {
+    public let headerSize: CGSize?
+    public let footerSize: CGSize?
+    public let minimumLineSpacing: CGFloat?
+    public let minimumInteritemSpacing: CGFloat?
+
     internal init(
         headerSize: CGSize? = nil,
         footerSize: CGSize? = nil,
         minimumLineSpacing: CGFloat? = nil,
         minimumInteritemSpacing: CGFloat? = nil
     ) {
-        self._headerSize = headerSize
-        self._footerSize = footerSize
-        self._minimumLineSpacing = minimumLineSpacing
-        self._minimumInteritemSpacing = minimumInteritemSpacing
+        self.headerSize = headerSize
+        self.footerSize = footerSize
+        self.minimumLineSpacing = minimumLineSpacing
+        self.minimumInteritemSpacing = minimumInteritemSpacing
     }
-    
+
     public required init(instance: BaseCollectionViewSection) {
-        _headerSize = instance._headerSize
-        _footerSize = instance._footerSize
-        _minimumLineSpacing = instance._minimumLineSpacing
-        _minimumInteritemSpacing = instance._minimumInteritemSpacing
+        headerSize = instance.headerSize
+        footerSize = instance.footerSize
+        minimumLineSpacing = instance.minimumLineSpacing
+        minimumInteritemSpacing = instance.minimumInteritemSpacing
     }
-    
-    public override func copy() -> Any {
-        return type(of: self).init(instance: self)
-    }
-    
-    public var count: Int {
+
+    open var count: Int {
         fatalError("Must override")
     }
-    
-    public func item(for index: Int) -> Item? {
+
+    open func item(for index: Int) -> Item? {
         fatalError("Must override")
     }
-    
+
+    open var nibForHeader: UINib? {
+        return nil
+    }
+
+    open var nibForFooter: UINib? {
+        return nil
+    }
+
+    open var reuseIdentifierForHeader: String {
+        return "\(identifier(self)).Header"
+    }
+
+    open var reuseIdentifierForFooter: String {
+        return "\(identifier(self)).Footer"
+    }
+
     open func configure(header: UICollectionReusableView) {
     }
-    
+
     open func configure(footer: UICollectionReusableView) {
     }
 
     open func sizeForHeader(_ container: Container) -> CGSize? {
-        return _headerSize
+        return headerSize
     }
-    
+
     open func sizeForFooter(_ container: Container) -> CGSize? {
-        return _footerSize
+        return footerSize
+    }
+
+    open func didEndDisplayingHeader() {
+    }
+
+    open func didEndDisplayingFooter() {
     }
 
     open func minimumInteritemSpacing(_ container: Container) -> CGFloat? {
-        return _minimumInteritemSpacing
+        return minimumInteritemSpacing
     }
-    
+
     open func minimumLineSpacing(_ container: Container) -> CGFloat? {
-        return _minimumLineSpacing
+        return minimumLineSpacing
     }
 
     func dequeueSupplementaryView(for collectionView: UICollectionView, kind: String, indexPath: IndexPath) -> UICollectionReusableView? {
@@ -95,3 +115,5 @@ open class BaseCollectionViewSection: NSObject, Section, Copyable {
         }
     }
 }
+
+#endif

@@ -76,8 +76,8 @@ class RealmSearchableCollectionViewAdapterTests: BaseRealmTestCase {
     }
 }
 
-class RealmFilterableCollectionViewSection: RealmCollectionViewSection<BasicModel>, RealmFilterableSection {
-    func filter(with payload: Any) -> NSPredicate? {
+class RealmFilterableCollectionViewSection: RealmCollectionViewSection<BasicModel> {
+    override func filter(with payload: Any) -> NSPredicate? {
         return NSPredicate(format: "text CONTAINS[c] %@", payload as! String)
     }
 }

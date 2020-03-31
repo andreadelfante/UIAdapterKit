@@ -15,10 +15,10 @@ import RealmSwift
 import UIAdapterKit
 #endif
 
-open class RealmTableViewSection<T: Object>: BaseTableViewSection {
-    public internal(set) var results: Results<T>!
+open class RealmTableViewSection<T: Object>: BaseTableViewSection, RealmFilterableSection {
+    public internal(set) var results: Results<T>
     internal var notificationToken: NotificationToken?
-    private var itemBuilder: ((T) -> TableViewItem)!
+    private var itemBuilder: ((T) -> TableViewItem)
 
     public init(headerTitle: String? = nil,
                 footerTitle: String? = nil,
@@ -28,7 +28,7 @@ open class RealmTableViewSection<T: Object>: BaseTableViewSection {
                 itemBuilder: @escaping (T) -> TableViewItem) {
         self.results = results
         self.itemBuilder = itemBuilder
-        
+
         super.init(headerTitle: headerTitle,
                    footerTitle: footerTitle,
                    headerHeight: headerHeight,
@@ -36,20 +36,15 @@ open class RealmTableViewSection<T: Object>: BaseTableViewSection {
     }
 
     public required init(instance: BaseTableViewSection) {
+        let instance = instance as! RealmTableViewSection<T>
+        results = instance.results
+        itemBuilder = instance.itemBuilder
+
         super.init(instance: instance)
-        
-        if let instance = instance as? RealmTableViewSection<T> {
-            results = instance.results
-            itemBuilder = instance.itemBuilder
-        }
     }
 
     deinit {
         notificationToken?.invalidate()
-    }
-
-    open override func copy() -> Any {
-        return type(of: self).init(instance: self)
     }
 
     open override var count: Int {
@@ -60,7 +55,7 @@ open class RealmTableViewSection<T: Object>: BaseTableViewSection {
         guard 0 <= index && index < count else { return nil }
         return itemBuilder(results[index])
     }
-    
+
     open func onPreInitial() {}
 
     open func onPostInitial() {}
@@ -70,12 +65,13 @@ open class RealmTableViewSection<T: Object>: BaseTableViewSection {
     open func onPostUpdate(deletions: [Int], insertions: [Int], modifications: [Int]) {}
 
     open func onError(_ error: Error) {}
-}
 
-extension RealmTableViewSection: RealmFilterableBridging {
-    func performFilter(with payload: Any) {
-        guard let filterable = self as? RealmFilterableSection else { return }
-        guard let predicate = filterable.filter(with: payload) else { return }
+    open func filter(with payload: Any) -> NSPredicate? {
+        return nil
+    }
+
+    public func performFilter(with payload: Any) {
+        guard let predicate = filter(with: payload) else { return }
 
         results = results.filter(predicate)
     }

@@ -11,4 +11,10 @@ public protocol Copyable {
     init(instance: Self)
 }
 
+public extension Copyable {
+    func copy() -> Self {
+        return type(of: self).init(instance: self)
+    }
+}
+
 #endif

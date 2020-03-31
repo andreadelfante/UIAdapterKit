@@ -1,5 +1,5 @@
 //
-//  StaticTableViewAdapterTests.swift
+//  StaticCollectionViewAdapterTests.swift
 //  UIAdapterKit_Tests
 //
 //  Created by Andrea Del Fante on 04/06/2019.
@@ -9,39 +9,37 @@
 import XCTest
 @testable import UIAdapterKit
 
-class StaticTableViewAdapterTests: XCTestCase {
+class StaticCollectionViewAdapterTests: XCTestCase {
     
-    private var tableView: UITableView!
     private var models: [BasicModel]!
-    private var items: [BasicTableViewItem]!
+    private var items: [BasicCollectionViewItem]!
     
     override func setUp() {
         super.setUp()
         
-        tableView = UITableView()
         models = BasicModel.fake(30)
-        items = models.map { BasicTableViewItem($0) }
+        items = models.map { BasicCollectionViewItem($0) }
     }
     
     func testSectionCount() {
-        let adapter = StaticTableViewAdapter(sections: [
-            BasicTableViewSection(items: items)
+        let adapter = StaticCollectionViewAdapter(sections: [
+            StaticCollectionViewSection(items: items)
         ])
         
         XCTAssertEqual(1, adapter.sectionCount)
     }
     
-    func testHasSections() {
-        let adapter = StaticTableViewAdapter(sections: [
-            BasicTableViewSection(items: items)
+    func testHasSection() {
+        let adapter = StaticCollectionViewAdapter(sections: [
+            StaticCollectionViewSection(items: items)
         ])
         
         XCTAssertTrue(adapter.hasSections)
     }
     
     func testSectionForIndex() {
-        let adapter = StaticTableViewAdapter(sections: [
-            BasicTableViewSection(items: items)
+        let adapter = StaticCollectionViewAdapter(sections: [
+            StaticCollectionViewSection(items: items)
         ])
         
         XCTAssertNil(adapter.section(for: -1))
@@ -49,8 +47,8 @@ class StaticTableViewAdapterTests: XCTestCase {
     }
     
     func testSectionForItem() {
-        let adapter = StaticTableViewAdapter(sections: [
-            BasicTableViewSection(items: items)
+        let adapter = StaticCollectionViewAdapter(sections: [
+            StaticCollectionViewSection(items: items)
         ])
         
         XCTAssertNil(adapter.section(for: -1)?.item(for: -1))

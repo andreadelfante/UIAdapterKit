@@ -11,10 +11,10 @@ import UIAdapterKit
 import RealmSwift
 import PredicateFlow
 
-class RealmUserTableViewSection: RealmTableViewSection<User>, RealmFilterableSection {
+class RealmUserTableViewSection: RealmTableViewSection<User> {
     
     init(realm: Realm) {
-        super.init(results: realm.objects(User.self).sorted(UserSchema.lastName.ascending())) { (user) -> RealmTableViewItem in
+        super.init(results: realm.objects(User.self).sorted(UserSchema.lastName.ascending())) { (user) -> TableViewItem in
             return UserTableViewItem(user: user,
                                      actionForDelete: {
                                         try! realm.write {
@@ -24,11 +24,11 @@ class RealmUserTableViewSection: RealmTableViewSection<User>, RealmFilterableSec
         }
     }
     
-    required init(instance: RealmTableViewSection<User>) {
+    required init(instance: BaseTableViewSection) {
         super.init(instance: instance)
     }
     
-    func filter(with payload: Any) -> NSPredicate? {
+    override func filter(with payload: Any) -> NSPredicate? {
         if let string = payload as? String {
             return PredicateBuilder(UserSchema.firstName.contains(string))
                 .or(UserSchema.lastName.contains(string))
@@ -45,7 +45,7 @@ class RealmElementListTableViewSection: RealmTableViewSection<ElementList> {
                    itemBuilder: { ElementListTableViewItem(elementList: $0) })
     }
     
-    required init(instance: RealmTableViewSection<ElementList>) {
+    required init(instance: BaseTableViewSection) {
         super.init(instance: instance)
     }
 }

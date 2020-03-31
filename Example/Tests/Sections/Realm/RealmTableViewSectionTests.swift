@@ -21,18 +21,18 @@ class RealmTableViewSectionTests: BaseRealmTestCase {
         faker = Faker()
         section = RealmTableViewSection(headerTitle: faker.lorem.word(),
                                         footerTitle: faker.lorem.word(),
-                                        headerHeight: 0.5,
-                                        footerHeight: 0.7,
+                                        headerHeight: 1,
+                                        footerHeight: 2,
                                         results: realm.objects(BasicModel.self),
                                         itemBuilder: { BasicTableViewItem($0) })
     }
     
-    func testHeaderTitle() {
-        XCTAssertNotNil(section.headerTitle)
+    func testTitleForHeader() {
+        XCTAssertEqual(section.titleForHeader, section.headerTitle)
     }
     
-    func testFooterTitle() {
-        XCTAssertNotNil(section.footerTitle)
+    func testTitleForFooter() {
+        XCTAssertEqual(section.titleForFooter, section.footerTitle)
     }
     
     func testCount() {
@@ -44,33 +44,17 @@ class RealmTableViewSectionTests: BaseRealmTestCase {
         XCTAssertNotNil(section.item(for: 0))
     }
     
-    func testNibForHeader() {
-        XCTAssertNil(section.nibForHeader)
-    }
-    
-    func testNibForFooter() {
-        XCTAssertNil(section.nibForFooter)
-    }
-    
     func testHeaderHeight() {
         let height = section.heightForHeader(UITableView())
         
         XCTAssertNotNil(height)
-        XCTAssert(0.5 <= height! && height! <= 0.51)
+        XCTAssertEqual(height, 1)
     }
     
     func testFooterHeight() {
         let height = section.heightForFooter(UITableView())
         
         XCTAssertNotNil(height)
-        XCTAssert(0.7 <= height! && height! <= 0.71)
-    }
-    
-    func testDidEndDisplayingHeader() {
-        section.didEndDisplayingHeader()
-    }
-    
-    func testDidEndDisplayingFooter() {
-        section.didEndDisplayingFooter()
+        XCTAssertEqual(height, 2)
     }
 }

@@ -41,10 +41,6 @@ class RealmCollectionViewSectionTests: BaseRealmTestCase {
         XCTAssertNotNil(section.item(for: 0))
     }
     
-    func testNibForHeader() {
-        XCTAssertNil(section.nibForHeader)
-    }
-    
     func testSizeForHeader() {
         XCTAssertEqual(section.sizeForHeader(container), headerSize)
     }
@@ -63,13 +59,5 @@ class RealmCollectionViewSectionTests: BaseRealmTestCase {
     
     func testMinimumInteritemSpacing() {
         XCTAssertEqual(section.minimumInteritemSpacing(container), minimumInteritemSpacing)
-    }
-    
-    func testDidEndDisplayingHeader() {
-        section.didEndDisplayingHeader()
-    }
-    
-    func testDidEndDisplayingFooter() {
-        section.didEndDisplayingFooter()
     }
 }

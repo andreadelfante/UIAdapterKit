@@ -44,7 +44,7 @@ open class BaseTableViewAdapter: NSObject, Adaptable, UITableViewDelegate, UITab
     }
 
     open func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let item = self.item(for: indexPath)!
+        guard let item = self.item(for: indexPath) else { return UITableViewCell() } // This is useful to avoid crash when there are multiple concurrent UITableView refresh.
         let cell = item.dequeueCell(from: tableView, at: indexPath)
 
         item.configure(cell: cell)
@@ -70,7 +70,7 @@ open class BaseTableViewAdapter: NSObject, Adaptable, UITableViewDelegate, UITab
 	open func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
 		return self.tableView(tableView, heightForRowAt: indexPath)
 	}
-    
+
     public func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         self.item(for: indexPath)?.willDisplay(cell: cell)
     }
@@ -82,7 +82,7 @@ open class BaseTableViewAdapter: NSObject, Adaptable, UITableViewDelegate, UITab
     open func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         guard let section = tableViewSection(for: section) else { return nil }
         guard !section.isEmpty else { return nil }
-        return section.headerTitle
+        return section.titleForHeader
     }
 
     open func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -107,7 +107,7 @@ open class BaseTableViewAdapter: NSObject, Adaptable, UITableViewDelegate, UITab
     open func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
         guard let section = tableViewSection(for: section) else { return nil }
         guard !section.isEmpty else { return nil }
-        return section.footerTitle
+        return section.titleForFooter
     }
 
     open func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
@@ -173,8 +173,8 @@ open class BaseTableViewAdapter: NSObject, Adaptable, UITableViewDelegate, UITab
 }
 
 extension Adaptable where Self: BaseTableViewAdapter {
-    public func tableViewSection(for index: Int) -> TableViewSection? {
-        return section(for: index) as? TableViewSection
+    public func tableViewSection(for index: Int) -> BaseTableViewSection? {
+        return section(for: index) as? BaseTableViewSection
     }
 
     public func item(for indexPath: IndexPath) -> TableViewItem? {

@@ -530,7 +530,7 @@ fileprivate class MockItem: TableViewItem, SwipeableTableViewItem, ActionPerform
     }
 }
 
-fileprivate class MockSection: TableViewSection {
+fileprivate class MockSection: BaseTableViewSection {
     var items: Int = 1
     var itemBuilder: ((Int) -> Item?)?
     var heightForHeader: CGFloat?
@@ -542,48 +542,48 @@ fileprivate class MockSection: TableViewSection {
     var endDisplayingHeader: () -> Void = {}
     var endDisplayingFooter: () -> Void = {}
     
-    var count: Int {
+    override var count: Int {
         return items
     }
     
-    func item(for index: Int) -> Item? {
+    override func item(for index: Int) -> Item? {
         guard 0 <= index && index < count else { return nil }
         return itemBuilder?(index)
     }
     
-    func heightForHeader(_ container: Container) -> CGFloat? {
+    override func heightForHeader(_ container: Container) -> CGFloat? {
         return heightForHeader
     }
     
-    func heightForFooter(_ container: Container) -> CGFloat? {
+    override func heightForFooter(_ container: Container) -> CGFloat? {
         return heightForFooter
     }
     
-    var headerTitle: String? {
+    override var titleForHeader: String? {
         return headerString
     }
     
-    var footerTitle: String? {
+    override var titleForFooter: String? {
         return footerString
     }
     
-    func dequeueHeader(for tableView: UITableView) -> UITableViewHeaderFooterView? {
+    override func dequeueHeader(for tableView: UITableView) -> UITableViewHeaderFooterView? {
         return headerView
     }
     
-    func dequeueFooter(for tableView: UITableView) -> UITableViewHeaderFooterView? {
+    override func dequeueFooter(for tableView: UITableView) -> UITableViewHeaderFooterView? {
         return footerView
     }
     
-    func registerHeaderFooter(for tableView: UITableView) {
+    override func registerHeaderFooter(for tableView: UITableView) {
         
     }
     
-    func didEndDisplayingHeader() {
+    override func didEndDisplayingHeader() {
         endDisplayingHeader()
     }
     
-    func didEndDisplayingFooter() {
+    override func didEndDisplayingFooter() {
         endDisplayingFooter()
     }
 }

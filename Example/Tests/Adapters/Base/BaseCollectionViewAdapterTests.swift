@@ -350,7 +350,7 @@ fileprivate class MockItem: CollectionViewItem, ActionPerformableCollectionViewI
     }
 }
 
-fileprivate class MockSection: CollectionViewSection {
+fileprivate class MockSection: BaseCollectionViewSection {
     var items: Int = 1
     var itemBuilder: ((Int) -> Item?)?
     var sizeForHeader: CGSize?
@@ -359,36 +359,36 @@ fileprivate class MockSection: CollectionViewSection {
     var endDisplayingHeader: () -> Void = {}
     var endDisplayingFooter: () -> Void = {}
     
-    var count: Int {
+    override var count: Int {
         return items
     }
     
-    func item(for index: Int) -> Item? {
+    override func item(for index: Int) -> Item? {
         guard 0 <= index && index < count else { return nil }
         return itemBuilder?(index)
     }
     
-    func sizeForHeader(_ container: Container) -> CGSize? {
+    override func sizeForHeader(_ container: Container) -> CGSize? {
         return sizeForHeader
     }
     
-    func sizeForFooter(_ container: Container) -> CGSize? {
+    override func sizeForFooter(_ container: Container) -> CGSize? {
         return sizeForFooter
     }
     
-    func dequeueSupplementaryView(for collectionView: UICollectionView, kind: String, indexPath: IndexPath) -> UICollectionReusableView? {
+    override func dequeueSupplementaryView(for collectionView: UICollectionView, kind: String, indexPath: IndexPath) -> UICollectionReusableView? {
         return headerFooterView
     }
     
-    func registerSupplementaryView(for collectionView: UICollectionView) {
+    override func registerSupplementaryView(for collectionView: UICollectionView) {
         
     }
     
-    func didEndDisplayingHeader() {
+    override func didEndDisplayingHeader() {
         endDisplayingHeader()
     }
     
-    func didEndDisplayingFooter() {
+    override func didEndDisplayingFooter() {
         endDisplayingFooter()
     }
 }

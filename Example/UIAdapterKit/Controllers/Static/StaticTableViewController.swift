@@ -12,10 +12,10 @@ import UIAdapterKit
 class StaticTableViewController: UITableViewController {
     
     private let adapter = StaticTableViewAdapter(sections: [
-        UserTableViewSection(items: User.fake(10).map {
+        UserStaticTableViewSection(items: User.fake(10).map {
             UserTableViewItem(user: $0)
         }),
-        UserTableViewSection(items: User.fake(10).map {
+        UserStaticTableViewSection(items: User.fake(10).map {
             UserTableViewItem(user: $0)
         })
     ])
