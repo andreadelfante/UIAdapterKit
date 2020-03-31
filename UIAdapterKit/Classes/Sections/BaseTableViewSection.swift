@@ -35,11 +35,11 @@ open class BaseTableViewSection: Section, Copyable {
         footerHeight = instance.footerHeight
     }
 
-    public var count: Int {
+    open var count: Int {
         fatalError("Must override")
     }
 
-    public func item(for index: Int) -> Item? {
+    open func item(for index: Int) -> Item? {
         fatalError("Must override")
     }
 
