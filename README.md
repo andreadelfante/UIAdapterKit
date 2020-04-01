@@ -5,10 +5,6 @@
 [![Platform](https://img.shields.io/cocoapods/p/UIAdapterKit.svg?style=flat)](https://cocoapods.org/pods/UIAdapterKit)
 [![License](https://img.shields.io/cocoapods/l/UIAdapterKit.svg?style=flat)](https://cocoapods.org/pods/UIAdapterKit)
 
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
 ## Requirements
 * iOS 8.0+
 
@@ -29,11 +25,7 @@ this repository URL:
 https://github.com/andreadelfante/UIAdapterKit.git
 ```
 
-
-## Author
-
-andreadelfante, andreadelfante94@gmail.com
-
-## License
-
-UIAdapterKit is available under the MIT license. See the LICENSE file for more info.
+## Documentation
+* [UIAdapterKit](./UIAdapterKit/README.md)
+* [UIAdapterKit/Common](./UIAdapterKit-Common/README.md)
+* [UIAdapterKit/Realm](./UIAdapterKit-Realm/README.md)
