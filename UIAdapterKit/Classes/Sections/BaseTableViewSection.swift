@@ -87,7 +87,7 @@ open class BaseTableViewSection: Section, Copyable {
     open func didEndDisplayingFooter() {
     }
 
-    func dequeueHeader(for tableView: UITableView) -> UITableViewHeaderFooterView? {
+    open func dequeueHeader(for tableView: UITableView) -> UITableViewHeaderFooterView? {
         if let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: reuseIdentifierForHeader) {
             return header
         }
@@ -96,7 +96,7 @@ open class BaseTableViewSection: Section, Copyable {
         return tableView.dequeueReusableHeaderFooterView(withIdentifier: reuseIdentifierForHeader)
     }
 
-    func dequeueFooter(for tableView: UITableView) -> UITableViewHeaderFooterView? {
+    open func dequeueFooter(for tableView: UITableView) -> UITableViewHeaderFooterView? {
         if let footer = tableView.dequeueReusableHeaderFooterView(withIdentifier: reuseIdentifierForFooter) {
             return footer
         }
@@ -105,7 +105,7 @@ open class BaseTableViewSection: Section, Copyable {
         return tableView.dequeueReusableHeaderFooterView(withIdentifier: reuseIdentifierForFooter)
     }
 
-    func registerHeaderFooter(for tableView: UITableView) {
+    open func registerHeaderFooter(for tableView: UITableView) {
         if let nib = nibForHeader {
             tableView.register(nib, forHeaderFooterViewReuseIdentifier: reuseIdentifierForHeader)
         }

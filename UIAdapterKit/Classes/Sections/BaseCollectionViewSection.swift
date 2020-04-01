@@ -87,7 +87,7 @@ open class BaseCollectionViewSection: Section, Copyable {
         return minimumLineSpacing
     }
 
-    func dequeueSupplementaryView(for collectionView: UICollectionView, kind: String, indexPath: IndexPath) -> UICollectionReusableView? {
+    open func dequeueSupplementaryView(for collectionView: UICollectionView, kind: String, indexPath: IndexPath) -> UICollectionReusableView? {
         registerSupplementaryView(for: collectionView)
 
         if kind == UICollectionView.elementKindSectionHeader {
@@ -101,7 +101,7 @@ open class BaseCollectionViewSection: Section, Copyable {
         return nil
     }
 
-    func registerSupplementaryView(for collectionView: UICollectionView) {
+    open func registerSupplementaryView(for collectionView: UICollectionView) {
         if let nib = nibForHeader {
             collectionView.register(nib,
                                     forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
