@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.13.1
+
+### Enhancements
+* Change some internal function to open
+
 ## 0.13.0
 
 ### Enhancements
