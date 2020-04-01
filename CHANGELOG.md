@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.13.0
+
+### Enhancements
+* Add `ArrayTableViewAdapter` and `ArrayCollectionViewAdapter`
+* Add `ArraySearchableTableViewAdapter` and `ArraySearchableCollectionViewAdapter`
+* Add `StaticCollectionViewSection` for StaticCollectionViewAdapter
+* Add ``StaticTableViewSection` for StaticTableViewAdapter
+
+### Breaking changes
+* Removed `RealmCollectionViewItem` and `RealmTableViewItem`. Now you must use respectively `CollectionViewItem` and `TableViewItem`
+* All sections now implement `FilterableSection` (in Realm submodule ``RealmFilterableSection`) by default
+
 ## 0.12.1
 
 ### Enhancements
