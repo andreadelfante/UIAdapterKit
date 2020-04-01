@@ -28,18 +28,6 @@ public protocol Section: Identifiable {
 
 public extension Section {
     var isEmpty: Bool { return count == 0 }
-
-    var nibForHeader: UINib? { return nil }
-
-    var reuseIdentifierForHeader: String { return "\(identifier(self)).Header" }
-
-    var nibForFooter: UINib? { return nil }
-
-    var reuseIdentifierForFooter: String { return "\(identifier(self)).Footer" }
-
-    func didEndDisplayingHeader() {}
-
-    func didEndDisplayingFooter() {}
 }
 
 #endif

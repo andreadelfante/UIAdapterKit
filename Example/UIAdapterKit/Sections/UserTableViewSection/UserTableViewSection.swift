@@ -19,32 +19,53 @@ class UserTableViewFooter: UITableViewHeaderFooterView {
     }
 }
 
-class UserTableViewSection: TableViewSection {
-    private let items: [TableViewItem]
-    let headerTitle: String?
-    
+class UserStaticTableViewSection: StaticTableViewSection {
     init(items: [TableViewItem]) {
-        self.items = items
-        self.headerTitle = Faker().lorem.word()
+        super.init(headerTitle: Faker().lorem.word(),
+                   headerHeight: 44,
+                   items: items)
     }
     
-    var count: Int {
-        return items.count
+    required init(instance: BaseTableViewSection) {
+        super.init(instance: instance)
     }
     
-    func item(for index: Int) -> Item? {
-        return items[index]
-    }
-    
-    var nibForFooter: UINib? {
+    override var nibForFooter: UINib? {
         return UINib(resource: R.nib.userTableViewFooter)
     }
     
-    func configure(footer: UITableViewHeaderFooterView) {
+    override func configure(footer: UITableViewHeaderFooterView) {
+        (footer as? UserTableViewFooter)?.titleLabel.text = Faker().lorem.word()
+    }
+}
+
+class UserArrayTableViewSection: ArrayTableViewSection<User> {
+    init(users: [User]) {
+        super.init(headerTitle: Faker().lorem.word(),
+                   headerHeight: 44,
+                   items: users,
+                   itemBuilder: { UserTableViewItem(user: $0) })
+    }
+    
+    required init(instance: BaseTableViewSection) {
+        super.init(instance: instance)
+    }
+    
+    override var nibForFooter: UINib? {
+        return UINib(resource: R.nib.userTableViewFooter)
+    }
+    
+    override func configure(footer: UITableViewHeaderFooterView) {
         (footer as? UserTableViewFooter)?.titleLabel.text = Faker().lorem.word()
     }
     
-    func heightForFooter(_ container: Container) -> CGFloat? {
-        return 44
+    override func filter(item: User, with payload: Any) -> Bool {
+        if let string = payload as? String {
+            return item.firstName.contains(string) ||
+                item.lastName.contains(string) ||
+                item.text.contains(string)
+        }
+        
+        return super.filter(item: item, with: payload)
     }
 }

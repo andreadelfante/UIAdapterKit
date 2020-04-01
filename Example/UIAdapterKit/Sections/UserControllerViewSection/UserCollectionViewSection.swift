@@ -13,49 +13,102 @@ class UserCollectionViewHeaderFooter: UICollectionReusableView {
     @IBOutlet weak var titleLabel: UILabel!
 }
 
-class UserCollectionViewSection: CollectionViewSection {
-    
-    private let items: [CollectionViewItem]
+class UserStaticCollectionViewSection: StaticCollectionViewSection {
     private let headerTitle: String
     private let footerTitle: String
     
     init(items: [CollectionViewItem]) {
-        self.items = items
-        
         let faker = Faker()
         headerTitle = faker.lorem.word()
         footerTitle = faker.lorem.word()
+        
+        super.init(items: items)
     }
     
-    var count: Int {
-        return items.count
+    required init(instance: BaseCollectionViewSection) {
+        let instance = instance as! UserStaticCollectionViewSection
+        headerTitle = instance.headerTitle
+        footerTitle = instance.footerTitle
+        
+        super.init(instance: instance)
     }
     
-    func item(for index: Int) -> Item? {
-        return items[index]
-    }
-    
-    var nibForHeader: UINib? {
+    override var nibForHeader: UINib? {
         return UINib(resource: R.nib.userCollectionViewHeaderFooter)
     }
     
-    var nibForFooter: UINib? {
+    override var nibForFooter: UINib? {
         return UINib(resource: R.nib.userCollectionViewHeaderFooter)
     }
     
-    func configure(header: UICollectionReusableView) {
+    override func configure(header: UICollectionReusableView) {
         (header as? UserCollectionViewHeaderFooter)?.titleLabel.text = headerTitle
     }
     
-    func configure(footer: UICollectionReusableView) {
+    override func configure(footer: UICollectionReusableView) {
         (footer as? UserCollectionViewHeaderFooter)?.titleLabel.text = footerTitle
     }
     
-    func sizeForHeader(_ container: Container) -> CGSize? {
+    override func sizeForHeader(_ container: Container) -> CGSize? {
         return CGSize(width: container.containerSize.width, height: 44)
     }
     
-    func sizeForFooter(_ container: Container) -> CGSize? {
+    override func sizeForFooter(_ container: Container) -> CGSize? {
         return sizeForHeader(container)
+    }
+}
+
+class UserArrayCollectionViewSection: ArrayCollectionViewSection<User> {
+    private let headerTitle: String
+    private let footerTitle: String
+    
+    init(users: [User]) {
+        let faker = Faker()
+        headerTitle = faker.lorem.word()
+        footerTitle = faker.lorem.word()
+        
+        super.init(items: users, itemBuilder: { UserCollectionViewItem(user: $0) })
+    }
+    
+    required init(instance: BaseCollectionViewSection) {
+        let instance = instance as! UserArrayCollectionViewSection
+        headerTitle = instance.headerTitle
+        footerTitle = instance.footerTitle
+        
+        super.init(instance: instance)
+    }
+    
+    override var nibForHeader: UINib? {
+        return UINib(resource: R.nib.userCollectionViewHeaderFooter)
+    }
+    
+    override var nibForFooter: UINib? {
+        return UINib(resource: R.nib.userCollectionViewHeaderFooter)
+    }
+    
+    override func configure(header: UICollectionReusableView) {
+        (header as? UserCollectionViewHeaderFooter)?.titleLabel.text = headerTitle
+    }
+    
+    override func configure(footer: UICollectionReusableView) {
+        (footer as? UserCollectionViewHeaderFooter)?.titleLabel.text = footerTitle
+    }
+    
+    override func sizeForHeader(_ container: Container) -> CGSize? {
+        return CGSize(width: container.containerSize.width, height: 44)
+    }
+    
+    override func sizeForFooter(_ container: Container) -> CGSize? {
+        return sizeForHeader(container)
+    }
+    
+    override func filter(item: User, with payload: Any) -> Bool {
+        if let string = payload as? String {
+            return item.firstName.contains(string) ||
+                item.lastName.contains(string) ||
+                item.text.contains(string)
+        }
+        
+        return super.filter(item: item, with: payload)
     }
 }

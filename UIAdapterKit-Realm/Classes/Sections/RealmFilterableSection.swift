@@ -9,13 +9,12 @@
 
 import Foundation
 
-public protocol RealmFilterableSection {
-    func filter(with payload: Any) -> NSPredicate?
-}
-
-protocol RealmFilterableBridging {
+public protocol RealmPerformableFilter {
     func performFilter(with payload: Any)
 }
 
-#endif
+public protocol RealmFilterableSection: RealmPerformableFilter {
+    func filter(with payload: Any) -> NSPredicate?
+}
 
+#endif

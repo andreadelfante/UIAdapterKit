@@ -11,17 +11,17 @@ import UIAdapterKit
 import RealmSwift
 import PredicateFlow
 
-class RealmUserCollectionViewSection: RealmCollectionViewSection<User>, RealmFilterableSection {
+class RealmUserCollectionViewSection: RealmCollectionViewSection<User> {
     init(realm: Realm) {
         super.init(results: realm.objects(User.self).sorted(UserSchema.lastName.ascending()),
                    itemBuilder: { UserCollectionViewItem(user: $0) })
     }
     
-    required init(instance: RealmCollectionViewSection<User>) {
+    required init(instance: BaseCollectionViewSection) {
         super.init(instance: instance)
     }
     
-    func filter(with payload: Any) -> NSPredicate? {
+    override func filter(with payload: Any) -> NSPredicate? {
         if let string = payload as? String {
             return PredicateBuilder(UserSchema.firstName.contains(string))
                 .or(UserSchema.lastName.contains(string))

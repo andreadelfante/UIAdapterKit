@@ -8,7 +8,7 @@
 
 @testable import UIAdapterKit
 
-class BasicTableViewItem: TableViewItem, RealmTableViewItem {
+class BasicTableViewItem: TableViewItem {
     private var model: BasicModel
     
     init(_ model: BasicModel) {
@@ -19,4 +19,6 @@ class BasicTableViewItem: TableViewItem, RealmTableViewItem {
         cell.textLabel?.text = model.text
         cell.detailTextLabel?.text = model.detail
     }
+    
+    
 }
