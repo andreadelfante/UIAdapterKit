@@ -14,10 +14,8 @@ import Foundation
 import UIAdapterKit
 #endif
 
-private typealias FilterableSection = NSObject & TableViewSection & RealmFilterableSection & RealmFilterableBridging
-
 open class RealmSearchableTableViewAdapter: RealmTableViewAdapter {
-    internal var filteredSections: [Int: TableViewSection]
+    internal var filteredSections: [Int: BaseTableViewSection]
     internal var filteredItemsCount: Int
 
     public private(set) var isSeeking: Bool
@@ -33,7 +31,7 @@ open class RealmSearchableTableViewAdapter: RealmTableViewAdapter {
 
                 for keyValue in sections {
                     var section = keyValue.value
-                    if let filterableSection = (section as? FilterableSection)?.copy() as? FilterableSection {
+                    if let filterableSection = section.copy() as? BaseTableViewSection & RealmPerformableFilter {
                         filterableSection.performFilter(with: payload)
                         section = filterableSection
                     }
@@ -71,17 +69,6 @@ open class RealmSearchableTableViewAdapter: RealmTableViewAdapter {
         guard 0 <= index && index < sectionCount else { return nil }
         return filteredSections[index]
     }
-
-    @discardableResult
-    open override func map<T>(index: Int, for section: RealmTableViewSection<T>) -> Self where T: Object {
-        if !(section is RealmFilterableSection) {
-            print("[WARNING] The section at index \(index) doesn't implement \(RealmFilterableSection.self). It will be ignored during filtering.")
-        }
-
-        super.map(index: index, for: section)
-        return self
-    }
 }
-
 
 #endif

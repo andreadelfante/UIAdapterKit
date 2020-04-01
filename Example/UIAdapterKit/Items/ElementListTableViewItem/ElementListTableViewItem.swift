@@ -14,7 +14,7 @@ class ElementListTableViewCell: UITableViewCell {
     @IBOutlet weak var collectionView: UICollectionView!
 }
 
-struct ElementListTableViewItem: RealmTableViewItem {
+struct ElementListTableViewItem: TableViewItem {
     let elementList: ElementList
     let adapter = RealmCollectionViewAdapter(animation: .row)
     

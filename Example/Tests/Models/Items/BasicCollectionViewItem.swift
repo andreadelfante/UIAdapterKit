@@ -8,7 +8,7 @@
 
 @testable import UIAdapterKit
 
-class BasicCollectionViewItem: CollectionViewItem, RealmCollectionViewItem {
+class BasicCollectionViewItem: CollectionViewItem {
     private var model: BasicModel
     
     init(_ model: BasicModel) {
@@ -16,6 +16,5 @@ class BasicCollectionViewItem: CollectionViewItem, RealmCollectionViewItem {
     }
     
     func configure(cell: UICollectionViewCell) {
-        
     }
 }

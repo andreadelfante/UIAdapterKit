@@ -13,7 +13,7 @@ class SubelementListCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var label: UILabel!
 }
 
-struct SubelementListCollectionViewItem: RealmCollectionViewItem {
+struct SubelementListCollectionViewItem: CollectionViewItem {
     let subelementList: SubelementList
     
     func configure(cell: UICollectionViewCell) {

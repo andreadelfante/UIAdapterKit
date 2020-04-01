@@ -68,7 +68,7 @@ open class BaseCollectionViewAdapter: NSObject, Adaptable, UICollectionViewDeleg
             ?? (collectionViewLayout as? UICollectionViewFlowLayout)?.itemSize
             ?? CGSize.zero
     }
-    
+
     public func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         self.item(for: indexPath)?.willDisplay(cell: cell)
     }
@@ -130,8 +130,8 @@ open class BaseCollectionViewAdapter: NSObject, Adaptable, UICollectionViewDeleg
 }
 
 extension Adaptable where Self: BaseCollectionViewAdapter {
-    public func collectionViewSection(for index: Int) -> CollectionViewSection? {
-        return section(for: index) as? CollectionViewSection
+    public func collectionViewSection(for index: Int) -> BaseCollectionViewSection? {
+        return section(for: index) as? BaseCollectionViewSection
     }
 
     public func item(for indexPath: IndexPath) -> CollectionViewItem? {
