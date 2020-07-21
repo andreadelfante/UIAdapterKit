@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.14.0
+### Breaking changes
+* Bump min iOS version to 9.0.
+
 ## 0.13.1
 
 ### Enhancements
