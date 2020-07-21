@@ -1,29 +1,29 @@
 PODS:
   - Fakery (4.1.1)
-  - PredicateFlow (1.3):
-    - PredicateFlow/Basic (= 1.3)
+  - PredicateFlow (1.4):
+    - PredicateFlow/Basic (= 1.4)
     - Sourcery (~> 0.17.0)
-  - PredicateFlow/Basic (1.3):
+  - PredicateFlow/Basic (1.4):
     - Sourcery (~> 0.17.0)
-  - PredicateFlow/Realm (1.3):
+  - PredicateFlow/Realm (1.4):
     - RealmSwift
     - Sourcery (~> 0.17.0)
-  - R.swift (5.1.0):
-    - R.swift.Library (~> 5.1.0)
-  - R.swift.Library (5.1.0)
-  - Realm (4.1.1):
-    - Realm/Headers (= 4.1.1)
-  - Realm/Headers (4.1.1)
-  - RealmSwift (4.1.1):
-    - Realm (= 4.1.1)
+  - R.swift (5.2.2):
+    - R.swift.Library (~> 5.2.0)
+  - R.swift.Library (5.2.0)
+  - Realm (5.3.1):
+    - Realm/Headers (= 5.3.1)
+  - Realm/Headers (5.3.1)
+  - RealmSwift (5.3.1):
+    - Realm (= 5.3.1)
   - Sourcery (0.17.0)
-  - SwiftLint (0.37.0)
-  - UIAdapterKit (0.13.0):
-    - UIAdapterKit/Basic (= 0.13.0)
-  - UIAdapterKit/Basic (0.13.0)
-  - UIAdapterKit/Common (0.13.0)
-  - UIAdapterKit/Realm (0.13.0):
-    - RealmSwift
+  - SwiftLint (0.39.2)
+  - UIAdapterKit (0.14.0):
+    - UIAdapterKit/Basic (= 0.14.0)
+  - UIAdapterKit/Basic (0.14.0)
+  - UIAdapterKit/Common (0.14.0)
+  - UIAdapterKit/Realm (0.14.0):
+    - RealmSwift (~> 5)
 
 DEPENDENCIES:
   - Fakery
@@ -52,14 +52,14 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Fakery: d3380c4aa1efe7631c0831d7e26aa9db4491f014
-  PredicateFlow: 76b1bff5b00eeed3f493a5b5366cb01ac417278e
-  R.swift: 8cbc4fc69b740305b6a17c8a8ed968eb788962d9
-  R.swift.Library: fa85ce1e0d0b7e818cd9e080df910ba54d2776cc
-  Realm: 25f0a8244cbb1c2271c922963ea8666fc2d8104d
-  RealmSwift: 9e2657b33764f80e4a4dffd6d440e24715782052
+  PredicateFlow: fd09f4aaa5a4a66940c5ac5d0b193debc8d8b81b
+  R.swift: 7c52cdc57a66840ffe6cbd8a823d732059d42a32
+  R.swift.Library: 5ba4f1631300caf9a4d890186930da85d540769d
+  Realm: 8ec860dc0c3079f7cab1085d95661a06f162d487
+  RealmSwift: ca9d0df752157befb8c28034301f988a56ce91eb
   Sourcery: 3ed61be7c8a1218fce349266139379dba477efe0
-  SwiftLint: c078a14d7d7ade75e5507795d185e3da41d844d2
-  UIAdapterKit: 0442e11fae1f4b8b19a11e6590212005a9048779
+  SwiftLint: 22ccbbe3b8008684be5955693bab135e0ed6a447
+  UIAdapterKit: 8f407fd90ed21359bb6a57c38eee81214b539aac
 
 PODFILE CHECKSUM: dfb609fe46473d7183e0acd0cc7e197c47905188
 

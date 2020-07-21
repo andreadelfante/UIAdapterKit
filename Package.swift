@@ -5,7 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "UIAdapterKit",
-    platforms: [.iOS(.v8)],
+    platforms: [.iOS(.v9)],
     products: [
         .library(
             name: "UIAdapterKit",
@@ -18,7 +18,7 @@ let package = Package(
  	    targets: ["UIAdapterKit/Common"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/realm/realm-cocoa.git", from: "4.0.0"),
+        .package(url: "https://github.com/realm/realm-cocoa.git", from: "5.0.0"),
 
 	// Test dependencies
 	//.package(url: "https://github.com/vadymmarkov/Fakery.git", from: "4.1.1")
