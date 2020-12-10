@@ -6,6 +6,9 @@
 //  Copyright © 2019 CocoaPods. All rights reserved.
 //
 
+#if canImport(UIKit)
+
+import UIKit
 import XCTest
 @testable import UIAdapterKit
 
@@ -32,3 +35,5 @@ class SwipeableTableViewItemTests: XCTestCase {
         XCTAssertEqual(item.actions, baseActions)
     }
 }
+
+#endif

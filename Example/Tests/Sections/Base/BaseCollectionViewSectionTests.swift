@@ -6,6 +6,9 @@
 //  Copyright © 2020 CocoaPods. All rights reserved.
 //
 
+#if canImport(UIKit)
+
+import UIKit
 import XCTest
 @testable import UIAdapterKit
 
@@ -71,3 +74,5 @@ class BaseCollectionViewSectionTests: XCTestCase {
         XCTAssertEqual(copy.minimumInteritemSpacing, section.minimumInteritemSpacing)
     }
 }
+
+#endif

@@ -6,6 +6,8 @@
 //  Copyright © 2020 CocoaPods. All rights reserved.
 //
 
+#if canImport(UIKit)
+
 import XCTest
 import Fakery
 @testable import UIAdapterKit
@@ -30,3 +32,5 @@ class StaticTableViewSectionTests: XCTestCase {
         XCTAssertNotNil(section.item(for: 6))
     }
 }
+
+#endif

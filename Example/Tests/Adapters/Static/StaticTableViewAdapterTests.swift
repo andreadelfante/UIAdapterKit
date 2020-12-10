@@ -6,6 +6,9 @@
 //  Copyright © 2019 CocoaPods. All rights reserved.
 //
 
+#if canImport(UIKit)
+
+import UIKit
 import XCTest
 @testable import UIAdapterKit
 
@@ -59,3 +62,5 @@ class StaticTableViewAdapterTests: XCTestCase {
         XCTAssertNotNil(adapter.section(for: 0)?.item(for: 0))
     }
 }
+
+#endif

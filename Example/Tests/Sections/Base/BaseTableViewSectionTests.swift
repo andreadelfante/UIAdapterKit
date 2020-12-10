@@ -6,6 +6,9 @@
 //  Copyright © 2020 CocoaPods. All rights reserved.
 //
 
+#if canImport(UIKit)
+
+import UIKit
 import XCTest
 import Fakery
 @testable import UIAdapterKit
@@ -75,3 +78,5 @@ class BaseTableViewSectionTests: XCTestCase {
         XCTAssertEqual(copy.footerHeight, section.footerHeight)
     }
 }
+
+#endif

@@ -6,6 +6,8 @@
 //  Copyright © 2019 CocoaPods. All rights reserved.
 //
 
+#if canImport(UIKit)
+
 import XCTest
 import RealmSwift
 import Fakery
@@ -81,3 +83,5 @@ class RealmFilterableCollectionViewSection: RealmCollectionViewSection<BasicMode
         return NSPredicate(format: "text CONTAINS[c] %@", payload as! String)
     }
 }
+
+#endif

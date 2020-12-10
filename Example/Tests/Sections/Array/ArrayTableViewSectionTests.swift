@@ -6,6 +6,8 @@
 //  Copyright © 2020 CocoaPods. All rights reserved.
 //
 
+#if canImport(UIKit)
+
 import XCTest
 @testable import UIAdapterKit
 
@@ -34,3 +36,5 @@ class ArrayTableViewSectionTests: XCTestCase {
         XCTAssertNil(section.item(for: section.count))
     }
 }
+
+#endif

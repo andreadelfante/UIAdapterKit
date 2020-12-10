@@ -6,6 +6,8 @@
 //  Copyright © 2019 CocoaPods. All rights reserved.
 //
 
+#if canImport(UIKit)
+
 import XCTest
 import RealmSwift
 import Fakery
@@ -61,3 +63,5 @@ class RealmCollectionViewSectionTests: BaseRealmTestCase {
         XCTAssertEqual(section.minimumInteritemSpacing(container), minimumInteritemSpacing)
     }
 }
+
+#endif

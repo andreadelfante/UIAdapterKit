@@ -6,8 +6,12 @@
 //  Copyright © 2019 CocoaPods. All rights reserved.
 //
 
+#if canImport(UIKit)
+
 @testable import UIAdapterKit
 
 class BasicItem: Item {
     
 }
+
+#endif

@@ -6,6 +6,8 @@
 //  Copyright © 2019 CocoaPods. All rights reserved.
 //
 
+#if canImport(UIKit)
+
 import XCTest
 import RealmSwift
 import Fakery
@@ -58,3 +60,5 @@ class RealmTableViewSectionTests: BaseRealmTestCase {
         XCTAssertEqual(height, 2)
     }
 }
+
+#endif

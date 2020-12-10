@@ -6,6 +6,8 @@
 //  Copyright © 2019 CocoaPods. All rights reserved.
 //
 
+#if canImport(UIKit)
+
 import XCTest
 @testable import UIAdapterKit
 
@@ -31,3 +33,5 @@ class ItemTests: XCTestCase {
         item.didEndDisplayingItem()
     }
 }
+
+#endif

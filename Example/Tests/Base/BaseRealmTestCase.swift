@@ -6,6 +6,8 @@
 //  Copyright © 2019 CocoaPods. All rights reserved.
 //
 
+#if canImport(UIKit)
+
 import XCTest
 import RealmSwift
 
@@ -27,3 +29,5 @@ class BaseRealmTestCase: XCTestCase {
         super.tearDown()
     }
 }
+
+#endif

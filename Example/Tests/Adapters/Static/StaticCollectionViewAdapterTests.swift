@@ -6,6 +6,8 @@
 //  Copyright © 2019 CocoaPods. All rights reserved.
 //
 
+#if canImport(UIKit)
+
 import XCTest
 @testable import UIAdapterKit
 
@@ -57,3 +59,5 @@ class StaticCollectionViewAdapterTests: XCTestCase {
         XCTAssertNotNil(adapter.section(for: 0)?.item(for: 0))
     }
 }
+
+#endif

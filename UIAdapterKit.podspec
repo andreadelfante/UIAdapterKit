@@ -32,7 +32,7 @@ A set of adapters useful to define UITableView and UICollectionView in a declara
   s.subspec 'Realm' do |realm|
     realm.source_files      = ['UIAdapterKit/Classes/**/*', 'UIAdapterKit-Realm/Classes/**/*']
     
-    realm.dependency 'RealmSwift', '~> 5'
+    realm.dependency 'RealmSwift'
   end
   
   s.subspec 'Common' do |common|

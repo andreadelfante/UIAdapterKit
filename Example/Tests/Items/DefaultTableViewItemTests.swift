@@ -6,6 +6,9 @@
 //  Copyright © 2019 CocoaPods. All rights reserved.
 //
 
+#if canImport(UIKit)
+
+import UIKit
 import XCTest
 import Fakery
 @testable import UIAdapterKit
@@ -68,3 +71,5 @@ class DefaultTableViewItemTests: XCTestCase {
         item.didEndDisplayingItem()
     }
 }
+
+#endif

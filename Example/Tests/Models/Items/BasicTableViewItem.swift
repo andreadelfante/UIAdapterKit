@@ -6,6 +6,8 @@
 //  Copyright © 2019 CocoaPods. All rights reserved.
 //
 
+#if canImport(UIKit)
+
 @testable import UIAdapterKit
 
 class BasicTableViewItem: TableViewItem {
@@ -19,6 +21,6 @@ class BasicTableViewItem: TableViewItem {
         cell.textLabel?.text = model.text
         cell.detailTextLabel?.text = model.detail
     }
-    
-    
 }
+
+#endif

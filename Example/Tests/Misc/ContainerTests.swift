@@ -6,6 +6,8 @@
 //  Copyright © 2019 CocoaPods. All rights reserved.
 //
 
+#if canImport(UIKit)
+
 import XCTest
 import Fakery
 @testable import UIAdapterKit
@@ -36,3 +38,5 @@ class ContainerTests: XCTestCase {
         XCTAssertEqual(mock.containerSize.height, CGFloat(height))
     }
 }
+
+#endif

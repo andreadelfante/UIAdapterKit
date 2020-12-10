@@ -6,6 +6,8 @@
 //  Copyright © 2020 CocoaPods. All rights reserved.
 //
 
+#if canImport(UIKit)
+
 import XCTest
 import Fakery
 @testable import UIAdapterKit
@@ -109,3 +111,5 @@ fileprivate class BMTableViewSection: ArrayTableViewSection<BasicModel> {
         return super.filter(item: item, with: payload)
     }
 }
+
+#endif

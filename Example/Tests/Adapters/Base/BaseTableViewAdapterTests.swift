@@ -6,6 +6,9 @@
 //  Copyright © 2019 CocoaPods. All rights reserved.
 //
 
+#if canImport(UIKit)
+
+import UIKit
 import XCTest
 import Fakery
 @testable import UIAdapterKit
@@ -601,3 +604,5 @@ fileprivate class MockTableViewAdapter: BaseTableViewAdapter {
         return sectionBuilder?(index)
     }
 }
+
+#endif

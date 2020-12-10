@@ -6,6 +6,8 @@
 //  Copyright © 2019 CocoaPods. All rights reserved.
 //
 
+#if canImport(UIKit)
+
 import XCTest
 import RealmSwift
 @testable import UIAdapterKit
@@ -118,3 +120,5 @@ class CustomRealmCollectionViewSection: RealmCollectionViewSection<BasicModel> {
         postUpdate?()
     }
 }
+
+#endif
